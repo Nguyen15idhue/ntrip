@@ -102,6 +102,7 @@ class RelayService extends EventEmitter {
       
       // Handle RTCM data from source
       client.on('rtcm', (data) => {
+        // Pass the raw data buffer directly to broadcast without any modification
         const sentTo = this.caster.broadcast(station.name, data);
         if (sentTo > 0) {
           logger.debug(`Broadcasted ${data.length} bytes to ${sentTo} clients on ${station.name}`);

@@ -147,6 +147,8 @@ class NtripCaster extends EventEmitter {
         try {
           // Check if it's a writable stream (socket)
           if (client.socket.writable !== false && !client.socket.destroyed) {
+            // Important: Write the original buffer directly without modification
+            // This ensures the data format is preserved exactly as received
             client.socket.write(data);
             successCount++;
             

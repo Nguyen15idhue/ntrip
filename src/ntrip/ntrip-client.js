@@ -133,6 +133,11 @@ class NtripClient extends EventEmitter {
     this.lastDataReceived = new Date();
     this.stats.bytesReceived += data.length;
     
+    // Important: Emit the original raw data buffer first to ensure the exact data format is preserved
+    // This will ensure that clients receive data in its original format without any modifications
+    this.emit('rtcm', data);
+    
+    // For statistics purposes only, analyze the data without modifying it
     this.rtcmData = Buffer.concat([this.rtcmData, data]);
     let index = 0;
     
@@ -146,9 +151,7 @@ class NtripClient extends EventEmitter {
         const messageLength = len + 6;
         
         if (index + messageLength <= this.rtcmData.length) {
-          const rtcmMessage = this.rtcmData.subarray(index, index + messageLength);
-          
-          // Extract message type for statistics
+          // Extract message type for statistics only
           const byte3 = this.rtcmData[index + 3];
           const byte4 = this.rtcmData[index + 4];
           const messageType = (byte3 << 4) | (byte4 >> 4);
@@ -160,8 +163,7 @@ class NtripClient extends EventEmitter {
           }
           this.stats.messageTypes.set(messageType, this.stats.messageTypes.get(messageType) + 1);
           
-          // Emit RTCM message
-          this.emit('rtcm', rtcmMessage);
+          // Don't emit individual messages here anymore - we already emitted the whole buffer
           index += messageLength;
         } else {
           break;

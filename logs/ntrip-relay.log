@@ -1,0 +1,101 @@
+2025-07-27 00:33:27 info: Database connection established successfully
+2025-07-27 00:33:27 info: Initializing NTRIP relay service...
+2025-07-27 00:33:27 info: API server running on port 3000
+2025-07-27 00:33:27 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-27 00:33:27 info: Found 1 active stations
+2025-07-27 00:33:27 info: Starting relay for station: HANOI_VRS
+2025-07-27 00:33:27 info: Added virtual station: HANOI_VRS (Hanoi VRS Mount Point)
+2025-07-27 00:33:27 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 00:33:27 info: Started relay for station: HANOI_VRS
+2025-07-27 00:33:27 info: NTRIP relay service initialized successfully
+2025-07-27 00:33:27 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-27 00:33:28 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 00:33:28 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 00:33:28 info: Connected to source caster for station HANOI_VRS
+2025-07-27 00:33:28 debug: Sent NMEA position to NTRIP caster: $GPGGA,173328.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 00:33:31 debug: New raw connection from 127.0.0.1
+2025-07-27 00:33:31 debug: Connection closed from 127.0.0.1
+2025-07-27 00:34:28 debug: Sent NMEA position to NTRIP caster: $GPGGA,173428.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 00:34:56 debug: New raw connection from 127.0.0.1
+2025-07-27 00:34:56 debug: Connection closed from 127.0.0.1
+2025-07-27 00:35:28 debug: Sent NMEA position to NTRIP caster: $GPGGA,173528.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 00:36:28 debug: Sent NMEA position to NTRIP caster: $GPGGA,173628.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 00:37:01 debug: New raw connection from 127.0.0.1
+2025-07-27 00:37:01 info: Client a146c081-3b12-48d1-bd7b-cd37d76ec3af (rover1) connected to station HANOI_VRS from 127.0.0.1
+2025-07-27 00:37:01 info: Rover rover1 connected to station HANOI_VRS from 127.0.0.1
+2025-07-27 00:37:01 debug: Client a146c081-3b12-48d1-bd7b-cd37d76ec3af position updated: {"lat":21.004569,"lon":105.7951135,"alt":0.8883,"quality":4,"satellites":10}
+2025-07-27 00:37:01 debug: Broadcasted 161 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:01 debug: Broadcasted 275 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:01 debug: Broadcasted 332 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:01 debug: Broadcasted 115 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:01 debug: Broadcasted 268 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:01 debug: Broadcasted 25 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:02 debug: Broadcasted 161 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:02 debug: Broadcasted 275 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:02 debug: Broadcasted 332 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:02 debug: Broadcasted 115 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:02 debug: Broadcasted 268 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:02 debug: Broadcasted 25 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:03 debug: Broadcasted 161 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:03 debug: Broadcasted 275 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:03 debug: Broadcasted 332 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:03 debug: Broadcasted 115 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:03 debug: Broadcasted 268 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:03 debug: Broadcasted 25 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:04 debug: Broadcasted 161 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:04 debug: Broadcasted 275 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:04 debug: Broadcasted 332 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:04 debug: Broadcasted 115 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:04 debug: Broadcasted 268 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:04 debug: Broadcasted 25 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:05 debug: Broadcasted 161 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:05 debug: Broadcasted 275 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:05 debug: Broadcasted 332 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:05 debug: Broadcasted 115 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:05 debug: Broadcasted 268 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:05 debug: Broadcasted 25 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:05 debug: Client a146c081-3b12-48d1-bd7b-cd37d76ec3af position updated: {"lat":21.004569,"lon":105.7951135,"alt":0.8883,"quality":4,"satellites":10}
+2025-07-27 00:37:06 debug: Broadcasted 161 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:06 debug: Broadcasted 275 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:06 debug: Broadcasted 332 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:06 debug: Broadcasted 115 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:06 debug: Broadcasted 268 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:06 debug: Broadcasted 25 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:07 debug: Broadcasted 161 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:07 debug: Broadcasted 275 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:07 debug: Broadcasted 332 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:07 debug: Broadcasted 115 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:07 debug: Broadcasted 268 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:07 debug: Broadcasted 25 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:08 debug: Broadcasted 32 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:08 debug: Broadcasted 161 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:08 debug: Broadcasted 275 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:08 debug: Broadcasted 332 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:08 debug: Broadcasted 115 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:08 debug: Broadcasted 268 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:08 debug: Broadcasted 25 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:09 debug: Broadcasted 161 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:09 debug: Broadcasted 275 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:09 debug: Broadcasted 332 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:09 debug: Broadcasted 115 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:09 debug: Broadcasted 268 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:09 debug: Broadcasted 25 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:10 debug: Broadcasted 161 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:10 debug: Broadcasted 275 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:10 debug: Broadcasted 332 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:10 debug: Broadcasted 115 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:10 debug: Broadcasted 268 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:10 debug: Broadcasted 25 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:10 debug: Client a146c081-3b12-48d1-bd7b-cd37d76ec3af position updated: {"lat":21.004569,"lon":105.7951135,"alt":0.8883,"quality":4,"satellites":10}
+2025-07-27 00:37:11 debug: Broadcasted 161 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:11 debug: Broadcasted 275 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:11 debug: Broadcasted 332 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:11 debug: Broadcasted 115 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:11 debug: Broadcasted 268 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:11 debug: Broadcasted 25 bytes to 1 clients on HANOI_VRS
+2025-07-27 00:37:12 debug: Connection closed from 127.0.0.1
+2025-07-27 00:37:12 debug: Removing client a146c081-3b12-48d1-bd7b-cd37d76ec3af - Current active clients: 1
+2025-07-27 00:37:12 info: Client a146c081-3b12-48d1-bd7b-cd37d76ec3af disconnected from station HANOI_VRS
+2025-07-27 00:37:12 info: Rover disconnected from station HANOI_VRS
+2025-07-27 00:37:28 debug: Sent NMEA position to NTRIP caster: $GPGGA,173728.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 00:37:39 info: Database connection established successfully

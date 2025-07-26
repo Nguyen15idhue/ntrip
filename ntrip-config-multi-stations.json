@@ -1,0 +1,143 @@
+{
+  "server": {
+    "port": 3000,
+    "ntripPort": 2101
+  },
+  "ntripClient": {
+    "host": "rtk.taikhoandodac.vn",
+    "port": 1509,
+    "mountpoint": "HNI_CauGiay",
+    "username": "admin2",
+    "password": "123456",
+    "reconnectInterval": 5000,
+    "maxReconnectAttempts": 10
+  },
+  "ntripCaster": {
+    "host": "0.0.0.0",
+    "port": 2101,
+    "operator": "Vietnam CORS Network",
+    "positionTimeout": 30000
+  },
+  "virtualStations": [
+    {
+      "name": "Hanoi Cau Giay Station",
+      "mountpoint": "HNI_CAUGIAY",
+      "identifier": "VNCG01",
+      "format": "RTCM 3.2",
+      "formatDetails": "1004,1005,1006,1007,1012,1033,1230",
+      "carrier": "2",
+      "navSystem": "GPS+GLO+GAL+BDS",
+      "network": "VNCORS",
+      "country": "VNM",
+      "latitude": 21.0362,
+      "longitude": 105.7905,
+      "nmea": false,
+      "solution": "1",
+      "generator": "Trimble",
+      "compression": "none",
+      "authentication": true,
+      "fee": false,
+      "bitrate": "2400"
+    },
+    {
+      "name": "Ho Chi Minh City Station",
+      "mountpoint": "HCM_CENTER",
+      "identifier": "VNHC01",
+      "format": "RTCM 3.2",
+      "formatDetails": "1004,1005,1006,1007,1012,1033,1230",
+      "carrier": "2",
+      "navSystem": "GPS+GLO+GAL+BDS",
+      "network": "VNCORS",
+      "country": "VNM",
+      "latitude": 10.7769,
+      "longitude": 106.7009,
+      "nmea": false,
+      "solution": "1",
+      "generator": "Leica",
+      "compression": "none",
+      "authentication": true,
+      "fee": false,
+      "bitrate": "2400"
+    },
+    {
+      "name": "Da Nang Station",
+      "mountpoint": "DN_CENTER",
+      "identifier": "VNDN01",
+      "format": "RTCM 3.2",
+      "formatDetails": "1004,1005,1006,1007,1012,1033,1230",
+      "carrier": "2",
+      "navSystem": "GPS+GLO+GAL+BDS",
+      "network": "VNCORS",
+      "country": "VNM",
+      "latitude": 16.0544,
+      "longitude": 108.2022,
+      "nmea": false,
+      "solution": "1",
+      "generator": "Topcon",
+      "compression": "none",
+      "authentication": true,
+      "fee": false,
+      "bitrate": "2400"
+    },
+    {
+      "name": "Can Tho Station",
+      "mountpoint": "CT_CENTER",
+      "identifier": "VNCT01",
+      "format": "RTCM 3.2",
+      "formatDetails": "1004,1005,1006,1007,1012,1033,1230",
+      "carrier": "2",
+      "navSystem": "GPS+GLO+GAL+BDS",
+      "network": "VNCORS",
+      "country": "VNM",
+      "latitude": 10.0302,
+      "longitude": 105.7942,
+      "nmea": false,
+      "solution": "1",
+      "generator": "Trimble",
+      "compression": "none",
+      "authentication": true,
+      "fee": false,
+      "bitrate": "2400"
+    }
+  ],
+  "virtualStation": {
+    "name": "Hanoi Cau Giay Station",
+    "mountpoint": "HNI_CAUGIAY",
+    "identifier": "VNCG01",
+    "format": "RTCM 3.2",
+    "formatDetails": "1004,1005,1006,1007,1012,1033,1230",
+    "carrier": "2",
+    "navSystem": "GPS+GLO+GAL+BDS",
+    "network": "VNCORS",
+    "country": "VNM",
+    "latitude": 21.0362,
+    "longitude": 105.7905,
+    "nmea": false,
+    "solution": "1",
+    "generator": "Trimble",
+    "compression": "none",
+    "authentication": true,
+    "fee": false,
+    "bitrate": "2400"
+  },
+  "users": [
+    {
+      "username": "rover1",
+      "password": "rover123",
+      "name": "Rover User 1",
+      "type": "user"
+    },
+    {
+      "username": "admin",
+      "password": "admin123",
+      "name": "Administrator",
+      "type": "admin"
+    },
+    {
+      "username": "survey1",
+      "password": "survey123",
+      "name": "Survey Team 1",
+      "type": "user"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "server": {
+    "port": 3000,
+    "ntripPort": 2101
+  },
+  "ntripClient": {
+    "host": "rtk.taikhoandodac.vn",
+    "port": 1509,
+    "mountpoint": "HNI_CauGiay",
+    "username": "admin2",
+    "password": "123456",
+    "reconnectInterval": 5000,
+    "maxReconnectAttempts": 10
+  },
+  "ntripCaster": {
+    "host": "0.0.0.0",
+    "port": 2101,
+    "operator": "Virtual NTRIP Service",
+    "positionTimeout": 30000
+  },
+  "virtualStation": {
+    "name": "Virtual GNSS Station",
+    "mountpoint": "VSTATION",
+    "identifier": "VRS_01",
+    "format": "RTCM 3.2",
+    "formatDetails": "RTCM 3.2 (1004,1005,1007,1012,1230)",
+    "carrier": "GPS+GLONASS",
+    "navSystem": "GPS+GLO+GAL+BDS",
+    "network": "VIRTUAL",
+    "country": "VIE",
+    "latitude": 21.0362,
+    "longitude": 105.7905,
+    "nmea": false,
+    "solution": "Single-Base",
+    "generator": "Custom NTRIP Caster",
+    "encryption": false,
+    "authentication": true,
+    "fee": false,
+    "bitrate": 500
+  },
+  "users": [
+    {
+      "username": "rover1",
+      "password": "rover123",
+      "name": "Rover User 1",
+      "type": "user"
+    },
+    {
+      "username": "admin",
+      "password": "admin123",
+      "name": "Admin User",
+      "type": "admin"
+    }
+  ]
+}

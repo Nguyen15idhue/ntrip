@@ -1,10 +1,10 @@
 // Script để tạo tài khoản rover mới hoặc kiểm tra rover hiện có
 // Chạy bằng lệnh: node create-rover.js
 
-import sequelize from './src/config/database.js';
-import { Rover, Station, User } from './src/models/index.js';
+import sequelize from '../src/config/database.js';
+import { Rover, Station, User } from '../src/models/index.js';
 import bcrypt from 'bcrypt';
-import { logger } from './src/utils/logger.js';
+import { logger } from '../src/utils/logger.js';
 
 async function createOrCheckRover() {
   try {

@@ -635,3 +635,10 @@
 2025-07-27 21:01:54 debug: Client aac08be7-e416-499c-b089-cb0058d4d342 position updated: {"lat":21.004569,"lon":105.7951135,"alt":0.8883,"quality":4,"satellites":10}
 2025-07-27 21:01:54 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
 2025-07-27 21:01:55 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:56 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:57 debug: Connection closed from 127.0.0.1
+2025-07-27 21:01:57 debug: Removing client aac08be7-e416-499c-b089-cb0058d4d342 - Current active clients: 1
+2025-07-27 21:01:57 info: Client aac08be7-e416-499c-b089-cb0058d4d342 disconnected from station HANOI_VRS
+2025-07-27 21:01:57 info: Rover disconnected from station HANOI_VRS
+2025-07-27 21:02:44 debug: Sent NMEA position to NTRIP caster: $GPGGA,140244.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6E
+2025-07-27 21:03:44 debug: Sent NMEA position to NTRIP caster: $GPGGA,140344.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6F

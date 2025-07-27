@@ -265,7 +265,16 @@ router.post('/:id/start', [authenticateJWT, isAdmin], async (req, res) => {
       });
     }
     
-    // Update status
+    // First stop any existing relay to ensure clean state
+    try {
+      logger.info(`Ensuring station ${station.name} is stopped before starting`);
+      await relayService.stopRelay(station.name);
+    } catch (stopError) {
+      logger.warn(`Non-critical error when stopping station before restart: ${stopError.message}`);
+      // Continue even if stopping fails
+    }
+    
+    // Update status in database
     station.status = 'active';
     await station.save();
     
@@ -273,14 +282,15 @@ router.post('/:id/start', [authenticateJWT, isAdmin], async (req, res) => {
     const result = await relayService.startRelay(station.id);
     
     if (!result.success) {
+      logger.error(`Failed to start station ${station.name}: ${result.message}`);
       return res.status(500).json({
         success: false,
-        message: 'Failed to start station'
+        message: `Failed to start station: ${result.message}`
       });
     }
     
-    // Refresh source table to reflect active station
-    await relayService.refreshSourceTable();
+    // Synchronize with database to ensure consistency
+    await relayService.syncWithDatabase();
     
     res.status(200).json({
       success: true,
@@ -291,7 +301,7 @@ router.post('/:id/start', [authenticateJWT, isAdmin], async (req, res) => {
     logger.error(`Error starting station ${req.params.id}:`, error);
     res.status(500).json({
       success: false,
-      message: 'Failed to start station'
+      message: `Failed to start station: ${error.message}`
     });
   }
 });
@@ -308,33 +318,32 @@ router.post('/:id/stop', [authenticateJWT, isAdmin], async (req, res) => {
       });
     }
     
-    // Update status
+    // First update status in database
     station.status = 'inactive';
     await station.save();
     
-    // Stop station in relay service
+    // Always force refresh the sourcetable to ensure sync
+    await relayService.refreshSourceTable();
+    
+    // Stop station in relay service - we'll consider this successful even if no relay was running
     const result = await relayService.stopRelay(station.name);
     
-    if (!result.success) {
-      return res.status(500).json({
-        success: false,
-        message: 'Failed to stop station'
-      });
-    }
+    // We consider this a success even if the relay wasn't found
+    // Because the goal is to make sure the station is stopped
     
-    // Refresh source table to reflect inactive station
-    await relayService.refreshSourceTable();
+    // Synchronize with database to ensure consistency
+    await relayService.syncWithDatabase();
     
     res.status(200).json({
       success: true,
-      message: 'Station stopped successfully',
+      message: result.success ? 'Station stopped successfully' : 'Station marked as inactive (no active relay found)',
       data: station
     });
   } catch (error) {
     logger.error(`Error stopping station ${req.params.id}:`, error);
     res.status(500).json({
       success: false,
-      message: 'Failed to stop station'
+      message: `Failed to stop station: ${error.message}`
     });
   }
 });

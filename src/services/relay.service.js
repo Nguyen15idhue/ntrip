@@ -16,7 +16,10 @@ class RelayService extends EventEmitter {
    * Initialize the relay service
    */
   async initialize() {
-    if (this.initialized) return;
+    if (this.initialized) {
+      logger.info('NTRIP relay service already initialized');
+      return;
+    }
     
     try {
       logger.info('Initializing NTRIP relay service...');
@@ -37,11 +40,11 @@ class RelayService extends EventEmitter {
         logger.error('NTRIP caster error:', error);
       });
       
-      // Load and start active stations from database
-      await this._loadActiveStations();
+      // First refresh source table to ensure caster has all stations
+      await this.caster.refreshSourceTable();
       
-      // Initial refresh of source table
-      await this.refreshSourceTable();
+      // Then load and start active stations from database
+      await this._loadActiveStations();
       
       this.initialized = true;
       logger.info('NTRIP relay service initialized successfully');
@@ -81,17 +84,27 @@ class RelayService extends EventEmitter {
       
       // Start relays for stations that don't have one running
       for (const station of activeStations) {
-        if (!this.clients.has(station.name)) {
-          logger.info(`Starting missing relay for station: ${station.name}`);
-          await this.startRelay(station.id);
+        try {
+          if (!this.clients.has(station.name)) {
+            logger.info(`Starting missing relay for station: ${station.name}`);
+            await this.startRelay(station.id);
+          }
+        } catch (stationError) {
+          logger.error(`Error starting relay for station ${station.name}:`, stationError);
+          // Continue with other stations even if one fails
         }
       }
       
       // Stop relays for stations that are no longer active
       for (const stationName of currentRelays) {
-        if (!databaseStations.has(stationName)) {
-          logger.info(`Stopping relay for inactive station: ${stationName}`);
-          await this.stopRelay(stationName);
+        try {
+          if (!databaseStations.has(stationName)) {
+            logger.info(`Stopping relay for inactive station: ${stationName}`);
+            await this.stopRelay(stationName);
+          }
+        } catch (stationError) {
+          logger.error(`Error stopping relay for station ${stationName}:`, stationError);
+          // Continue with other stations even if one fails
         }
       }
       
@@ -130,16 +143,32 @@ class RelayService extends EventEmitter {
         return { success: true, message: 'Relay already running', station };
       }
       
-      // Add station to caster
-      this.caster.addStation({
-        name: station.name,
-        description: station.description,
-        lat: parseFloat(station.lat),
-        lon: parseFloat(station.lon),
-        identifier: `VNM_${station.name}`,
-        country: 'VNM',
-        nmea: true
-      });
+      // Check if caster is initialized
+      if (!this.caster) {
+        logger.error(`Cannot start relay for station ${station.name}: caster not initialized`);
+        return { success: false, message: 'Caster not initialized', station };
+      }
+      
+      // Add station to caster - skip if already exists
+      try {
+        // Check if station already exists in caster
+        if (!this.caster.stations.has(station.name)) {
+          this.caster.addStation({
+            name: station.name,
+            description: station.description,
+            lat: parseFloat(station.lat),
+            lon: parseFloat(station.lon),
+            identifier: `VNM_${station.name}`,
+            country: 'VNM',
+            nmea: true
+          });
+        } else {
+          logger.info(`Station ${station.name} already exists in caster, skipping add`);
+        }
+      } catch (stationError) {
+        logger.warn(`Could not add station to caster: ${stationError.message}`);
+        // Continue even if we can't add the station - it might already exist
+      }
       
       // Create NTRIP client to source caster
       const client = new NtripClient({
@@ -210,36 +239,120 @@ class RelayService extends EventEmitter {
    */
   async stopRelay(stationName) {
     try {
-      // Check if client exists
-      if (!this.clients.has(stationName)) {
-        logger.info(`No relay running for station: ${stationName}`);
-        return { success: false, message: 'No relay running for this station' };
+      let clientFound = false;
+      
+      // Check if client exists in our map
+      if (this.clients.has(stationName)) {
+        clientFound = true;
+        const { client, intervalId } = this.clients.get(stationName);
+        
+        // Disconnect client
+        if (client) {
+          client.removeAllListeners();
+          client.disconnect();
+        }
+        
+        // Clear interval
+        if (intervalId) {
+          clearInterval(intervalId);
+        }
+        
+        // Remove from clients map
+        this.clients.delete(stationName);
+        logger.info(`Stopped relay client for station: ${stationName}`);
+      } else {
+        logger.info(`No relay client found in map for station: ${stationName}`);
       }
       
-      const { client, intervalId } = this.clients.get(stationName);
-      
-      // Disconnect client
-      if (client) {
-        client.removeAllListeners();
-        client.disconnect();
+      // Always attempt to remove from caster regardless of client existence
+      if (this.caster && this.caster.stations.has(stationName)) {
+        this.caster.removeStation(stationName);
+        logger.info(`Removed station from caster: ${stationName}`);
+        clientFound = true;
+      } else {
+        logger.info(`Station ${stationName} not found in caster`);
       }
       
-      // Clear interval
-      if (intervalId) {
-        clearInterval(intervalId);
+      // Search for any orphaned client by station name (for recovery)
+      for (const [name, data] of this.clients.entries()) {
+        if (data.station && data.station.name === stationName) {
+          if (data.client) {
+            data.client.removeAllListeners();
+            data.client.disconnect();
+          }
+          if (data.intervalId) {
+            clearInterval(data.intervalId);
+          }
+          this.clients.delete(name);
+          logger.info(`Stopped orphaned relay client for station: ${stationName} (mapped as ${name})`);
+          clientFound = true;
+        }
       }
       
-      // Remove from clients map
-      this.clients.delete(stationName);
+      if (!clientFound) {
+        logger.warn(`No relay or station found for: ${stationName}`);
+        return { success: false, message: 'No relay or station found for this station' };
+      }
       
-      // Remove from caster
-      this.caster.removeStation(stationName);
-      
-      logger.info(`Stopped relay for station: ${stationName}`);
+      logger.info(`Successfully stopped relay for station: ${stationName}`);
       return { success: true, message: 'Relay stopped' };
     } catch (error) {
       logger.error(`Error stopping relay for station ${stationName}:`, error);
       return { success: false, message: error.message };
+    }
+  }
+
+  /**
+   * Synchronize relay service state with database
+   * This ensures that relay clients match active stations in database
+   */
+  async syncWithDatabase() {
+    try {
+      logger.info('Synchronizing relay service state with database');
+      
+      // Get all active stations from database
+      const activeStations = await Station.findAll({
+        where: { status: 'active' }
+      });
+      
+      // Get current clients
+      const currentStationNames = new Set(this.clients.keys());
+      const dbStationNames = new Set(activeStations.map(s => s.name));
+      
+      logger.info(`Found ${activeStations.length} active stations in database and ${currentStationNames.size} active relays in memory`);
+      
+      // Start relays for stations in database but not in memory
+      for (const station of activeStations) {
+        if (!this.clients.has(station.name)) {
+          logger.info(`Starting missing relay for station: ${station.name}`);
+          try {
+            await this.startRelay(station.id);
+          } catch (startError) {
+            logger.error(`Error starting relay for ${station.name}:`, startError);
+          }
+        }
+      }
+      
+      // Stop relays for stations in memory but not active in database
+      for (const stationName of currentStationNames) {
+        if (!dbStationNames.has(stationName)) {
+          logger.info(`Stopping relay for inactive station: ${stationName}`);
+          try {
+            await this.stopRelay(stationName);
+          } catch (stopError) {
+            logger.error(`Error stopping relay for ${stationName}:`, stopError);
+          }
+        }
+      }
+      
+      // Refresh source table
+      await this.refreshSourceTable();
+      
+      logger.info('Relay service synchronized with database');
+      return true;
+    } catch (error) {
+      logger.error('Error synchronizing with database:', error);
+      return false;
     }
   }
 
@@ -298,15 +411,41 @@ class RelayService extends EventEmitter {
    */
   async _loadActiveStations() {
     try {
+      // Clear existing clients to prevent duplicates
+      for (const [stationName, { client, intervalId }] of this.clients.entries()) {
+        try {
+          logger.info(`Cleaning up existing relay for station: ${stationName}`);
+          if (client) {
+            client.removeAllListeners();
+            client.disconnect();
+          }
+          if (intervalId) {
+            clearInterval(intervalId);
+          }
+        } catch (cleanupError) {
+          logger.warn(`Error cleaning up station ${stationName}:`, cleanupError);
+        }
+      }
+      
+      // Clear client map
+      this.clients.clear();
+      
+      // Get active stations from database
       const activeStations = await Station.findAll({
         where: { status: 'active' }
       });
       
       logger.info(`Found ${activeStations.length} active stations`);
       
+      // Start relays for all active stations
       for (const station of activeStations) {
-        logger.info(`Starting relay for station: ${station.name}`);
-        await this.startRelay(station.id);
+        try {
+          logger.info(`Starting relay for station: ${station.name}`);
+          await this.startRelay(station.id);
+        } catch (stationError) {
+          logger.error(`Error starting relay for station ${station.name}:`, stationError);
+          // Continue with other stations even if one fails
+        }
       }
     } catch (error) {
       logger.error('Error loading active stations:', error);

@@ -86,10 +86,25 @@ class NtripCaster extends EventEmitter {
    * @returns {Object} Added station
    */
   addStation(station) {
+    // If station already exists, just update it instead of throwing an error
     if (this.stations.has(station.name)) {
-      throw new Error(`Station with mountpoint ${station.name} already exists`);
+      // Update existing station with new properties
+      const existingStation = this.stations.get(station.name);
+      
+      // Update fields but preserve client list and other runtime data
+      const updatedStation = {
+        ...existingStation,
+        ...station,
+        clients: existingStation.clients, // Preserve connected clients
+        stats: existingStation.stats      // Preserve statistics
+      };
+      
+      this.stations.set(station.name, updatedStation);
+      logger.info(`Updated existing virtual station: ${station.name} (${station.description || 'No description'})`);
+      return updatedStation;
     }
     
+    // Add new station
     this.stations.set(station.name, { 
       ...station, 
       clients: new Set(),
@@ -708,23 +723,28 @@ class NtripCaster extends EventEmitter {
           logger.debug(`Updated existing station in sourcetable: ${dbStation.name}`);
         } else {
           // Add new station to memory
-          logger.info(`Adding new station to sourcetable: ${dbStation.name}`);
-          this.addStation({
-            name: dbStation.name,
-            description: dbStation.description,
-            lat: parseFloat(dbStation.lat),
-            lon: parseFloat(dbStation.lon),
-            identifier: `VNM_${dbStation.name}`,
-            country: 'VNM',
-            nmea: true,
-            active: true,
-            status: true,
-            format: 'RTCM 3.2',
-            formatDetails: '1004(1),1005/1006(5),1019(5),1020(5)',
-            carrier: '2',
-            navSystem: 'GPS+GLO+GAL+BDS',
-            network: 'CORS'
-          });
+          try {
+            logger.info(`Adding new station to sourcetable: ${dbStation.name}`);
+            this.addStation({
+              name: dbStation.name,
+              description: dbStation.description,
+              lat: parseFloat(dbStation.lat),
+              lon: parseFloat(dbStation.lon),
+              identifier: `VNM_${dbStation.name}`,
+              country: 'VNM',
+              nmea: true,
+              active: true,
+              status: true,
+              format: 'RTCM 3.2',
+              formatDetails: '1004(1),1005/1006(5),1019(5),1020(5)',
+              carrier: '2',
+              navSystem: 'GPS+GLO+GAL+BDS',
+              network: 'CORS'
+            });
+          } catch (addError) {
+            logger.warn(`Could not add station ${dbStation.name} to sourcetable: ${addError.message}`);
+            // Continue with other stations even if one fails
+          }
         }
       }
       

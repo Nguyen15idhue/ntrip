@@ -127,3 +127,49 @@
     at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async file:///C:/laragon/www/ntrip/src/routes/station.routes.js:201:7
+2025-07-27 22:43:39 error: TypeError: Cannot read properties of null (reading 'addStation')
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/laragon/www/ntrip/src/routes/station.routes.js:273:20
+2025-07-27 22:43:51 error: Error: Station with mountpoint HANOI_VRS already exists
+    at NtripCaster.addStation (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:90:13)
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RelayService.refreshSourceTable (file:///C:/laragon/www/ntrip/src/services/relay.service.js:86:11)
+    at async RelayService.initialize (file:///C:/laragon/www/ntrip/src/services/relay.service.js:44:7)
+    at async initialize (file:///C:/laragon/www/ntrip/src/app.js:85:5)
+2025-07-27 22:43:51 error: Error: Station with mountpoint HNI_141 already exists
+    at NtripCaster.addStation (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:90:13)
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RelayService.refreshSourceTable (file:///C:/laragon/www/ntrip/src/services/relay.service.js:86:11)
+    at async RelayService.initialize (file:///C:/laragon/www/ntrip/src/services/relay.service.js:44:7)
+    at async initialize (file:///C:/laragon/www/ntrip/src/app.js:85:5)
+2025-07-27 22:43:54 error: TypeError: Cannot read properties of null (reading 'addStation')
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/laragon/www/ntrip/src/routes/station.routes.js:273:20
+2025-07-27 22:44:36 error: Error: Station with mountpoint HANOI_VRS already exists
+    at NtripCaster.addStation (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:90:13)
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RelayService.refreshSourceTable (file:///C:/laragon/www/ntrip/src/services/relay.service.js:86:11)
+    at async RelayService.initialize (file:///C:/laragon/www/ntrip/src/services/relay.service.js:44:7)
+    at async initialize (file:///C:/laragon/www/ntrip/src/app.js:85:5)
+2025-07-27 22:44:36 error: Error: Station with mountpoint HNI_141 already exists
+    at NtripCaster.addStation (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:90:13)
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RelayService.refreshSourceTable (file:///C:/laragon/www/ntrip/src/services/relay.service.js:86:11)
+    at async RelayService.initialize (file:///C:/laragon/www/ntrip/src/services/relay.service.js:44:7)
+    at async initialize (file:///C:/laragon/www/ntrip/src/app.js:85:5)
+2025-07-27 22:44:39 error: TypeError: Cannot read properties of null (reading 'addStation')
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/laragon/www/ntrip/src/routes/station.routes.js:273:20
+2025-07-27 22:48:36 error: Cannot start relay for station HNI_141: caster not initialized
+2025-07-27 22:53:30 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:821:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:399:27)
+2025-07-27 22:53:45 error: Cannot start relay for station HNI_141: caster not initialized

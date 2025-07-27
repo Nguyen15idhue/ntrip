@@ -22,3 +22,28 @@
     at Function.listen (C:\laragon\www\ntrip\node_modules\express\lib\application.js:635:24)
     at initialize (file:///C:/laragon/www/ntrip/src/app.js:79:24)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-27 21:20:54 error: TypeError: relayService.setupStation is not a function
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:119:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-27 21:22:32 error: TypeError: relayService.setupStation is not a function
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:119:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-27 21:26:27 error: TypeError: relayService.setupStation is not a function
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:119:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-27 21:26:54 error: TypeError: relayService.setupStation is not a function
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:119:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-27 21:28:04 error: TypeError: relayService.setupStation is not a function
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:119:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-27 21:28:14 error: TypeError: relayService.setupStation is not a function
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:119:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-27 21:28:58 error: TypeError: relayService.setupStation is not a function
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:119:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-27 21:34:36 error: TypeError: Cannot read properties of null (reading 'addStation')
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:82:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/laragon/www/ntrip/src/routes/station.routes.js:119:7

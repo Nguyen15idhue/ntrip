@@ -1081,20 +1081,103 @@ Creates a new station. Admin access required.
 
 #### Request Body
 
+**Required fields:** `name`, `lat`, `lon`, `location_id`, `source_host`, `source_mount_point`
+
 ```json
 {
-  "name": "DN_SONTRA",
-  "description": "Da Nang - Son Tra CORS Station",
-  "lat": 16.0544,
-  "lon": 108.2022,
-  "location_id": 3,
-  "source_host": "cors3.example.com",
-  "source_port": 2101,
-  "source_user": "user3",
-  "source_pass": "password3",
-  "source_mount_point": "DN",
+  "name": "HNI_QuocOAI22",
+  "description": "HN",
+  "lat": 20.92616439472222,
+  "lon": 105.60029841527776,
+  "location_id": 1,
+  "source_host": "rtk.taikhoandodac.vn",
+  "source_port": 1509,
+  "source_user": "admin2",
+  "source_pass": "123456",
+  "source_mount_point": "HNI_QuocOai",
   "status": "active"
 }
+```
+
+#### Success Response
+
+- **Code**: 201 Created
+- **Content**:
+
+```json
+{
+  "success": true,
+  "data": {
+    "id": 3,
+    "name": "HNI_QuocOAI22",
+    "description": "HN",
+    "lat": "20.9261644",
+    "lon": "105.6002984",
+    "location_id": 1,
+    "source_host": "rtk.taikhoandodac.vn",
+    "source_port": 1509,
+    "source_user": "admin2",
+    "source_pass": "123456",
+    "source_mount_point": "HNI_QuocOai",
+    "status": "active",
+    "updated_at": "2025-07-27T12:30:15.000Z",
+    "created_at": "2025-07-27T12:30:15.000Z"
+  },
+  "message": "Station created successfully"
+}
+```
+
+#### Error Responses
+
+- **Code**: 400 Bad Request
+  - **Content**: `{"success": false, "message": "Name, location, latitude, longitude, source host, and source mount point are required"}`
+  - **Cause**: Missing required fields
+
+- **Code**: 400 Bad Request
+  - **Content**: `{"success": false, "message": "Station with this name already exists"}`
+  - **Cause**: Duplicate station name
+
+- **Code**: 500 Internal Server Error
+  - **Content**: `{"success": false, "message": "Failed to create station"}`
+  - **Cause**: Server error
+
+#### Test Example
+
+```javascript
+async function testCreateStation() {
+  const token = 'your_jwt_token';
+  
+  const station = {
+    "name": "TEST_STATION_01",
+    "description": "Test station",
+    "lat": 20.92616439472222,
+    "lon": 105.60029841527776,
+    "location_id": 1,
+    "source_host": "rtk.taikhoandodac.vn",
+    "source_port": 1509,
+    "source_user": "admin2",
+    "source_pass": "123456",
+    "source_mount_point": "HNI_QuocOai",
+    "status": "inactive"  // Use 'inactive' for testing, 'active' to immediately start the relay
+  };
+  
+  try {
+    const response = await axios.post('http://localhost:3000/api/stations', station, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      }
+    });
+    
+    console.log('Station created successfully:', response.data);
+    return response.data;
+  } catch (error) {
+    console.error('Station creation failed:', error.response ? error.response.data : error.message);
+  }
+}
+
+// Test the station creation
+testCreateStation();
 ```
 
 #### Success Response

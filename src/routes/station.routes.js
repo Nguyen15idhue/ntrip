@@ -54,8 +54,8 @@ router.get('/:id', authenticateJWT, async (req, res) => {
   }
 });
 
-// Create new station - basic auth provides full access
-router.post('/', authenticateJWT, async (req, res) => {
+// Create new station - Admin access required
+router.post('/', [authenticateJWT, isAdmin], async (req, res) => {
   try {
     const {
       name,
@@ -76,10 +76,10 @@ router.post('/', authenticateJWT, async (req, res) => {
     } = req.body;
     
     // Validate required fields
-    if (!name || !location_id || !source_host || !source_mount_point) {
+    if (!name || !location_id || !source_host || !source_mount_point || lat === undefined || lon === undefined) {
       return res.status(400).json({
         success: false,
-        message: 'Name, location, source host, and source mount point are required'
+        message: 'Name, location, latitude, longitude, source host, and source mount point are required'
       });
     }
     
@@ -116,7 +116,7 @@ router.post('/', authenticateJWT, async (req, res) => {
     
     // If station is active, set it up in relay service
     if (station.status === 'active') {
-      await relayService.setupStation(station);
+      await relayService.startRelay(station.id);
     }
     
     res.status(201).json({
@@ -187,14 +187,15 @@ router.put('/:id', [authenticateJWT, isAdmin], async (req, res) => {
     if (oldStatus !== status) {
       if (status === 'active') {
         // Activate station
-        await relayService.setupStation(station);
+        await relayService.startRelay(station.id);
       } else if (status === 'inactive') {
         // Deactivate station
-        await relayService.stopStation(station.id);
+        await relayService.stopRelay(station.name);
       }
     } else if (status === 'active') {
       // Restart active station with new configuration
-      await relayService.restartStation(station.id);
+      await relayService.stopRelay(station.name);
+      await relayService.startRelay(station.id);
     }
     
     res.status(200).json({
@@ -225,7 +226,7 @@ router.delete('/:id', [authenticateJWT, isAdmin], async (req, res) => {
     
     // Stop station if active
     if (station.status === 'active') {
-      await relayService.stopStation(station.id);
+      await relayService.stopRelay(station.name);
     }
     
     await station.destroy();
@@ -260,9 +261,9 @@ router.post('/:id/start', [authenticateJWT, isAdmin], async (req, res) => {
     await station.save();
     
     // Set up station in relay service
-    const success = await relayService.setupStation(station);
+    const result = await relayService.startRelay(station.id);
     
-    if (!success) {
+    if (!result.success) {
       return res.status(500).json({
         success: false,
         message: 'Failed to start station'
@@ -300,9 +301,9 @@ router.post('/:id/stop', [authenticateJWT, isAdmin], async (req, res) => {
     await station.save();
     
     // Stop station in relay service
-    const success = await relayService.stopStation(station.id);
+    const result = await relayService.stopRelay(station.name);
     
-    if (!success) {
+    if (!result.success) {
       return res.status(500).json({
         success: false,
         message: 'Failed to stop station'

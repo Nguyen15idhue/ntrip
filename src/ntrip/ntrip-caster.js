@@ -2,8 +2,9 @@ import net from 'net';
 import { Buffer } from 'buffer';
 import { EventEmitter } from 'events';
 import crypto from 'crypto';
+import jwt from 'jsonwebtoken';
 import { logger } from '../utils/logger.js';
-import { Rover, Station } from '../models/index.js';
+import { Rover, Station, User } from '../models/index.js';
 
 /**
  * Enhanced NTRIP Caster Service
@@ -369,7 +370,7 @@ class NtripCaster extends EventEmitter {
     
     // Handle sourcetable requests
     if (!mountpoint || mountpoint === '') {
-      const sourcetable = this.getSourcetable();
+      const sourcetable = await this.getSourcetable();
       socket.write(sourcetable);
       socket.destroy();
       return;
@@ -390,7 +391,7 @@ class NtripCaster extends EventEmitter {
       if (!roverCredentials) {
         logger.warn(`Authentication failed for request to ${mountpoint}`);
         socket.write('HTTP/1.1 401 Unauthorized\r\n');
-        socket.write('WWW-Authenticate: Basic realm="NTRIP Caster"\r\n');
+        socket.write('WWW-Authenticate: Basic realm="NTRIP Caster", Bearer\r\n');
         socket.write('\r\n');
         socket.write('ERROR - Authentication failed');
         socket.destroy();
@@ -414,54 +415,101 @@ class NtripCaster extends EventEmitter {
    * @private
    */
   async _authenticateRover(authHeader, mountpoint) {
-    if (!authHeader || !authHeader.startsWith('Basic ')) {
+    // Support both Basic auth (for GNSS devices) and Bearer token (for API clients)
+    if (!authHeader) {
       return null;
     }
     
     try {
-      const credentials = Buffer.from(authHeader.slice(6), 'base64').toString();
-      const [username, password] = credentials.split(':');
-      
-      logger.debug(`Authenticating rover with username: ${username} for mountpoint: ${mountpoint}`);
-      
-      // Find rover in database without requiring station link
-      const rover = await Rover.findOne({ 
-        where: { 
-          username,
-          status: 'active'
+      // Handle Basic auth for backward compatibility with GNSS devices
+      if (authHeader.startsWith('Basic ')) {
+        const credentials = Buffer.from(authHeader.slice(6), 'base64').toString();
+        const [username, password] = credentials.split(':');
+        
+        logger.debug(`Authenticating rover with Basic auth: ${username} for mountpoint: ${mountpoint}`);
+        
+        // Find rover in database without requiring station link
+        const rover = await Rover.findOne({ 
+          where: { 
+            username,
+            status: 'active'
+          }
+        });
+        
+        if (!rover) {
+          logger.warn(`Authentication failed: Rover '${username}' not found or not active in database`);
+          return null;
         }
-        // Removed the include with Station condition to allow any rover to connect to any station
-      });
-      
-      if (!rover) {
-        logger.warn(`Authentication failed: Rover '${username}' not found or not active in database`);
-        return null;
+        
+        logger.debug(`Rover '${username}' found, validating password...`);
+        
+        // Validate password
+        const isValid = await rover.validatePassword(password);
+        if (!isValid) {
+          logger.warn(`Authentication failed: Invalid password for rover '${username}'`);
+          return null;
+        }
+        
+        // Update last connection time
+        rover.last_connection = new Date();
+        await rover.save();
+        
+        return {
+          id: rover.id,
+          username: rover.username,
+          stationId: rover.station_id,
+          userId: rover.user_id
+        };
       }
       
-      logger.debug(`Rover '${username}' found, validating password...`);
-      
-      // Validate password
-      const isValid = await rover.validatePassword(password);
-      if (!isValid) {
-        logger.warn(`Authentication failed: Invalid password for rover '${username}'`);
-        return null;
+      // Handle JWT Bearer token auth for API clients
+      else if (authHeader.startsWith('Bearer ')) {
+        const token = authHeader.slice(7);
+        
+        logger.debug(`Authenticating with Bearer token for mountpoint: ${mountpoint}`);
+        
+        // Verify JWT token
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        
+        // Find user by ID from token
+        const user = await User.findByPk(decoded.id);
+        if (!user) {
+          logger.warn(`JWT auth failed: User not found for id ${decoded.id}`);
+          return null;
+        }
+        
+        // Find an associated rover for this user
+        const rover = await Rover.findOne({
+          where: {
+            user_id: user.id,
+            status: 'active'
+          }
+        });
+        
+        if (!rover) {
+          logger.warn(`JWT auth failed: No active rover found for user ${user.email}`);
+          return null;
+        }
+        
+        logger.debug(`JWT auth successful for rover id ${rover.id} associated with user ${user.email}`);
+        
+        // Update last connection time
+        rover.last_connection = new Date();
+        await rover.save();
+        
+        return {
+          id: rover.id,
+          username: rover.username,
+          stationId: rover.station_id,
+          userId: user.id
+        };
       }
       
-      logger.debug(`Password validation successful for rover '${username}'`);
-      
-      // Update last connection time
-      rover.last_connection = new Date();
-      await rover.save();
-      
-      return {
-        id: rover.id,
-        username: rover.username,
-        stationId: rover.station_id,
-        userId: rover.user_id
-      };
+      // No valid authentication method found
+      return null;
     } catch (error) {
-      logger.error('Authentication error', error);
-      throw error;
+      logger.error('Authentication error:', error);
+      return null;
     }
   }
 
@@ -593,6 +641,116 @@ class NtripCaster extends EventEmitter {
       ip: client.ip,
       username: client.rover ? client.rover.username : 'unknown'
     });
+  }
+
+  /**
+   * Generate and return an NTRIP sourcetable
+   * @returns {string} The complete sourcetable response with headers
+   */
+  async getSourcetable() {
+    // Generate NTRIP standard sourcetable
+    let table = '';
+    
+    try {
+      // Get all stations from the database
+      const stations = await Station.findAll();
+      
+      // Add stream entries (STR records) for configured stations
+      for (const [mountpoint, station] of this.stations.entries()) {
+        const str = [
+          'STR',                                               // Record type
+          mountpoint,                                          // Mountpoint name (using station name)
+          station.identifier || mountpoint,                    // Source identifier
+          station.format || 'RTCM 3.2',                        // Data format
+          station.formatDetails || '1004(1),1005(60),1007(60),1012(1),1230(5)', // Format details
+          station.carrier || '2',                              // Carrier phase (1=L1, 2=L1+L2)
+          station.navSystem || 'GPS+GLO+GAL+BDS',             // Navigation system
+          station.network || 'VRS',                           // Network type (VRS, RTK, etc.)
+          station.country || 'VNM',                           // Country code (ISO 3166)
+          station.lat.toFixed(4),                             // Latitude (degrees, 4 decimal places)
+          station.lon.toFixed(4),                             // Longitude (degrees, 4 decimal places)
+          station.nmea ? '1' : '0',                           // NMEA required (0=no, 1=yes)
+          station.solution || '1',                            // Solution type (0=single, 1=network)
+          station.generator || 'NTRIP/2.0',                   // Generator/software
+          station.compression || 'none',                      // Compression (none, gzip)
+          station.authentication ? 'B' : 'N',                // Authentication (N=none, B=basic, D=digest)
+          station.fee ? 'Y' : 'N',                           // Fee (Y=yes, N=no)
+          station.bitrate || '2400'                          // Bitrate (bits per second)
+        ].join(';');
+        table += str + '\r\n';
+      }
+      
+      // Add stream entries (STR records) for database stations
+      for (const dbStation of stations) {
+        // If this station is already in the active stations map, skip it
+        if (this.stations.has(dbStation.name)) continue;
+        
+        const str = [
+          'STR',                                               // Record type
+          dbStation.name,                                      // Mountpoint name (using station name from DB)
+          dbStation.id.toString(),                             // Source identifier (using DB ID)
+          'RTCM 3.2',                                         // Data format
+          '1004(1),1005(60),1007(60),1012(1),1230(5)',       // Format details
+          '2',                                                // Carrier phase (L1+L2)
+          'GPS+GLO+GAL+BDS',                                  // Navigation system
+          'CORS',                                             // Network type
+          'VNM',                                              // Country code
+          dbStation.lat.toFixed(4),                           // Latitude
+          dbStation.lon.toFixed(4),                           // Longitude
+          '1',                                                // NMEA required
+          '1',                                                // Solution type (network)
+          'NTRIP/2.0',                                       // Generator
+          'none',                                             // Compression
+          'B',                                                // Authentication required
+          'N',                                                // No fee
+          '2400'                                              // Bitrate
+        ].join(';');
+        table += str + '\r\n';
+      }
+    } catch (error) {
+      logger.error('Error retrieving stations for sourcetable', error);
+    }
+    
+    // Add caster entry (CAS record)
+    const host = this.options.host === '0.0.0.0' ? 'localhost' : this.options.host;
+    const cas = [
+      'CAS',                                                  // Record type
+      host,                                                   // Host
+      this.options.port.toString(),                          // Port
+      'VN_NTRIP',                                            // Source identifier
+      this.options.operator || 'NTRIP Relay Service',        // Operator
+      '0',                                                   // NMEA required
+      'VNM',                                                 // Country
+      '16.0000',                                             // Latitude (center of Vietnam)
+      '106.0000',                                            // Longitude (center of Vietnam)
+      ''                                                     // Fallback host (optional)
+    ].join(';');
+    table += cas + '\r\n';
+    
+    // Add network entry (NET record)
+    const net = [
+      'NET',                                                  // Record type
+      'VN_CORS',                                             // Network identifier
+      this.options.operator || 'NTRIP Relay Service',        // Operator
+      'B',                                                   // Authentication required
+      'N',                                                   // No fee
+      '',                                                    // Web address
+      '',                                                    // Web registration
+      'Vietnam CORS Network for RTK positioning'             // Misc info
+    ].join(';');
+    table += net + '\r\n';
+    
+    // End marker
+    table += 'ENDSOURCETABLE\r\n';
+    
+    // Return complete sourcetable with proper NTRIP headers
+    const header = 'SOURCETABLE 200 OK\r\n' +
+                  'Content-Type: text/plain\r\n' +
+                  'Server: NTRIP Caster/2.0\r\n' +
+                  'Connection: close\r\n' +
+                  '\r\n';
+    
+    return header + table;
   }
 }
 

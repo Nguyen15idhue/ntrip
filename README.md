@@ -6,11 +6,12 @@ A Node.js-based NTRIP Relay system that provides RESTful API and low-latency RTC
 
 - Connect to source NTRIP casters and relay data to multiple rovers
 - Virtual mount points with customizable names
-- User authentication and authorization (JWT)
-- Rover authentication for mount points
+- User authentication and authorization (JWT Bearer Tokens)
+- Dual authentication support for rovers (Basic Auth for GNSS devices, Bearer Token for API clients)
 - Role-based access control (admin/user)
 - Low-latency, high-performance RTCM data relay
 - Database-driven configuration
+- RESTful API with comprehensive documentation
 
 ## Prerequisites
 
@@ -43,6 +44,15 @@ setup-db.bat
 mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS ntrip_relay CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 node src/utils/migrate.js
 ```
+
+## Authentication Update
+
+As of the latest update, the system now supports dual authentication methods:
+
+- **JWT Bearer Tokens** (Recommended): For web applications, mobile apps, and API clients
+- **Basic Authentication**: Maintained for backward compatibility with GNSS devices
+
+For detailed information about the authentication changes and migration guide, see [Authentication Changes Documentation](./docs/authentication-changes.md).
 
 ## Usage
 

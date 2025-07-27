@@ -2,6 +2,8 @@
 
 This document provides a comprehensive guide to all REST APIs available in the NTRIP project, along with testing instructions.
 
+> **Authentication Update**: All API endpoints now use JWT Bearer token authentication instead of Basic authentication. Include the token in the `Authorization` header with the format: `Bearer {token}`.
+
 ## Table of Contents
 
 1. [Authentication APIs](#authentication-apis)
@@ -21,7 +23,7 @@ Base URL: `/api/auth`
 | `/register` | POST | Register a new user | No | `{ "name": "string", "email": "string", "password": "string" }` | `{ "success": true, "message": "User registered", "data": { "id": "number", "name": "string", "email": "string", "role": "string" }, "token": "string" }` |
 | `/login` | POST | Login user | No | `{ "email": "string", "password": "string" }` | `{ "success": true, "message": "Login successful", "data": { "id": "number", "name": "string", "email": "string", "role": "string" }, "token": "string", "refreshToken": "string" }` |
 | `/refresh-token` | POST | Refresh authentication token | No | `{ "refreshToken": "string" }` | `{ "success": true, "token": "string", "refreshToken": "string" }` |
-| `/profile` | GET | Get current user profile | JWT | - | `{ "success": true, "data": { "id": "number", "name": "string", "email": "string", "role": "string" } }` |
+| `/profile` | GET | Get current user profile | Bearer Token | - | `{ "success": true, "data": { "id": "number", "name": "string", "email": "string", "role": "string" } }` |
 
 ## User APIs
 
@@ -29,12 +31,12 @@ Base URL: `/api/users`
 
 | Endpoint | Method | Description | Authentication | Request Body | Response |
 |----------|--------|-------------|----------------|--------------|----------|
-| `/` | GET | Get all users | JWT + Admin | - | `{ "success": true, "data": [{ "id": "number", "name": "string", "email": "string", "role": "string" }] }` |
-| `/:id` | GET | Get user by ID | JWT (Admin or Self) | - | `{ "success": true, "data": { "id": "number", "name": "string", "email": "string", "role": "string" } }` |
-| `/` | POST | Create new user | JWT + Admin | `{ "name": "string", "email": "string", "password": "string", "role": "string" }` | `{ "success": true, "message": "User created", "data": { "id": "number", "name": "string", "email": "string", "role": "string" } }` |
-| `/:id` | PUT | Update user | JWT (Admin or Self) | `{ "name": "string", "email": "string", "role": "string" }` | `{ "success": true, "message": "User updated", "data": { "id": "number", "name": "string", "email": "string", "role": "string" } }` |
-| `/:id/change-password` | PUT | Change user password | JWT (Admin or Self) | `{ "currentPassword": "string", "newPassword": "string" }` | `{ "success": true, "message": "Password changed successfully" }` |
-| `/:id` | DELETE | Delete user | JWT + Admin | - | `{ "success": true, "message": "User deleted" }` |
+| `/` | GET | Get all users | Bearer Token + Admin | - | `{ "success": true, "data": [{ "id": "number", "name": "string", "email": "string", "role": "string" }] }` |
+| `/:id` | GET | Get user by ID | Bearer Token (Admin or Self) | - | `{ "success": true, "data": { "id": "number", "name": "string", "email": "string", "role": "string" } }` |
+| `/` | POST | Create new user | Bearer Token + Admin | `{ "name": "string", "email": "string", "password": "string", "role": "string" }` | `{ "success": true, "message": "User created", "data": { "id": "number", "name": "string", "email": "string", "role": "string" } }` |
+| `/:id` | PUT | Update user | Bearer Token (Admin or Self) | `{ "name": "string", "email": "string", "role": "string" }` | `{ "success": true, "message": "User updated", "data": { "id": "number", "name": "string", "email": "string", "role": "string" } }` |
+| `/:id/change-password` | PUT | Change user password | Bearer Token (Admin or Self) | `{ "currentPassword": "string", "newPassword": "string" }` | `{ "success": true, "message": "Password changed successfully" }` |
+| `/:id` | DELETE | Delete user | Bearer Token + Admin | - | `{ "success": true, "message": "User deleted" }` |
 
 ## Station APIs
 
@@ -42,12 +44,12 @@ Base URL: `/api/stations`
 
 | Endpoint | Method | Description | Authentication | Request Body | Response |
 |----------|--------|-------------|----------------|--------------|----------|
-| `/` | GET | Get all stations | JWT | - | `{ "success": true, "data": [{ "id": "number", "name": "string", ... }] }` |
-| `/:id` | GET | Get station by ID | JWT | - | `{ "success": true, "data": { "id": "number", "name": "string", ... } }` |
-| `/` | POST | Create new station | JWT + Admin | `{ "name": "string", "description": "string", "lat": "number", "lon": "number", "location_id": "number", ... }` | `{ "success": true, "message": "Station created", "data": { "id": "number", "name": "string", ... } }` |
-| `/:id` | PUT | Update station | JWT + Admin | `{ "name": "string", "description": "string", ... }` | `{ "success": true, "message": "Station updated", "data": { "id": "number", "name": "string", ... } }` |
-| `/:id` | DELETE | Delete station | JWT + Admin | - | `{ "success": true, "message": "Station deleted" }` |
-| `/:id/start` | POST | Start station relay | JWT + Admin | - | `{ "success": true, "message": "Relay started", "station": { ... } }` |
+| `/` | GET | Get all stations | Bearer Token | - | `{ "success": true, "data": [{ "id": "number", "name": "string", ... }] }` |
+| `/:id` | GET | Get station by ID | Bearer Token | - | `{ "success": true, "data": { "id": "number", "name": "string", ... } }` |
+| `/` | POST | Create new station | Bearer Token + Admin | `{ "name": "string", "description": "string", "lat": "number", "lon": "number", "location_id": "number", ... }` | `{ "success": true, "message": "Station created", "data": { "id": "number", "name": "string", ... } }` |
+| `/:id` | PUT | Update station | Bearer Token + Admin | `{ "name": "string", "description": "string", ... }` | `{ "success": true, "message": "Station updated", "data": { "id": "number", "name": "string", ... } }` |
+| `/:id` | DELETE | Delete station | Bearer Token + Admin | - | `{ "success": true, "message": "Station deleted" }` |
+| `/:id/start` | POST | Start station relay | Bearer Token + Admin | - | `{ "success": true, "message": "Relay started", "station": { ... } }` |
 | `/:id/stop` | POST | Stop station relay | JWT + Admin | - | `{ "success": true, "message": "Relay stopped" }` |
 
 ## Rover APIs
@@ -82,6 +84,58 @@ Base URL: `/api/locations`
 | Endpoint | Method | Description | Authentication | Request Body | Response |
 |----------|--------|-------------|----------------|--------------|----------|
 | `/api/sourcetable` | GET | Get NTRIP sourcetable | No | - | Text content in NTRIP sourcetable format |
+
+## Authentication Update Guide
+
+The authentication method has been updated from Basic Authentication to JWT Bearer Token Authentication. This section provides guidance on updating client code.
+
+### Previous Authentication Method (Basic Auth)
+
+```javascript
+// Old method - Basic Authentication
+const username = 'your_username';
+const password = 'your_password';
+const base64Credentials = btoa(`${username}:${password}`);
+
+axios.get('http://localhost:3000/api/stations', {
+  headers: {
+    'Authorization': `Basic ${base64Credentials}`
+  }
+});
+```
+
+### New Authentication Method (Bearer Token)
+
+```javascript
+// Step 1: Obtain the JWT token via login
+const loginResponse = await axios.post('http://localhost:3000/api/auth/login', {
+  email: 'your_email@example.com',
+  password: 'your_password'
+});
+
+const token = loginResponse.data.data.token;
+
+// Step 2: Use the token in subsequent requests
+axios.get('http://localhost:3000/api/stations', {
+  headers: {
+    'Authorization': `Bearer ${token}`
+  }
+});
+```
+
+### Benefits of JWT Authentication
+
+1. **More Secure**: Tokens are cryptographically signed and can be verified.
+2. **Stateless**: No need to store session information on the server.
+3. **Expiration**: Tokens expire after a set time for added security.
+4. **Rich Claims**: Can include user roles and permissions in the token.
+
+### Best Practices
+
+1. Store the token securely (avoid localStorage in browsers for sensitive applications).
+2. Implement token refresh logic when tokens expire.
+3. Use HTTPS for all API communications.
+4. Set appropriate token expiration times.
 
 ## Testing the APIs
 

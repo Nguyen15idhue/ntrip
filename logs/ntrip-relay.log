@@ -439,3 +439,199 @@
 2025-07-27 12:36:48 debug: Basic auth successful for admin: admin
 2025-07-27 12:37:39 debug: Sent NMEA position to NTRIP caster: $GPGGA,053739.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*62
 2025-07-27 12:38:39 debug: Sent NMEA position to NTRIP caster: $GPGGA,053839.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6D
+2025-07-27 12:50:18 info: Database connection established successfully
+2025-07-27 12:50:18 info: Initializing NTRIP relay service...
+2025-07-27 12:50:18 info: API server running on port 3000
+2025-07-27 12:50:18 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-27 12:50:18 info: Found 2 active stations
+2025-07-27 12:50:18 info: Starting relay for station: HANOI_VRS
+2025-07-27 12:50:18 info: Added virtual station: HANOI_VRS (Hanoi VRS Mount Point)
+2025-07-27 12:50:19 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 12:50:19 info: Started relay for station: HANOI_VRS
+2025-07-27 12:50:19 info: Starting relay for station: HANOI_VRS2
+2025-07-27 12:50:19 info: Added virtual station: HANOI_VRS2 (Hanoi VRS Mount Point)
+2025-07-27 12:50:19 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 12:50:19 info: Started relay for station: HANOI_VRS2
+2025-07-27 12:50:19 info: NTRIP relay service initialized successfully
+2025-07-27 12:50:19 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-27 12:50:19 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 12:50:19 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 12:50:19 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 12:50:19 info: Connected to source caster for station HANOI_VRS
+2025-07-27 12:50:19 debug: Sent NMEA position to NTRIP caster: $GPGGA,055019.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 12:50:19 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 12:50:19 info: Connected to source caster for station HANOI_VRS2
+2025-07-27 12:50:19 debug: Sent NMEA position to NTRIP caster: $GPGGA,055019.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 12:50:33 debug: New raw connection from 127.0.0.1
+2025-07-27 12:50:33 debug: Authenticating rover with username: rover1 for mountpoint: HANOI_VRS2
+2025-07-27 12:50:33 debug: Rover 'rover1' found, validating password...
+2025-07-27 12:50:33 debug: Password validation successful for rover 'rover1'
+2025-07-27 12:50:33 info: Client 9645702f-ed81-4d76-b5ff-1815b93f3612 (rover1) connected to station HANOI_VRS2 from 127.0.0.1
+2025-07-27 12:50:33 info: Rover rover1 connected to station HANOI_VRS2 from 127.0.0.1
+2025-07-27 12:50:33 debug: Client 9645702f-ed81-4d76-b5ff-1815b93f3612 position updated: {"lat":21.004569,"lon":105.7951135,"alt":0.8883,"quality":4,"satellites":10}
+2025-07-27 12:50:34 debug: Broadcasted 955 bytes to 1 clients on HANOI_VRS2
+2025-07-27 12:50:35 debug: Broadcasted 961 bytes to 1 clients on HANOI_VRS2
+2025-07-27 12:50:35 debug: Connection closed from 127.0.0.1
+2025-07-27 12:50:35 debug: Removing client 9645702f-ed81-4d76-b5ff-1815b93f3612 - Current active clients: 1
+2025-07-27 12:50:35 info: Client 9645702f-ed81-4d76-b5ff-1815b93f3612 disconnected from station HANOI_VRS2
+2025-07-27 12:50:35 info: Rover disconnected from station HANOI_VRS2
+2025-07-27 12:50:42 debug: New raw connection from 127.0.0.1
+2025-07-27 12:50:42 debug: Authenticating rover with username: rover1 for mountpoint: HANOI_VRS
+2025-07-27 12:50:42 debug: Rover 'rover1' found, validating password...
+2025-07-27 12:50:42 debug: Password validation successful for rover 'rover1'
+2025-07-27 12:50:42 info: Client 4448acae-e176-4ce7-85a3-86bef161f9da (rover1) connected to station HANOI_VRS from 127.0.0.1
+2025-07-27 12:50:42 info: Rover rover1 connected to station HANOI_VRS from 127.0.0.1
+2025-07-27 12:50:42 debug: Client 4448acae-e176-4ce7-85a3-86bef161f9da position updated: {"lat":21.004569,"lon":105.7951135,"alt":0.8883,"quality":4,"satellites":10}
+2025-07-27 12:50:43 debug: Broadcasted 1024 bytes to 1 clients on HANOI_VRS
+2025-07-27 12:50:44 debug: Broadcasted 1033 bytes to 1 clients on HANOI_VRS
+2025-07-27 12:50:44 debug: Connection closed from 127.0.0.1
+2025-07-27 12:50:44 debug: Removing client 4448acae-e176-4ce7-85a3-86bef161f9da - Current active clients: 1
+2025-07-27 12:50:44 info: Client 4448acae-e176-4ce7-85a3-86bef161f9da disconnected from station HANOI_VRS
+2025-07-27 12:50:44 info: Rover disconnected from station HANOI_VRS
+2025-07-27 12:50:50 debug: New raw connection from 127.0.0.1
+2025-07-27 12:50:50 warn: Station not found: HANOI_VRS22
+2025-07-27 12:50:50 debug: Connection closed from 127.0.0.1
+2025-07-27 12:51:19 debug: Sent NMEA position to NTRIP caster: $GPGGA,055119.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 12:51:19 debug: Sent NMEA position to NTRIP caster: $GPGGA,055119.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 12:52:19 debug: Sent NMEA position to NTRIP caster: $GPGGA,055219.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 12:52:19 debug: Sent NMEA position to NTRIP caster: $GPGGA,055219.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 12:52:49 info: Database connection established successfully
+2025-07-27 12:53:19 debug: Sent NMEA position to NTRIP caster: $GPGGA,055319.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 12:53:19 debug: Sent NMEA position to NTRIP caster: $GPGGA,055319.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 12:53:45 info: Database connection established successfully
+2025-07-27 12:53:45 info: Initializing NTRIP relay service...
+2025-07-27 12:53:45 info: API server running on port 3000
+2025-07-27 12:53:45 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-27 12:53:45 info: Found 2 active stations
+2025-07-27 12:53:45 info: Starting relay for station: HANOI_VRS
+2025-07-27 12:53:45 info: Added virtual station: HANOI_VRS (Hanoi VRS Mount Point)
+2025-07-27 12:53:45 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 12:53:45 info: Started relay for station: HANOI_VRS
+2025-07-27 12:53:45 info: Starting relay for station: HANOI_VRS2
+2025-07-27 12:53:45 info: Added virtual station: HANOI_VRS2 (Hanoi VRS Mount Point)
+2025-07-27 12:53:45 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 12:53:45 info: Started relay for station: HANOI_VRS2
+2025-07-27 12:53:45 info: NTRIP relay service initialized successfully
+2025-07-27 12:53:45 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-27 12:53:45 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 12:53:45 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 12:53:45 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 12:53:45 info: Connected to source caster for station HANOI_VRS
+2025-07-27 12:53:45 debug: Sent NMEA position to NTRIP caster: $GPGGA,055345.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6B
+2025-07-27 12:53:45 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 12:53:45 info: Connected to source caster for station HANOI_VRS2
+2025-07-27 12:53:45 debug: Sent NMEA position to NTRIP caster: $GPGGA,055345.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6B
+2025-07-27 12:53:50 debug: New raw connection from 127.0.0.1
+2025-07-27 12:53:50 debug: Connection closed from 127.0.0.1
+2025-07-27 12:54:31 info: Shutting down...
+2025-07-27 12:56:58 info: Database connection established successfully
+2025-07-27 12:56:58 info: Initializing NTRIP relay service...
+2025-07-27 12:56:58 info: API server running on port 3000
+2025-07-27 12:56:58 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-27 12:56:58 info: Found 2 active stations
+2025-07-27 12:56:58 info: Starting relay for station: HANOI_VRS
+2025-07-27 12:56:58 info: Added virtual station: HANOI_VRS (Hanoi VRS Mount Point)
+2025-07-27 12:56:58 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 12:56:58 info: Started relay for station: HANOI_VRS
+2025-07-27 12:56:58 info: Starting relay for station: HANOI_VRS2
+2025-07-27 12:56:58 info: Added virtual station: HANOI_VRS2 (Hanoi VRS Mount Point)
+2025-07-27 12:56:58 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 12:56:58 info: Started relay for station: HANOI_VRS2
+2025-07-27 12:56:58 info: NTRIP relay service initialized successfully
+2025-07-27 12:56:58 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-27 12:56:58 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 12:56:58 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 12:56:58 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 12:56:58 info: Connected to source caster for station HANOI_VRS
+2025-07-27 12:56:58 debug: Sent NMEA position to NTRIP caster: $GPGGA,055658.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 12:56:58 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 12:56:58 info: Connected to source caster for station HANOI_VRS2
+2025-07-27 12:56:58 debug: Sent NMEA position to NTRIP caster: $GPGGA,055658.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 12:57:42 info: Shutting down...
+2025-07-27 12:58:07 info: Database connection established successfully
+2025-07-27 12:58:07 info: Initializing NTRIP relay service...
+2025-07-27 12:58:07 info: API server running on port 3000
+2025-07-27 12:58:07 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-27 12:58:07 info: Found 1 active stations
+2025-07-27 12:58:07 info: Starting relay for station: HANOI_VRS
+2025-07-27 12:58:07 info: Added virtual station: HANOI_VRS (Hanoi VRS Mount Point)
+2025-07-27 12:58:07 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 12:58:07 info: Started relay for station: HANOI_VRS
+2025-07-27 12:58:07 info: NTRIP relay service initialized successfully
+2025-07-27 12:58:07 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-27 12:58:07 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 12:58:07 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 12:58:07 info: Connected to source caster for station HANOI_VRS
+2025-07-27 12:58:07 debug: Sent NMEA position to NTRIP caster: $GPGGA,055807.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 12:58:32 debug: New raw connection from 127.0.0.1
+2025-07-27 12:58:32 debug: Connection closed from 127.0.0.1
+2025-07-27 12:58:37 debug: New raw connection from 127.0.0.1
+2025-07-27 12:58:37 debug: Authenticating rover with username: rover1 for mountpoint: HANOI_VRS
+2025-07-27 12:58:37 debug: Rover 'rover1' found, validating password...
+2025-07-27 12:58:37 debug: Password validation successful for rover 'rover1'
+2025-07-27 12:58:37 info: Client 056622f5-2dbd-4ed3-8946-aa251cee95dc (rover1) connected to station HANOI_VRS from 127.0.0.1
+2025-07-27 12:58:37 info: Rover rover1 connected to station HANOI_VRS from 127.0.0.1
+2025-07-27 12:58:37 debug: Client 056622f5-2dbd-4ed3-8946-aa251cee95dc position updated: {"lat":21.004569,"lon":105.7951135,"alt":0.8883,"quality":4,"satellites":10}
+2025-07-27 12:58:37 debug: Broadcasted 32 bytes to 1 clients on HANOI_VRS
+2025-07-27 12:58:38 debug: Broadcasted 1018 bytes to 1 clients on HANOI_VRS
+2025-07-27 12:58:39 debug: Broadcasted 1018 bytes to 1 clients on HANOI_VRS
+2025-07-27 12:58:40 debug: Broadcasted 1018 bytes to 1 clients on HANOI_VRS
+2025-07-27 12:58:41 debug: Connection closed from 127.0.0.1
+2025-07-27 12:58:41 debug: Removing client 056622f5-2dbd-4ed3-8946-aa251cee95dc - Current active clients: 1
+2025-07-27 12:58:41 info: Client 056622f5-2dbd-4ed3-8946-aa251cee95dc disconnected from station HANOI_VRS
+2025-07-27 12:58:41 info: Rover disconnected from station HANOI_VRS
+2025-07-27 12:59:07 debug: Sent NMEA position to NTRIP caster: $GPGGA,055907.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 13:00:07 debug: Sent NMEA position to NTRIP caster: $GPGGA,060007.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*68
+2025-07-27 13:01:07 debug: Sent NMEA position to NTRIP caster: $GPGGA,060107.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*69
+2025-07-27 13:02:07 debug: Sent NMEA position to NTRIP caster: $GPGGA,060207.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6A
+2025-07-27 13:03:07 debug: Sent NMEA position to NTRIP caster: $GPGGA,060307.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6B
+2025-07-27 13:04:07 debug: Sent NMEA position to NTRIP caster: $GPGGA,060407.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6C
+2025-07-27 13:05:07 debug: Sent NMEA position to NTRIP caster: $GPGGA,060507.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6D
+2025-07-27 13:06:07 debug: Sent NMEA position to NTRIP caster: $GPGGA,060607.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6E
+2025-07-27 13:07:07 debug: Sent NMEA position to NTRIP caster: $GPGGA,060707.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6F
+2025-07-27 13:08:07 debug: Sent NMEA position to NTRIP caster: $GPGGA,060807.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 13:09:07 debug: Sent NMEA position to NTRIP caster: $GPGGA,060907.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 13:09:40 debug: Basic auth successful for admin: admin
+2025-07-27 21:00:44 info: Database connection established successfully
+2025-07-27 21:00:44 info: Initializing NTRIP relay service...
+2025-07-27 21:00:44 info: API server running on port 3000
+2025-07-27 21:00:44 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-27 21:00:44 info: Found 1 active stations
+2025-07-27 21:00:44 info: Starting relay for station: HANOI_VRS
+2025-07-27 21:00:44 info: Added virtual station: HANOI_VRS (Hanoi VRS Mount Point)
+2025-07-27 21:00:44 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 21:00:44 info: Started relay for station: HANOI_VRS
+2025-07-27 21:00:44 info: NTRIP relay service initialized successfully
+2025-07-27 21:00:44 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-27 21:00:44 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 21:00:44 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 21:00:44 info: Connected to source caster for station HANOI_VRS
+2025-07-27 21:00:44 debug: Sent NMEA position to NTRIP caster: $GPGGA,140044.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6C
+2025-07-27 21:01:30 debug: New raw connection from 127.0.0.1
+2025-07-27 21:01:30 debug: Connection closed from 127.0.0.1
+2025-07-27 21:01:41 debug: New raw connection from 127.0.0.1
+2025-07-27 21:01:41 debug: Authenticating rover with Basic auth: rover1 for mountpoint: HANOI_VRS
+2025-07-27 21:01:41 debug: Rover 'rover1' found, validating password...
+2025-07-27 21:01:41 info: Client aac08be7-e416-499c-b089-cb0058d4d342 (rover1) connected to station HANOI_VRS from 127.0.0.1
+2025-07-27 21:01:41 info: Rover rover1 connected to station HANOI_VRS from 127.0.0.1
+2025-07-27 21:01:41 debug: Client aac08be7-e416-499c-b089-cb0058d4d342 position updated: {"lat":21.004569,"lon":105.7951135,"alt":0.8883,"quality":4,"satellites":10}
+2025-07-27 21:01:41 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:42 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:43 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:44 debug: Sent NMEA position to NTRIP caster: $GPGGA,140144.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6D
+2025-07-27 21:01:44 debug: Broadcasted 32 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:44 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:45 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:46 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:47 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:47 debug: Client aac08be7-e416-499c-b089-cb0058d4d342 position updated: {"lat":21.004569,"lon":105.7951135,"alt":0.8883,"quality":4,"satellites":10}
+2025-07-27 21:01:48 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:49 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:50 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:51 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:52 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:53 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:54 debug: Broadcasted 32 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:54 debug: Client aac08be7-e416-499c-b089-cb0058d4d342 position updated: {"lat":21.004569,"lon":105.7951135,"alt":0.8883,"quality":4,"satellites":10}
+2025-07-27 21:01:54 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS
+2025-07-27 21:01:55 debug: Broadcasted 1064 bytes to 1 clients on HANOI_VRS

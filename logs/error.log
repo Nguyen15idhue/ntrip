@@ -15,3 +15,10 @@
 2025-07-27 12:35:28 error: TypeError: relayService.stopStation is not a function
     at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:228:26
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-27 12:52:49 error: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+    at listenInCluster (node:net:1996:12)
+    at Server.listen (node:net:2101:7)
+    at Function.listen (C:\laragon\www\ntrip\node_modules\express\lib\application.js:635:24)
+    at initialize (file:///C:/laragon/www/ntrip/src/app.js:79:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

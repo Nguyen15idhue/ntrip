@@ -119,6 +119,9 @@ router.post('/', [authenticateJWT, isAdmin], async (req, res) => {
       await relayService.startRelay(station.id);
     }
     
+    // Refresh source table to include new station
+    await relayService.refreshSourceTable();
+    
     res.status(201).json({
       success: true,
       data: station,
@@ -198,6 +201,9 @@ router.put('/:id', [authenticateJWT, isAdmin], async (req, res) => {
       await relayService.startRelay(station.id);
     }
     
+    // Refresh source table to reflect changes
+    await relayService.refreshSourceTable();
+    
     res.status(200).json({
       success: true,
       data: station,
@@ -230,6 +236,9 @@ router.delete('/:id', [authenticateJWT, isAdmin], async (req, res) => {
     }
     
     await station.destroy();
+    
+    // Refresh source table to reflect deleted station
+    await relayService.refreshSourceTable();
     
     res.status(200).json({
       success: true,
@@ -270,6 +279,9 @@ router.post('/:id/start', [authenticateJWT, isAdmin], async (req, res) => {
       });
     }
     
+    // Refresh source table to reflect active station
+    await relayService.refreshSourceTable();
+    
     res.status(200).json({
       success: true,
       message: 'Station started successfully',
@@ -309,6 +321,9 @@ router.post('/:id/stop', [authenticateJWT, isAdmin], async (req, res) => {
         message: 'Failed to stop station'
       });
     }
+    
+    // Refresh source table to reflect inactive station
+    await relayService.refreshSourceTable();
     
     res.status(200).json({
       success: true,

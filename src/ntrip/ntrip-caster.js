@@ -180,10 +180,19 @@ class NtripCaster extends EventEmitter {
     // Generate NTRIP standard sourcetable
     let table = '';
     
+    // Log what's happening for debugging
+    const stationCount = this.stations.size;
+    logger.debug(`Generating sourcetable with ${stationCount} stations in memory`);
+    
     // Add stream entries (STR records) for each station
     for (const [mountpoint, station] of this.stations.entries()) {
-      if (!station.active && !station.status) continue;
+      // Skip inactive stations - but log for debugging
+      if (!station.active && !station.status) {
+        logger.debug(`Skipping inactive station in sourcetable: ${mountpoint}`);
+        continue;
+      }
       
+      logger.debug(`Adding station to sourcetable: ${mountpoint}`);
       const str = [
         'STR',                                             // Record type
         mountpoint,                                        // Mountpoint name
@@ -370,6 +379,8 @@ class NtripCaster extends EventEmitter {
     
     // Handle sourcetable requests
     if (!mountpoint || mountpoint === '') {
+      // Refresh sourcetable before responding to ensure the latest info
+      await this.refreshSourceTable();
       const sourcetable = await this.getSourcetable();
       socket.write(sourcetable);
       socket.destroy();
@@ -379,7 +390,29 @@ class NtripCaster extends EventEmitter {
     // Handle mountpoint requests
     const station = this.stations.get(mountpoint);
     if (!station) {
-      logger.warn(`Station not found: ${mountpoint}`);
+      // Log available stations for debugging
+      const availableStations = Array.from(this.stations.keys()).join(', ');
+      logger.warn(`Station not found: ${mountpoint}. Available stations: ${availableStations}`);
+      
+      // Try to find station in database even if not in memory
+      try {
+        const dbStation = await Station.findOne({ where: { name: mountpoint } });
+        if (dbStation && dbStation.status === 'active') {
+          logger.warn(`Station ${mountpoint} exists in database as active but not in memory. Refreshing sourcetable.`);
+          await this.refreshSourceTable();
+          
+          // Check again after refresh
+          if (this.stations.has(mountpoint)) {
+            logger.info(`Station ${mountpoint} added to memory after refresh, continuing request`);
+            const refreshedStation = this.stations.get(mountpoint);
+            // Continue processing with the refreshed station
+            // This code will not be reached as we'll redirect the client to reconnect
+          }
+        }
+      } catch (err) {
+        logger.error(`Error checking database for station ${mountpoint}:`, err);
+      }
+      
       socket.write('HTTP/1.1 404 Not Found\r\n\r\nERROR - Mountpoint not found');
       socket.destroy();
       return;
@@ -641,6 +674,76 @@ class NtripCaster extends EventEmitter {
       ip: client.ip,
       username: client.rover ? client.rover.username : 'unknown'
     });
+  }
+
+  /**
+   * Refresh station list from database
+   * Updates the stations map with the latest information from the database
+   */
+  async refreshSourceTable() {
+    try {
+      logger.info('Refreshing sourcetable from database');
+      
+      // Get all stations from the database, including both active and inactive for comprehensive view
+      const allDbStations = await Station.findAll();
+      const activeDbStations = allDbStations.filter(s => s.status === 'active');
+      
+      // Create sets for efficient lookups
+      const activeDbStationNames = new Set(activeDbStations.map(s => s.name));
+      const currentStationNames = new Set(this.stations.keys());
+      
+      // Log station counts for debugging
+      logger.debug(`Current stations in memory: ${currentStationNames.size}, Active stations in DB: ${activeDbStationNames.size}`);
+      
+      // Update or add stations from database that are active
+      for (const dbStation of activeDbStations) {
+        if (this.stations.has(dbStation.name)) {
+          // Update existing station properties
+          const memStation = this.stations.get(dbStation.name);
+          memStation.lat = parseFloat(dbStation.lat);
+          memStation.lon = parseFloat(dbStation.lon);
+          memStation.description = dbStation.description;
+          memStation.active = true;
+          memStation.status = true;
+          logger.debug(`Updated existing station in sourcetable: ${dbStation.name}`);
+        } else {
+          // Add new station to memory
+          logger.info(`Adding new station to sourcetable: ${dbStation.name}`);
+          this.addStation({
+            name: dbStation.name,
+            description: dbStation.description,
+            lat: parseFloat(dbStation.lat),
+            lon: parseFloat(dbStation.lon),
+            identifier: `VNM_${dbStation.name}`,
+            country: 'VNM',
+            nmea: true,
+            active: true,
+            status: true,
+            format: 'RTCM 3.2',
+            formatDetails: '1004(1),1005/1006(5),1019(5),1020(5)',
+            carrier: '2',
+            navSystem: 'GPS+GLO+GAL+BDS',
+            network: 'CORS'
+          });
+        }
+      }
+      
+      // Remove stations from memory that are no longer active in the database
+      for (const stationName of currentStationNames) {
+        if (!activeDbStationNames.has(stationName)) {
+          logger.info(`Removing station from sourcetable: ${stationName}`);
+          this.removeStation(stationName);
+        }
+      }
+      
+      // Log all current stations for verification
+      const stationList = Array.from(this.stations.keys()).join(', ');
+      logger.info(`Sourcetable refreshed successfully. Active stations (${this.stations.size}): ${stationList}`);
+      return true;
+    } catch (error) {
+      logger.error('Error refreshing sourcetable:', error);
+      return false;
+    }
   }
 
   /**

@@ -47,3 +47,83 @@
     at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:82:19)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async file:///C:/laragon/www/ntrip/src/routes/station.routes.js:119:7
+2025-07-27 22:20:35 error: TypeError: Cannot read properties of null (reading 'addStation')
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:82:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/laragon/www/ntrip/src/routes/station.routes.js:198:7
+2025-07-27 22:21:01 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:698:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:32:46 error: TypeError: Cannot read properties of null (reading 'addStation')
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:105:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/laragon/www/ntrip/src/routes/station.routes.js:201:7
+2025-07-27 22:32:55 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:34:29 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:35:28 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:35:33 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:35:35 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:35:36 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:35:37 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:35:38 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:38:27 error: Error: Station with mountpoint HANOI_VRS already exists
+    at NtripCaster.addStation (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:90:13)
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RelayService.refreshSourceTable (file:///C:/laragon/www/ntrip/src/services/relay.service.js:86:11)
+    at async RelayService.initialize (file:///C:/laragon/www/ntrip/src/services/relay.service.js:44:7)
+    at async initialize (file:///C:/laragon/www/ntrip/src/app.js:85:5)
+2025-07-27 22:38:27 error: Error: Station with mountpoint HNI_2 already exists
+    at NtripCaster.addStation (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:90:13)
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RelayService.refreshSourceTable (file:///C:/laragon/www/ntrip/src/services/relay.service.js:86:11)
+    at async RelayService.initialize (file:///C:/laragon/www/ntrip/src/services/relay.service.js:44:7)
+    at async initialize (file:///C:/laragon/www/ntrip/src/app.js:85:5)
+2025-07-27 22:38:27 error: Error: Station with mountpoint HNI_QuocOAI2222d2 already exists
+    at NtripCaster.addStation (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:90:13)
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RelayService.refreshSourceTable (file:///C:/laragon/www/ntrip/src/services/relay.service.js:86:11)
+    at async RelayService.initialize (file:///C:/laragon/www/ntrip/src/services/relay.service.js:44:7)
+    at async initialize (file:///C:/laragon/www/ntrip/src/app.js:85:5)
+2025-07-27 22:38:27 error: Error: Station with mountpoint HNI_QuocOAI2d222d2 already exists
+    at NtripCaster.addStation (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:90:13)
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RelayService.refreshSourceTable (file:///C:/laragon/www/ntrip/src/services/relay.service.js:86:11)
+    at async RelayService.initialize (file:///C:/laragon/www/ntrip/src/services/relay.service.js:44:7)
+    at async initialize (file:///C:/laragon/www/ntrip/src/app.js:85:5)
+2025-07-27 22:38:41 error: TypeError: Cannot read properties of null (reading 'addStation')
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/laragon/www/ntrip/src/routes/station.routes.js:201:7
+2025-07-27 22:39:06 error: TypeError: Cannot read properties of null (reading 'addStation')
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/laragon/www/ntrip/src/routes/station.routes.js:201:7

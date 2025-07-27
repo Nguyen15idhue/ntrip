@@ -40,6 +40,9 @@ class RelayService extends EventEmitter {
       // Load and start active stations from database
       await this._loadActiveStations();
       
+      // Initial refresh of source table
+      await this.refreshSourceTable();
+      
       this.initialized = true;
       logger.info('NTRIP relay service initialized successfully');
       
@@ -48,6 +51,55 @@ class RelayService extends EventEmitter {
     } catch (error) {
       logger.error('Error initializing NTRIP relay service:', error);
       throw error;
+    }
+  }
+  
+  /**
+   * Refresh source table from database
+   * This updates the caster's station list with the latest information
+   * and ensures relays are running for all active stations
+   */
+  async refreshSourceTable() {
+    if (!this.caster) {
+      logger.warn('Cannot refresh source table: caster not initialized');
+      return false;
+    }
+    
+    try {
+      // First refresh the source table in the caster
+      await this.caster.refreshSourceTable();
+      logger.info('Source table refreshed in caster');
+      
+      // Then ensure all active stations have relays running
+      const activeStations = await Station.findAll({
+        where: { status: 'active' }
+      });
+      
+      // Track current active relays
+      const currentRelays = new Set(this.clients.keys());
+      const databaseStations = new Set(activeStations.map(s => s.name));
+      
+      // Start relays for stations that don't have one running
+      for (const station of activeStations) {
+        if (!this.clients.has(station.name)) {
+          logger.info(`Starting missing relay for station: ${station.name}`);
+          await this.startRelay(station.id);
+        }
+      }
+      
+      // Stop relays for stations that are no longer active
+      for (const stationName of currentRelays) {
+        if (!databaseStations.has(stationName)) {
+          logger.info(`Stopping relay for inactive station: ${stationName}`);
+          await this.stopRelay(stationName);
+        }
+      }
+      
+      logger.info('Source table and relays refreshed successfully');
+      return true;
+    } catch (error) {
+      logger.error('Error refreshing source table:', error);
+      return false;
     }
   }
 

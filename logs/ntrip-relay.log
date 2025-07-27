@@ -947,3 +947,652 @@
 2025-07-27 21:35:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,143526.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6E
 2025-07-27 21:35:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,143526.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
 2025-07-27 21:35:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,143526.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:20:03 info: Database connection established successfully
+2025-07-27 22:20:03 info: Initializing NTRIP relay service...
+2025-07-27 22:20:03 info: API server running on port 3000
+2025-07-27 22:20:03 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-27 22:20:03 info: Found 8 active stations
+2025-07-27 22:20:03 info: Starting relay for station: HANOI_VRS
+2025-07-27 22:20:03 info: Added virtual station: HANOI_VRS (Hanoi VRS Mount Point)
+2025-07-27 22:20:03 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 22:20:03 info: Started relay for station: HANOI_VRS
+2025-07-27 22:20:03 info: Starting relay for station: HNI_4
+2025-07-27 22:20:03 info: Added virtual station: HNI_4 (HN)
+2025-07-27 22:20:03 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:20:03 info: Started relay for station: HNI_4
+2025-07-27 22:20:03 info: Starting relay for station: HNI_QuocOAI2222d2
+2025-07-27 22:20:03 info: Added virtual station: HNI_QuocOAI2222d2 (HN)
+2025-07-27 22:20:03 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:20:03 info: Started relay for station: HNI_QuocOAI2222d2
+2025-07-27 22:20:03 info: Starting relay for station: HNI_QuocOAI2d222d2
+2025-07-27 22:20:03 info: Added virtual station: HNI_QuocOAI2d222d2 (HN)
+2025-07-27 22:20:03 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:20:03 info: Started relay for station: HNI_QuocOAI2d222d2
+2025-07-27 22:20:03 info: Starting relay for station: HNxcI_QuocOAI2d222d2
+2025-07-27 22:20:03 info: Added virtual station: HNxcI_QuocOAI2d222d2 (HN)
+2025-07-27 22:20:03 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:20:03 info: Started relay for station: HNxcI_QuocOAI2d222d2
+2025-07-27 22:20:03 info: Starting relay for station: HNxcI_QuocOAId2d222d2
+2025-07-27 22:20:03 info: Added virtual station: HNxcI_QuocOAId2d222d2 (HN)
+2025-07-27 22:20:03 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:20:03 info: Started relay for station: HNxcI_QuocOAId2d222d2
+2025-07-27 22:20:03 info: Starting relay for station: HNxcI_QuocOAcId2d222d2
+2025-07-27 22:20:03 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:20:03 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:20:03 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:20:03 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:20:03 info: Added virtual station: HNxcI_QuocOAcId2d222d2 (HN)
+2025-07-27 22:20:03 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:20:03 info: Started relay for station: HNxcI_QuocOAcId2d222d2
+2025-07-27 22:20:03 info: Starting relay for station: HNxcI_QuocOAcId2df222d2
+2025-07-27 22:20:03 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:20:03 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:20:03 info: Added virtual station: HNxcI_QuocOAcId2df222d2 (HN)
+2025-07-27 22:20:03 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:20:03 info: Started relay for station: HNxcI_QuocOAcId2df222d2
+2025-07-27 22:20:03 info: NTRIP relay service initialized successfully
+2025-07-27 22:20:03 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-27 22:20:03 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:20:03 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:20:03 info: Connected to source caster for station HNI_4
+2025-07-27 22:20:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152003.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:20:03 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 22:20:03 info: Connected to source caster for station HANOI_VRS
+2025-07-27 22:20:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152003.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6C
+2025-07-27 22:20:03 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:20:03 info: Connected to source caster for station HNxcI_QuocOAI2d222d2
+2025-07-27 22:20:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152003.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:20:03 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:20:03 info: Connected to source caster for station HNI_QuocOAI2222d2
+2025-07-27 22:20:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152003.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:20:03 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:20:03 info: Connected to source caster for station HNI_QuocOAI2d222d2
+2025-07-27 22:20:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152003.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:20:03 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:20:03 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:20:03 info: Connected to source caster for station HNxcI_QuocOAId2d222d2
+2025-07-27 22:20:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152003.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:20:03 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:20:03 info: Connected to source caster for station HNxcI_QuocOAcId2d222d2
+2025-07-27 22:20:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152003.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:20:03 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:20:03 info: Connected to source caster for station HNxcI_QuocOAcId2df222d2
+2025-07-27 22:20:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152003.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:20:18 debug: New raw connection from 127.0.0.1
+2025-07-27 22:20:18 debug: Connection closed from 127.0.0.1
+2025-07-27 22:20:35 debug: JWT auth successful for user: john@example.com
+2025-07-27 22:20:35 info: No relay running for station: HNI_1
+2025-07-27 22:20:35 error: TypeError: Cannot read properties of null (reading 'addStation')
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:82:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/laragon/www/ntrip/src/routes/station.routes.js:198:7
+2025-07-27 22:21:01 debug: New raw connection from 127.0.0.1
+2025-07-27 22:21:01 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:698:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:21:01 debug: Connection closed from 127.0.0.1
+2025-07-27 22:21:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152103.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:21:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152103.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6D
+2025-07-27 22:21:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152103.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:21:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152103.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:21:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152103.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:21:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152103.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:21:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152103.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:21:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152103.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:22:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152203.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:22:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152203.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6E
+2025-07-27 22:22:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152203.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:22:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152203.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:22:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152203.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:22:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152203.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:22:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152203.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:22:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152203.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:23:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152303.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:23:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152303.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6F
+2025-07-27 22:23:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152303.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:23:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152303.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:23:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152303.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:23:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152303.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:23:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152303.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:23:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152303.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:24:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152403.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:24:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152403.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*68
+2025-07-27 22:24:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152403.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:24:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152403.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:24:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152403.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:24:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152403.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:24:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152403.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:24:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152403.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:25:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152503.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:25:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152503.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*69
+2025-07-27 22:25:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152503.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:25:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152503.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:25:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152503.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:25:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152503.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:25:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152503.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:25:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152503.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:26:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152603.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:26:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152603.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6A
+2025-07-27 22:26:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152603.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:26:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152603.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:26:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152603.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:26:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152603.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:26:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152603.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:26:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152603.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:27:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152703.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:27:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152703.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6B
+2025-07-27 22:27:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152703.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:27:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152703.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:27:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152703.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:27:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152703.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:27:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152703.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:27:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152703.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:28:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152803.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6D
+2025-07-27 22:28:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152803.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:28:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152803.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6D
+2025-07-27 22:28:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152803.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6D
+2025-07-27 22:28:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152803.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6D
+2025-07-27 22:28:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152803.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6D
+2025-07-27 22:28:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152803.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6D
+2025-07-27 22:28:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152803.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6D
+2025-07-27 22:29:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152903.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6C
+2025-07-27 22:29:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152903.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:29:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152903.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6C
+2025-07-27 22:29:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152903.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6C
+2025-07-27 22:29:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152903.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6C
+2025-07-27 22:29:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152903.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6C
+2025-07-27 22:29:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152903.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6C
+2025-07-27 22:29:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,152903.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6C
+2025-07-27 22:30:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153003.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:30:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153003.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6D
+2025-07-27 22:30:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153003.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:30:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153003.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:30:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153003.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:30:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153003.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:30:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153003.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:30:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153003.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:31:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153103.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:31:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153103.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6C
+2025-07-27 22:31:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153103.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:31:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153103.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:31:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153103.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:31:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153103.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:31:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153103.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:31:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153103.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:32:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153203.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:32:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153203.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6F
+2025-07-27 22:32:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153203.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:32:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153203.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:32:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153203.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:32:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153203.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:32:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153203.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:32:03 debug: Sent NMEA position to NTRIP caster: $GPGGA,153203.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:32:22 info: Shutting down...
+2025-07-27 22:32:26 info: Database connection established successfully
+2025-07-27 22:32:26 info: Initializing NTRIP relay service...
+2025-07-27 22:32:26 info: API server running on port 3000
+2025-07-27 22:32:26 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-27 22:32:26 info: Found 8 active stations
+2025-07-27 22:32:26 info: Starting relay for station: HANOI_VRS
+2025-07-27 22:32:26 info: Added virtual station: HANOI_VRS (Hanoi VRS Mount Point)
+2025-07-27 22:32:26 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 22:32:26 info: Started relay for station: HANOI_VRS
+2025-07-27 22:32:26 info: Starting relay for station: HNI_1
+2025-07-27 22:32:26 info: Added virtual station: HNI_1 (HN)
+2025-07-27 22:32:26 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:26 info: Started relay for station: HNI_1
+2025-07-27 22:32:26 info: Starting relay for station: HNI_QuocOAI2222d2
+2025-07-27 22:32:26 info: Added virtual station: HNI_QuocOAI2222d2 (HN)
+2025-07-27 22:32:26 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:26 info: Started relay for station: HNI_QuocOAI2222d2
+2025-07-27 22:32:26 info: Starting relay for station: HNI_QuocOAI2d222d2
+2025-07-27 22:32:26 info: Added virtual station: HNI_QuocOAI2d222d2 (HN)
+2025-07-27 22:32:26 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:26 info: Started relay for station: HNI_QuocOAI2d222d2
+2025-07-27 22:32:26 info: Starting relay for station: HNxcI_QuocOAI2d222d2
+2025-07-27 22:32:26 info: Added virtual station: HNxcI_QuocOAI2d222d2 (HN)
+2025-07-27 22:32:26 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:26 info: Started relay for station: HNxcI_QuocOAI2d222d2
+2025-07-27 22:32:26 info: Starting relay for station: HNxcI_QuocOAId2d222d2
+2025-07-27 22:32:26 info: Added virtual station: HNxcI_QuocOAId2d222d2 (HN)
+2025-07-27 22:32:26 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:26 info: Started relay for station: HNxcI_QuocOAId2d222d2
+2025-07-27 22:32:26 info: Starting relay for station: HNxcI_QuocOAcId2d222d2
+2025-07-27 22:32:26 info: Added virtual station: HNxcI_QuocOAcId2d222d2 (HN)
+2025-07-27 22:32:26 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:26 info: Started relay for station: HNxcI_QuocOAcId2d222d2
+2025-07-27 22:32:26 info: Starting relay for station: HNxcI_QuocOAcId2df222d2
+2025-07-27 22:32:26 info: Added virtual station: HNxcI_QuocOAcId2df222d2 (HN)
+2025-07-27 22:32:26 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:26 info: Started relay for station: HNxcI_QuocOAcId2df222d2
+2025-07-27 22:32:26 info: Refreshing sourcetable from database
+2025-07-27 22:32:26 info: Sourcetable refreshed successfully. Active stations: 8
+2025-07-27 22:32:26 info: Source table refreshed successfully
+2025-07-27 22:32:26 info: NTRIP relay service initialized successfully
+2025-07-27 22:32:26 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-27 22:32:26 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:32:26 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:32:26 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:32:26 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:32:26 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:32:26 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:32:26 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:32:26 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:32:26 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:26 info: Connected to source caster for station HNI_QuocOAI2d222d2
+2025-07-27 22:32:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153226.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:32:26 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:26 info: Connected to source caster for station HNI_1
+2025-07-27 22:32:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153226.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:32:26 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:26 info: Connected to source caster for station HNxcI_QuocOAcId2d222d2
+2025-07-27 22:32:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153226.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:32:26 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:26 info: Connected to source caster for station HNxcI_QuocOAcId2df222d2
+2025-07-27 22:32:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153226.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:32:26 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:26 info: Connected to source caster for station HNxcI_QuocOAI2d222d2
+2025-07-27 22:32:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153226.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:32:26 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 22:32:26 info: Connected to source caster for station HANOI_VRS
+2025-07-27 22:32:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153226.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*68
+2025-07-27 22:32:26 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:26 info: Connected to source caster for station HNxcI_QuocOAId2d222d2
+2025-07-27 22:32:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153226.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:32:26 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:26 info: Connected to source caster for station HNI_QuocOAI2222d2
+2025-07-27 22:32:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153226.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:32:35 debug: New raw connection from 127.0.0.1
+2025-07-27 22:32:35 debug: Connection closed from 127.0.0.1
+2025-07-27 22:32:46 debug: JWT auth successful for user: john@example.com
+2025-07-27 22:32:46 info: No relay running for station: HNI_2
+2025-07-27 22:32:46 error: TypeError: Cannot read properties of null (reading 'addStation')
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:105:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/laragon/www/ntrip/src/routes/station.routes.js:201:7
+2025-07-27 22:32:46 warn: Cannot refresh source table: caster not initialized
+2025-07-27 22:32:55 debug: New raw connection from 127.0.0.1
+2025-07-27 22:32:55 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:32:55 debug: Connection closed from 127.0.0.1
+2025-07-27 22:32:56 warn: NTRIP connection timeout: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 info: Disconnected from NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HNI_QuocOAI2d222d2
+2025-07-27 22:32:56 warn: NTRIP connection timeout: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 info: Disconnected from NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HNI_1
+2025-07-27 22:32:56 warn: NTRIP connection timeout: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 info: Disconnected from NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HNxcI_QuocOAcId2d222d2
+2025-07-27 22:32:56 warn: NTRIP connection timeout: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 info: Disconnected from NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HNxcI_QuocOAcId2df222d2
+2025-07-27 22:32:56 warn: NTRIP connection timeout: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 info: Disconnected from NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HNxcI_QuocOAI2d222d2
+2025-07-27 22:32:56 warn: NTRIP connection timeout: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 22:32:56 info: Disconnected from NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HANOI_VRS
+2025-07-27 22:32:56 warn: NTRIP connection timeout: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 info: Disconnected from NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HNxcI_QuocOAId2d222d2
+2025-07-27 22:32:56 warn: NTRIP connection timeout: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 info: Disconnected from NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HNI_QuocOAI2222d2
+2025-07-27 22:32:56 info: Connection to NTRIP caster closed: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HNI_QuocOAI2222d2
+2025-07-27 22:32:56 info: Reconnecting to NTRIP caster (attempt 1 of 20)...
+2025-07-27 22:32:56 info: Connection to NTRIP caster closed: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HNxcI_QuocOAId2d222d2
+2025-07-27 22:32:56 info: Reconnecting to NTRIP caster (attempt 1 of 20)...
+2025-07-27 22:32:56 info: Connection to NTRIP caster closed: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HANOI_VRS
+2025-07-27 22:32:56 info: Reconnecting to NTRIP caster (attempt 1 of 20)...
+2025-07-27 22:32:56 info: Connection to NTRIP caster closed: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HNxcI_QuocOAI2d222d2
+2025-07-27 22:32:56 info: Reconnecting to NTRIP caster (attempt 1 of 20)...
+2025-07-27 22:32:56 info: Connection to NTRIP caster closed: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HNxcI_QuocOAcId2df222d2
+2025-07-27 22:32:56 info: Reconnecting to NTRIP caster (attempt 1 of 20)...
+2025-07-27 22:32:56 info: Connection to NTRIP caster closed: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HNxcI_QuocOAcId2d222d2
+2025-07-27 22:32:56 info: Reconnecting to NTRIP caster (attempt 1 of 20)...
+2025-07-27 22:32:56 info: Connection to NTRIP caster closed: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HNI_1
+2025-07-27 22:32:56 info: Reconnecting to NTRIP caster (attempt 1 of 20)...
+2025-07-27 22:32:56 info: Connection to NTRIP caster closed: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:32:56 warn: Disconnected from source caster for station HNI_QuocOAI2d222d2
+2025-07-27 22:32:56 info: Reconnecting to NTRIP caster (attempt 1 of 20)...
+2025-07-27 22:33:01 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:33:01 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:33:01 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 22:33:01 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:33:01 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:33:01 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:33:01 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:33:01 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:33:01 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:33:01 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:33:01 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:33:01 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:33:01 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:33:01 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:33:01 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:33:01 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:33:01 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:33:01 info: Connected to source caster for station HNxcI_QuocOAI2d222d2
+2025-07-27 22:33:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153301.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:33:01 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:33:01 info: Connected to source caster for station HNxcI_QuocOAId2d222d2
+2025-07-27 22:33:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153301.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:33:01 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:33:01 info: Connected to source caster for station HNxcI_QuocOAcId2df222d2
+2025-07-27 22:33:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153301.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:33:01 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 22:33:01 info: Connected to source caster for station HANOI_VRS
+2025-07-27 22:33:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153301.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6C
+2025-07-27 22:33:01 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:33:01 info: Connected to source caster for station HNxcI_QuocOAcId2d222d2
+2025-07-27 22:33:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153301.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:33:01 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:33:01 info: Connected to source caster for station HNI_QuocOAI2222d2
+2025-07-27 22:33:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153301.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:33:01 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:33:01 info: Connected to source caster for station HNI_1
+2025-07-27 22:33:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153301.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:33:01 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:33:01 info: Connected to source caster for station HNI_QuocOAI2d222d2
+2025-07-27 22:33:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153301.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:33:03 debug: New raw connection from 127.0.0.1
+2025-07-27 22:33:03 warn: Station not found: HNI_2
+2025-07-27 22:33:03 debug: Connection closed from 127.0.0.1
+2025-07-27 22:33:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153326.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:33:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153326.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:33:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153326.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:33:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153326.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:33:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153326.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:33:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153326.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*69
+2025-07-27 22:33:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153326.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:33:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153326.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:34:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153401.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:34:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153401.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:34:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153401.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:34:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153401.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6B
+2025-07-27 22:34:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153401.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:34:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153401.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:34:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153401.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:34:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153401.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:34:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153426.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:34:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153426.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:34:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153426.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:34:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153426.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:34:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153426.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:34:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153426.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6E
+2025-07-27 22:34:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153426.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:34:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153426.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:34:29 debug: New raw connection from 127.0.0.1
+2025-07-27 22:34:29 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:34:29 debug: Connection closed from 127.0.0.1
+2025-07-27 22:35:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153501.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:35:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153501.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:35:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153501.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:35:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153501.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6A
+2025-07-27 22:35:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153501.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:35:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153501.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:35:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153501.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:35:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153501.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:35:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153526.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:35:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153526.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:35:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153526.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:35:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153526.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:35:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153526.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:35:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153526.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6F
+2025-07-27 22:35:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153526.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:35:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153526.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*66
+2025-07-27 22:35:28 debug: New raw connection from 127.0.0.1
+2025-07-27 22:35:28 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:35:28 debug: Connection closed from 127.0.0.1
+2025-07-27 22:35:33 debug: New raw connection from 127.0.0.1
+2025-07-27 22:35:33 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:35:33 debug: Connection closed from 127.0.0.1
+2025-07-27 22:35:35 debug: New raw connection from 127.0.0.1
+2025-07-27 22:35:35 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:35:35 debug: Connection closed from 127.0.0.1
+2025-07-27 22:35:36 debug: New raw connection from 127.0.0.1
+2025-07-27 22:35:36 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:35:36 debug: Connection closed from 127.0.0.1
+2025-07-27 22:35:37 debug: New raw connection from 127.0.0.1
+2025-07-27 22:35:37 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:35:37 debug: Connection closed from 127.0.0.1
+2025-07-27 22:35:38 debug: New raw connection from 127.0.0.1
+2025-07-27 22:35:38 error: TypeError: dbStation.lat.toFixed is not a function
+    at NtripCaster.getSourcetable (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:749:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:373:27)
+2025-07-27 22:35:38 debug: Connection closed from 127.0.0.1
+2025-07-27 22:36:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153601.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:36:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153601.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:36:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153601.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:36:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153601.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*69
+2025-07-27 22:36:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153601.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:36:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153601.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:36:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153601.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:36:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153601.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*60
+2025-07-27 22:36:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153626.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:36:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153626.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:36:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153626.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:36:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153626.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:36:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153626.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:36:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153626.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6C
+2025-07-27 22:36:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153626.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:36:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153626.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*65
+2025-07-27 22:37:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153701.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:37:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153701.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:37:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153701.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:37:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153701.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*68
+2025-07-27 22:37:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153701.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:37:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153701.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:37:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153701.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:37:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153701.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*61
+2025-07-27 22:37:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153726.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:37:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153726.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:37:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153726.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:37:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153726.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:37:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153726.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:37:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153726.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6D
+2025-07-27 22:37:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153726.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:37:26 debug: Sent NMEA position to NTRIP caster: $GPGGA,153726.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*64
+2025-07-27 22:38:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153801.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6E
+2025-07-27 22:38:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153801.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6E
+2025-07-27 22:38:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153801.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6E
+2025-07-27 22:38:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153801.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*67
+2025-07-27 22:38:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153801.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6E
+2025-07-27 22:38:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153801.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6E
+2025-07-27 22:38:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153801.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6E
+2025-07-27 22:38:01 debug: Sent NMEA position to NTRIP caster: $GPGGA,153801.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6E
+2025-07-27 22:38:25 info: Shutting down...
+2025-07-27 22:38:27 info: Database connection established successfully
+2025-07-27 22:38:27 info: Initializing NTRIP relay service...
+2025-07-27 22:38:27 info: API server running on port 3000
+2025-07-27 22:38:27 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-27 22:38:27 info: Found 4 active stations
+2025-07-27 22:38:27 info: Starting relay for station: HANOI_VRS
+2025-07-27 22:38:27 info: Added virtual station: HANOI_VRS (Hanoi VRS Mount Point)
+2025-07-27 22:38:27 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 22:38:27 info: Started relay for station: HANOI_VRS
+2025-07-27 22:38:27 info: Starting relay for station: HNI_2
+2025-07-27 22:38:27 info: Added virtual station: HNI_2 (HN)
+2025-07-27 22:38:27 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:38:27 info: Started relay for station: HNI_2
+2025-07-27 22:38:27 info: Starting relay for station: HNI_QuocOAI2222d2
+2025-07-27 22:38:27 info: Added virtual station: HNI_QuocOAI2222d2 (HN)
+2025-07-27 22:38:27 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:38:27 info: Started relay for station: HNI_QuocOAI2222d2
+2025-07-27 22:38:27 info: Starting relay for station: HNI_QuocOAI2d222d2
+2025-07-27 22:38:27 info: Added virtual station: HNI_QuocOAI2d222d2 (HN)
+2025-07-27 22:38:27 info: Connecting to NTRIP caster: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:38:27 info: Started relay for station: HNI_QuocOAI2d222d2
+2025-07-27 22:38:27 info: Refreshing sourcetable from database
+2025-07-27 22:38:27 debug: Current stations in memory: 4, Active stations in DB: 4
+2025-07-27 22:38:27 debug: Updated existing station in sourcetable: HANOI_VRS
+2025-07-27 22:38:27 debug: Updated existing station in sourcetable: HNI_2
+2025-07-27 22:38:27 debug: Updated existing station in sourcetable: HNI_QuocOAI2222d2
+2025-07-27 22:38:27 debug: Updated existing station in sourcetable: HNI_QuocOAI2d222d2
+2025-07-27 22:38:27 info: Sourcetable refreshed successfully. Active stations (4): HANOI_VRS, HNI_2, HNI_QuocOAI2222d2, HNI_QuocOAI2d222d2
+2025-07-27 22:38:27 info: Source table refreshed in caster
+2025-07-27 22:38:27 info: Starting missing relay for station: HANOI_VRS
+2025-07-27 22:38:27 error: Error: Station with mountpoint HANOI_VRS already exists
+    at NtripCaster.addStation (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:90:13)
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RelayService.refreshSourceTable (file:///C:/laragon/www/ntrip/src/services/relay.service.js:86:11)
+    at async RelayService.initialize (file:///C:/laragon/www/ntrip/src/services/relay.service.js:44:7)
+    at async initialize (file:///C:/laragon/www/ntrip/src/app.js:85:5)
+2025-07-27 22:38:27 info: Starting missing relay for station: HNI_2
+2025-07-27 22:38:27 error: Error: Station with mountpoint HNI_2 already exists
+    at NtripCaster.addStation (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:90:13)
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RelayService.refreshSourceTable (file:///C:/laragon/www/ntrip/src/services/relay.service.js:86:11)
+    at async RelayService.initialize (file:///C:/laragon/www/ntrip/src/services/relay.service.js:44:7)
+    at async initialize (file:///C:/laragon/www/ntrip/src/app.js:85:5)
+2025-07-27 22:38:27 info: Starting missing relay for station: HNI_QuocOAI2222d2
+2025-07-27 22:38:27 error: Error: Station with mountpoint HNI_QuocOAI2222d2 already exists
+    at NtripCaster.addStation (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:90:13)
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RelayService.refreshSourceTable (file:///C:/laragon/www/ntrip/src/services/relay.service.js:86:11)
+    at async RelayService.initialize (file:///C:/laragon/www/ntrip/src/services/relay.service.js:44:7)
+    at async initialize (file:///C:/laragon/www/ntrip/src/app.js:85:5)
+2025-07-27 22:38:27 info: Starting missing relay for station: HNI_QuocOAI2d222d2
+2025-07-27 22:38:27 error: Error: Station with mountpoint HNI_QuocOAI2d222d2 already exists
+    at NtripCaster.addStation (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:90:13)
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RelayService.refreshSourceTable (file:///C:/laragon/www/ntrip/src/services/relay.service.js:86:11)
+    at async RelayService.initialize (file:///C:/laragon/www/ntrip/src/services/relay.service.js:44:7)
+    at async initialize (file:///C:/laragon/www/ntrip/src/app.js:85:5)
+2025-07-27 22:38:27 info: Source table and relays refreshed successfully
+2025-07-27 22:38:27 info: NTRIP relay service initialized successfully
+2025-07-27 22:38:27 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-27 22:38:27 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:38:27 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:38:27 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:38:27 info: Connected to NTRIP caster: rtk.taikhoandodac.vn:1509
+2025-07-27 22:38:27 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:38:27 info: Connected to source caster for station HNI_2
+2025-07-27 22:38:27 debug: Sent NMEA position to NTRIP caster: $GPGGA,153827.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6A
+2025-07-27 22:38:27 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:38:27 info: Connected to source caster for station HNI_QuocOAI2d222d2
+2025-07-27 22:38:27 debug: Sent NMEA position to NTRIP caster: $GPGGA,153827.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6A
+2025-07-27 22:38:27 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-27 22:38:27 info: Connected to source caster for station HNI_QuocOAI2222d2
+2025-07-27 22:38:27 debug: Sent NMEA position to NTRIP caster: $GPGGA,153827.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6A
+2025-07-27 22:38:27 info: NTRIP caster authentication successful: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-27 22:38:27 info: Connected to source caster for station HANOI_VRS
+2025-07-27 22:38:27 debug: Sent NMEA position to NTRIP caster: $GPGGA,153827.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*63
+2025-07-27 22:38:33 debug: New raw connection from 127.0.0.1
+2025-07-27 22:38:33 info: Refreshing sourcetable from database
+2025-07-27 22:38:33 debug: Current stations in memory: 4, Active stations in DB: 4
+2025-07-27 22:38:33 debug: Updated existing station in sourcetable: HANOI_VRS
+2025-07-27 22:38:33 debug: Updated existing station in sourcetable: HNI_2
+2025-07-27 22:38:33 debug: Updated existing station in sourcetable: HNI_QuocOAI2222d2
+2025-07-27 22:38:33 debug: Updated existing station in sourcetable: HNI_QuocOAI2d222d2
+2025-07-27 22:38:33 info: Sourcetable refreshed successfully. Active stations (4): HANOI_VRS, HNI_2, HNI_QuocOAI2222d2, HNI_QuocOAI2d222d2
+2025-07-27 22:38:33 debug: Connection closed from 127.0.0.1
+2025-07-27 22:38:41 debug: JWT auth successful for user: john@example.com
+2025-07-27 22:38:41 info: No relay running for station: HNI_8
+2025-07-27 22:38:41 error: TypeError: Cannot read properties of null (reading 'addStation')
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/laragon/www/ntrip/src/routes/station.routes.js:201:7
+2025-07-27 22:38:41 warn: Cannot refresh source table: caster not initialized
+2025-07-27 22:38:49 debug: New raw connection from 127.0.0.1
+2025-07-27 22:38:49 info: Refreshing sourcetable from database
+2025-07-27 22:38:49 debug: Current stations in memory: 4, Active stations in DB: 4
+2025-07-27 22:38:49 debug: Updated existing station in sourcetable: HANOI_VRS
+2025-07-27 22:38:49 info: Adding new station to sourcetable: HNI_8
+2025-07-27 22:38:49 info: Added virtual station: HNI_8 (HN)
+2025-07-27 22:38:49 debug: Updated existing station in sourcetable: HNI_QuocOAI2222d2
+2025-07-27 22:38:49 debug: Updated existing station in sourcetable: HNI_QuocOAI2d222d2
+2025-07-27 22:38:49 info: Removing station from sourcetable: HNI_2
+2025-07-27 22:38:49 info: Removed virtual station: HNI_2
+2025-07-27 22:38:49 info: Sourcetable refreshed successfully. Active stations (4): HANOI_VRS, HNI_QuocOAI2222d2, HNI_QuocOAI2d222d2, HNI_8
+2025-07-27 22:38:49 debug: Connection closed from 127.0.0.1
+2025-07-27 22:38:52 debug: New raw connection from 127.0.0.1
+2025-07-27 22:38:52 info: Refreshing sourcetable from database
+2025-07-27 22:38:52 debug: Current stations in memory: 4, Active stations in DB: 4
+2025-07-27 22:38:52 debug: Updated existing station in sourcetable: HANOI_VRS
+2025-07-27 22:38:52 debug: Updated existing station in sourcetable: HNI_8
+2025-07-27 22:38:52 debug: Updated existing station in sourcetable: HNI_QuocOAI2222d2
+2025-07-27 22:38:52 debug: Updated existing station in sourcetable: HNI_QuocOAI2d222d2
+2025-07-27 22:38:52 info: Sourcetable refreshed successfully. Active stations (4): HANOI_VRS, HNI_QuocOAI2222d2, HNI_QuocOAI2d222d2, HNI_8
+2025-07-27 22:38:52 debug: Connection closed from 127.0.0.1
+2025-07-27 22:39:06 debug: JWT auth successful for user: john@example.com
+2025-07-27 22:39:06 info: No relay running for station: 8
+2025-07-27 22:39:06 error: TypeError: Cannot read properties of null (reading 'addStation')
+    at RelayService.startRelay (file:///C:/laragon/www/ntrip/src/services/relay.service.js:134:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/laragon/www/ntrip/src/routes/station.routes.js:201:7
+2025-07-27 22:39:06 warn: Cannot refresh source table: caster not initialized
+2025-07-27 22:39:13 debug: New raw connection from 127.0.0.1
+2025-07-27 22:39:13 info: Refreshing sourcetable from database
+2025-07-27 22:39:13 debug: Current stations in memory: 4, Active stations in DB: 4
+2025-07-27 22:39:13 debug: Updated existing station in sourcetable: HANOI_VRS
+2025-07-27 22:39:13 info: Adding new station to sourcetable: 8
+2025-07-27 22:39:13 info: Added virtual station: 8 (HN)
+2025-07-27 22:39:13 debug: Updated existing station in sourcetable: HNI_QuocOAI2222d2
+2025-07-27 22:39:13 debug: Updated existing station in sourcetable: HNI_QuocOAI2d222d2
+2025-07-27 22:39:13 info: Removing station from sourcetable: HNI_8
+2025-07-27 22:39:13 info: Removed virtual station: HNI_8
+2025-07-27 22:39:13 info: Sourcetable refreshed successfully. Active stations (4): HANOI_VRS, HNI_QuocOAI2222d2, HNI_QuocOAI2d222d2, 8
+2025-07-27 22:39:13 debug: Connection closed from 127.0.0.1
+2025-07-27 22:39:27 debug: Sent NMEA position to NTRIP caster: $GPGGA,153927.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6B
+2025-07-27 22:39:27 debug: Sent NMEA position to NTRIP caster: $GPGGA,153927.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6B
+2025-07-27 22:39:27 debug: Sent NMEA position to NTRIP caster: $GPGGA,153927.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*6B
+2025-07-27 22:39:27 debug: Sent NMEA position to NTRIP caster: $GPGGA,153927.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*62
+2025-07-27 22:39:35 debug: New raw connection from 127.0.0.1
+2025-07-27 22:39:35 info: Refreshing sourcetable from database
+2025-07-27 22:39:35 debug: Current stations in memory: 4, Active stations in DB: 4
+2025-07-27 22:39:35 debug: Updated existing station in sourcetable: HANOI_VRS
+2025-07-27 22:39:35 info: Adding new station to sourcetable: 8N
+2025-07-27 22:39:35 info: Added virtual station: 8N (HN)
+2025-07-27 22:39:35 debug: Updated existing station in sourcetable: HNI_QuocOAI2222d2
+2025-07-27 22:39:35 debug: Updated existing station in sourcetable: HNI_QuocOAI2d222d2
+2025-07-27 22:39:35 info: Removing station from sourcetable: 8
+2025-07-27 22:39:35 info: Removed virtual station: 8
+2025-07-27 22:39:35 info: Sourcetable refreshed successfully. Active stations (4): HANOI_VRS, HNI_QuocOAI2222d2, HNI_QuocOAI2d222d2, 8N
+2025-07-27 22:39:35 debug: Connection closed from 127.0.0.1
+2025-07-27 22:39:47 debug: New raw connection from 127.0.0.1
+2025-07-27 22:39:47 info: Refreshing sourcetable from database
+2025-07-27 22:39:47 debug: Current stations in memory: 4, Active stations in DB: 4
+2025-07-27 22:39:47 debug: Updated existing station in sourcetable: HANOI_VRS
+2025-07-27 22:39:47 debug: Updated existing station in sourcetable: 8N
+2025-07-27 22:39:47 info: Adding new station to sourcetable: HNI_QuocOAI22g22d2
+2025-07-27 22:39:47 info: Added virtual station: HNI_QuocOAI22g22d2 (HN)
+2025-07-27 22:39:47 debug: Updated existing station in sourcetable: HNI_QuocOAI2d222d2
+2025-07-27 22:39:47 info: Removing station from sourcetable: HNI_QuocOAI2222d2
+2025-07-27 22:39:47 info: Removed virtual station: HNI_QuocOAI2222d2
+2025-07-27 22:39:47 info: Sourcetable refreshed successfully. Active stations (4): HANOI_VRS, HNI_QuocOAI2d222d2, 8N, HNI_QuocOAI22g22d2
+2025-07-27 22:39:47 debug: Connection closed from 127.0.0.1

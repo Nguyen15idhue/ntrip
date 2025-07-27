@@ -6,8 +6,8 @@ import { Socket } from 'net';
 // Cấu hình kết nối
 const config = {
     host: 'localhost',
-    port: 2101,
-    mountpoint: 'VSTATION',
+    port: 9001,         // Cập nhật cổng thành 9001 để khớp với NTRIP caster đang chạy
+    mountpoint: 'HANOI_VRS', // Cập nhật mountpoint thành HANOI_VRS để khớp với trạm có sẵn
     username: 'rover1',
     password: 'rover123',
     sendNMEA: true,    // Đặt thành false nếu không muốn gửi NMEA

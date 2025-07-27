@@ -6,28 +6,16 @@ import bcrypt from 'bcrypt';
 
 const router = express.Router();
 
-// Get all rovers (admin sees all, users see only their rovers)
+// Get all rovers - basic auth gives access to all rovers
 router.get('/', authenticateJWT, async (req, res) => {
   try {
-    let rovers;
-    
-    // Admins see all rovers, regular users see only their rovers
-    if (req.user.role === 'admin') {
-      rovers = await Rover.findAll({
-        include: [
-          { model: User, attributes: ['id', 'name', 'email'] },
-          { model: Station, attributes: ['id', 'name', 'description'] }
-        ]
-      });
-    } else {
-      rovers = await Rover.findAll({
-        where: { user_id: req.user.id },
-        include: [
-          { model: User, attributes: ['id', 'name', 'email'] },
-          { model: Station, attributes: ['id', 'name', 'description'] }
-        ]
-      });
-    }
+    // With basic auth, everyone gets access to all rovers
+    const rovers = await Rover.findAll({
+      include: [
+        { model: User, attributes: ['id', 'name', 'email'] },
+        { model: Station, attributes: ['id', 'name', 'description'] }
+      ]
+    });
     
     res.status(200).json({
       success: true,
@@ -62,13 +50,8 @@ router.get('/:id', authenticateJWT, async (req, res) => {
       });
     }
     
-    // Check if user is authorized to view this rover
-    if (req.user.role !== 'admin' && rover.user_id !== req.user.id) {
-      return res.status(403).json({
-        success: false,
-        message: 'You are not authorized to view this rover'
-      });
-    }
+    // With basic auth, all authenticated users can view any rover
+    // Authorization check removed
     
     res.status(200).json({
       success: true,

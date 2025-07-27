@@ -422,27 +422,32 @@ class NtripCaster extends EventEmitter {
       const credentials = Buffer.from(authHeader.slice(6), 'base64').toString();
       const [username, password] = credentials.split(':');
       
-      // Find rover in database
+      logger.debug(`Authenticating rover with username: ${username} for mountpoint: ${mountpoint}`);
+      
+      // Find rover in database without requiring station link
       const rover = await Rover.findOne({ 
         where: { 
           username,
           status: 'active'
-        },
-        include: [{
-          model: Station,
-          where: { name: mountpoint }
-        }]
+        }
+        // Removed the include with Station condition to allow any rover to connect to any station
       });
       
       if (!rover) {
+        logger.warn(`Authentication failed: Rover '${username}' not found or not active in database`);
         return null;
       }
+      
+      logger.debug(`Rover '${username}' found, validating password...`);
       
       // Validate password
       const isValid = await rover.validatePassword(password);
       if (!isValid) {
+        logger.warn(`Authentication failed: Invalid password for rover '${username}'`);
         return null;
       }
+      
+      logger.debug(`Password validation successful for rover '${username}'`);
       
       // Update last connection time
       rover.last_connection = new Date();

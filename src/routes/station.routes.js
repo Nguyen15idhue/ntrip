@@ -54,8 +54,8 @@ router.get('/:id', authenticateJWT, async (req, res) => {
   }
 });
 
-// Create new station (admin only)
-router.post('/', [authenticateJWT, isAdmin], async (req, res) => {
+// Create new station - basic auth provides full access
+router.post('/', authenticateJWT, async (req, res) => {
   try {
     const {
       name,

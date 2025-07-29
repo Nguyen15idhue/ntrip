@@ -197,3 +197,1170 @@
 2025-07-29 11:01:06 error: Relay client error for station HNI_111: connect ECONNREFUSED 103.168.58.135:1509
 2025-07-29 11:01:06 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
 2025-07-29 11:01:06 error: Relay client error for station HANOI_VRS2: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 17:07:10 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:07:10 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:07:15 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:07:20 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:07:20 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:07:22 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:07:36 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:07:36 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:07:37 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:17:51 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:17:51 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:17:55 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:17:55 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:17:56 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:17:59 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:18:04 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:19:29 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:19:29 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:19:33 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:19:33 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:19:34 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:21:10 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:21:10 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:21:15 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:21:15 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:21:19 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:21:19 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:21:25 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:21:25 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:21:30 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:21:30 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:25:02 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:25:02 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:25:29 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:25:29 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:25:33 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:25:33 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:25:34 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:25:34 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:25:59 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:25:59 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:26:01 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:26:34 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:26:34 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:28:36 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:28:36 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:39:15 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:39:15 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:39:27 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:39:27 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:40:06 error: NTRIP client error for DN_VRS: getaddrinfo ENOTFOUND some.cors.provider.com
+2025-07-29 17:40:06 error: Relay client error for station DANANG_01: getaddrinfo ENOTFOUND some.cors.provider.com
+2025-07-29 17:40:11 error: NTRIP client error for DN_VRS: getaddrinfo ENOTFOUND some.cors.provider.com
+2025-07-29 17:40:11 error: Relay client error for station DANANG_01: getaddrinfo ENOTFOUND some.cors.provider.com
+2025-07-29 17:40:16 error: NTRIP client error for DN_VRS: getaddrinfo ENOTFOUND some.cors.provider.com
+2025-07-29 17:40:16 error: Relay client error for station DANANG_01: getaddrinfo ENOTFOUND some.cors.provider.com
+2025-07-29 17:40:31 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:40:31 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:40:52 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:40:52 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:45 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:45 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:47 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:47 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:47 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:47 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:47 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:47 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:48 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:48 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:48 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:48 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:48 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:48 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:48 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:48 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:49 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:49 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:49 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:49 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:49 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:49 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:49 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:49 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:50 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:50 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:53 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:53 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:56 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:56 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:57 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:57 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:59 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:44:59 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:45:08 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:45:08 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:45:48 error: NTRIP client error for 2: getaddrinfo ENOTFOUND 12
+2025-07-29 17:45:48 error: Relay client error for station d: getaddrinfo ENOTFOUND 12
+2025-07-29 17:45:58 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:45:58 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:45:58 error: NTRIP client error for 2: getaddrinfo ENOTFOUND 12
+2025-07-29 17:45:58 error: Relay client error for station d: getaddrinfo ENOTFOUND 12
+2025-07-29 17:45:59 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:45:59 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:46:08 error: NTRIP client error for 2: getaddrinfo ENOTFOUND 12
+2025-07-29 17:46:08 error: Relay client error for station d: getaddrinfo ENOTFOUND 12
+2025-07-29 17:46:18 error: NTRIP client error for 2: getaddrinfo ENOTFOUND 12
+2025-07-29 17:46:18 error: Relay client error for station d: getaddrinfo ENOTFOUND 12
+2025-07-29 17:46:28 error: NTRIP client error for 2: getaddrinfo ENOTFOUND 12
+2025-07-29 17:46:28 error: Relay client error for station d: getaddrinfo ENOTFOUND 12
+2025-07-29 17:46:38 error: NTRIP client error for 2: getaddrinfo ENOTFOUND 12
+2025-07-29 17:46:38 error: Relay client error for station d: getaddrinfo ENOTFOUND 12
+2025-07-29 17:46:48 error: NTRIP client error for 2: getaddrinfo ENOTFOUND 12
+2025-07-29 17:46:48 error: Relay client error for station d: getaddrinfo ENOTFOUND 12
+2025-07-29 17:46:54 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:46:54 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:46:58 error: NTRIP client error for 2: getaddrinfo ENOTFOUND 12
+2025-07-29 17:46:58 error: Relay client error for station d: getaddrinfo ENOTFOUND 12
+2025-07-29 17:47:08 error: NTRIP client error for 2: getaddrinfo ENOTFOUND 12
+2025-07-29 17:47:08 error: Relay client error for station d: getaddrinfo ENOTFOUND 12
+2025-07-29 17:47:18 error: NTRIP client error for 2: getaddrinfo ENOTFOUND 12
+2025-07-29 17:47:18 error: Relay client error for station d: getaddrinfo ENOTFOUND 12
+2025-07-29 17:47:28 error: NTRIP client error for 2: getaddrinfo ENOTFOUND 12
+2025-07-29 17:47:28 error: Relay client error for station d: getaddrinfo ENOTFOUND 12
+2025-07-29 17:47:28 error: Max reconnect attempts reached for 2. Giving up.
+2025-07-29 17:47:28 error: Relay client error for station d: Max reconnect attempts reached
+2025-07-29 17:47:31 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:31 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:31 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:31 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:31 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:31 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:32 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:32 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:32 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:32 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:32 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:32 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:34 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:34 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:34 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:34 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:34 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:34 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:35 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:35 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:35 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:35 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:35 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:35 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:35 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:35 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:35 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:35 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:36 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:36 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:36 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:36 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:37 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:37 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:37 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:37 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:38 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:38 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:38 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:47:38 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:54 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:54 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:55 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:55 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:55 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:55 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:55 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:55 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:55 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:56 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:56 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:56 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:56 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:56 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:56 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:56 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:57 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:48:57 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:05 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:05 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:06 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:06 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:13 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:13 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:14 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:14 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:14 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:14 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:14 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:14 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:14 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:14 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:14 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:14 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:19 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:19 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:19 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:20 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:20 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:20 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:20 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:20 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:20 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:20 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:21 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:21 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:21 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:21 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:21 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:21 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:21 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:21 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:21 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:22 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:22 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:49:22 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 17:52:35 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:14:14 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:15:16 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:15:16 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:15:16 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:15:16 error: TypeError: this.caster.getStats is not a function
+    at RelayService.getStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:244:41)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:234:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:17:40 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:17:40 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:17:40 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:17:40 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:18:11 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:18:11 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:18:11 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:18:11 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:18:36 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:18:36 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:18:41 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:18:41 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:20:27 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:20:27 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:20:27 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:20:27 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:22:20 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:22:20 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:23:55 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:24:03 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:24:03 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:24:03 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:24:03 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:24:07 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:24:07 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:24:32 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:24:32 error: TypeError: Cannot read properties of undefined (reading 'values')
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:268:54)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:235:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:28:44 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:28:44 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:29:16 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:29:16 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:30:02 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:30:02 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:30:02 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:30:02 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:33:01 error: NTRIP client error for HNI_CauGiay: read ECONNRESET
+2025-07-29 18:33:01 error: Relay client error for station HNI_111: read ECONNRESET
+2025-07-29 18:33:08 error: NTRIP client error for HNI_QuocOai: Socket timeout
+2025-07-29 18:33:08 error: Relay client error for station HANOI_VRS2: Socket timeout
+2025-07-29 18:37:48 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:37:48 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:37:48 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:37:48 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:38:01 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:38:01 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:38:01 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:38:01 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:44:36 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:44:36 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:44:36 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:44:36 error: TypeError: this.caster.getMountpoint is not a function
+    at RelayService.getStationStatus (file:///C:/laragon/www/ntrip/src/services/relay.service.js:245:44)
+    at file:///C:/laragon/www/ntrip/src/routes/station.routes.js:225:39
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:37:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-29 18:51:44 error: NTRIP client error for HNI_QuocOai: Socket timeout
+2025-07-29 18:51:44 error: Relay client error for station HANOI_VRS2: Socket timeout
+2025-07-29 18:51:56 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 18:51:56 error: Relay client error for station HNI_111: Socket timeout
+2025-07-29 18:53:41 error: NTRIP client error for HNI_QuocOai: Socket timeout
+2025-07-29 18:53:41 error: Relay client error for station HANOI_VRS2: Socket timeout
+2025-07-29 19:00:16 error: NTRIP client error for HNI_QuocOai: Socket timeout
+2025-07-29 19:00:16 error: Relay client error for station HANOI_VRS2: Socket timeout
+2025-07-29 19:08:42 error: NTRIP client error for HNI_QuocOai: read ECONNRESET
+2025-07-29 19:08:42 error: Relay client error for station HANOI_VRS2: read ECONNRESET
+2025-07-29 19:08:42 error: NTRIP client error for HNI_CauGiay: read ECONNRESET
+2025-07-29 19:08:42 error: Relay client error for station HNI_111: read ECONNRESET

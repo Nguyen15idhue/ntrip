@@ -2,7 +2,7 @@ import express from 'express';
 import { Station, Location } from '../models/index.js';
 import { authenticateJWT, isAdmin } from '../middleware/auth.js';
 import { logger } from '../utils/logger.js';
-// FIX: Import the singleton instance, do NOT create a new one.
+// Import singleton instance đã được sửa
 import relayService from '../services/relay.service.js';
 import { Op } from 'sequelize';
 
@@ -33,12 +33,10 @@ router.post('/', [authenticateJWT, isAdmin], async (req, res) => {
     
     const station = await Station.create(req.body);
     
-    // If the new station is active, start its relay.
     if (station.status === 'active') {
       await relayService.startRelay(station.id);
     }
     
-    // The caster will pick up the new station on its next sync or can be refreshed here if immediate visibility is needed
     await relayService.syncWithDatabase();
     
     res.status(201).json({ success: true, data: station, message: 'Station created successfully' });
@@ -48,11 +46,10 @@ router.post('/', [authenticateJWT, isAdmin], async (req, res) => {
   }
 });
 
-// *** NEW: BULK ACTIONS ROUTE ***
+// Bulk actions route
 router.post('/bulk-action', [authenticateJWT, isAdmin], async (req, res) => {
     const { action, stationIds } = req.body;
 
-    // --- Input Validation ---
     if (!action || !['start', 'stop', 'delete'].includes(action)) {
         return res.status(400).json({ success: false, message: "Invalid or missing 'action'. Must be one of: start, stop, delete." });
     }
@@ -83,7 +80,6 @@ router.post('/bulk-action', [authenticateJWT, isAdmin], async (req, res) => {
                     await relayService.stopRelay(station.name);
                     break;
                 case 'delete':
-                    // First stop relay without updating DB, then destroy the record
                     await relayService.stopRelay(station.name, false); 
                     await station.destroy();
                     break;
@@ -95,7 +91,6 @@ router.post('/bulk-action', [authenticateJWT, isAdmin], async (req, res) => {
         }
     }
     
-    // Sync the entire service state after all actions are done
     await relayService.syncWithDatabase();
 
     res.status(200).json({
@@ -139,23 +134,18 @@ router.put('/:id', [authenticateJWT, isAdmin], async (req, res) => {
     const newStatus = station.status;
     const newName = station.name;
     
-    // Logic to handle relay state changes
     if (oldName !== newName) {
-        // If name changed, we must stop the old one.
         await relayService.stopRelay(oldName, false);
-        // If the station is still active with the new name, start it.
         if(newStatus === 'active') {
             await relayService.startRelay(station.id);
         }
     } else if (oldStatus !== newStatus) {
-      // If name is the same, but status changed
       if (newStatus === 'active') {
         await relayService.startRelay(station.id);
       } else {
         await relayService.stopRelay(station.name);
       }
     } else if (newStatus === 'active') {
-      // If status is still active and config might have changed (e.g., source host), restart.
       logger.info(`Restarting station ${station.name} due to configuration update.`);
       await relayService.stopRelay(station.name, false);
       await relayService.startRelay(station.id);
@@ -226,20 +216,32 @@ router.post('/:id/stop', [authenticateJWT, isAdmin], async (req, res) => {
 // Get station statistics
 router.get('/:id/stats', authenticateJWT, async (req, res) => {
   try {
-    const station = await Station.findByPk(req.params.id);
-    if (!station) {
-      return res.status(404).json({ success: false, message: 'Station not found' });
+    const stationId = parseInt(req.params.id, 10);
+    if (isNaN(stationId)) {
+      return res.status(400).json({ success: false, message: 'Invalid Station ID' });
     }
     
-    const serviceStatus = relayService.getStatus();
-    const stationStats = serviceStatus.relays.find(s => s.stationId === parseInt(req.params.id));
+    // Logic này bây giờ sẽ hoạt động chính xác vì hàm trong service đã được sửa
+    const stationStats = relayService.getStationStatus(stationId);
     
     if (stationStats) {
+      // Nếu tìm thấy trong relay service (tức là đang active)
       res.status(200).json({ success: true, data: stationStats });
     } else {
+      // Nếu không, trạm này đang không hoạt động (inactive)
+      const station = await Station.findByPk(stationId);
+      if (!station) {
+        return res.status(404).json({ success: false, message: 'Station not found' });
+      }
       res.status(200).json({
         success: true,
-        data: { stationId: station.id, stationName: station.name, connected: false, status: 'inactive' }
+        data: { 
+          stationId: station.id, 
+          stationName: station.name, 
+          status: 'inactive', 
+          sourceConnected: false, 
+          clientsConnected: 0 
+        }
       });
     }
   } catch (error) {

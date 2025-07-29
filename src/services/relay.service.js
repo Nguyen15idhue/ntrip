@@ -7,11 +7,14 @@ import NtripCaster from '../ntrip/ntrip-caster.js';
 class RelayService extends EventEmitter {
   constructor() {
     super();
-    // Ngăn chặn việc tạo nhiều instance nếu đã có
+    // Singleton pattern: The `export default new RelayService()` at the bottom
+    // already ensures only one instance is created and shared.
+    // The check inside the constructor is therefore redundant but harmless.
     if (RelayService._instance) {
       return RelayService._instance;
     }
     
+    // Sửa đổi quan trọng: Tên thuộc tính của bạn là 'clients', không phải 'relays'
     this.clients = new Map(); // Key: station.name, Value: { client, intervalId, station }
     this.caster = null;
     this.initialized = false;
@@ -64,29 +67,26 @@ class RelayService extends EventEmitter {
         throw new Error(`Station not found with ID: ${stationId}`);
       }
 
-      // Idempotency check: If relay is already running for this station, do nothing.
       if (this.clients.has(station.name)) {
         const { client } = this.clients.get(station.name);
         if (client && client.connected) {
            logger.info(`Relay for station ${station.name} is already running and connected.`);
            return { success: true, message: 'Relay already running.', station };
         }
-        // If client exists but not connected, we should stop it first before restarting.
         logger.info(`Relay for station ${station.name} exists but is not connected. Attempting to restart.`);
-        await this.stopRelay(station.name, false); // false to not update DB status
+        await this.stopRelay(station.name, false);
       }
       
       if (!this.caster) {
         throw new Error('Caster is not initialized.');
       }
       
-      // Add or update station info in the caster.
       this.caster.addStation({
         name: station.name,
         description: station.description,
         lat: parseFloat(station.lat),
         lon: parseFloat(station.lon),
-        active: true, // Mark as active for sourcetable
+        active: true,
         status: true
       });
       
@@ -109,7 +109,6 @@ class RelayService extends EventEmitter {
         const position = { lat: parseFloat(station.lat), lon: parseFloat(station.lon), alt: 100 };
         client.sendPosition(position);
         
-        // Periodically send position to keep connection alive
         intervalId = setInterval(() => {
           if (client.connected) {
             client.sendPosition(position);
@@ -119,7 +118,6 @@ class RelayService extends EventEmitter {
       
       client.on('disconnected', () => {
         logger.warn(`Relay disconnected from source for station ${station.name}`);
-        // Cleanup interval when disconnected to prevent orphaned timers
         if(intervalId) clearInterval(intervalId);
       });
       
@@ -127,13 +125,9 @@ class RelayService extends EventEmitter {
         logger.error(`Relay client error for station ${station.name}: ${error.message}`);
       });
       
-      // Store client and interval immediately
       this.clients.set(station.name, { client, intervalId, station });
-
-      // Start the connection
       client.connect();
       
-      // Update DB status
       if (station.status !== 'active') {
         station.status = 'active';
         await station.save();
@@ -157,29 +151,23 @@ class RelayService extends EventEmitter {
     try {
       const relayData = this.clients.get(stationName);
 
-      // Idempotency check: If no relay is running, consider it a success.
       if (!relayData) {
         logger.warn(`No active relay found for station ${stationName}. Nothing to stop.`);
       } else {
         const { client, intervalId } = relayData;
-        
         if (intervalId) clearInterval(intervalId);
-        
         if (client) {
             client.removeAllListeners();
             client.disconnect();
         }
-        
         this.clients.delete(stationName);
         logger.info(`Stopped relay client for station: ${stationName}`);
       }
       
-      // Always try to remove from caster to ensure clean state
       if (this.caster) {
         this.caster.removeStation(stationName);
       }
       
-      // Update DB status if requested
       if (updateDb) {
         const station = await Station.findOne({ where: { name: stationName } });
         if (station && station.status !== 'inactive') {
@@ -197,13 +185,12 @@ class RelayService extends EventEmitter {
   }
 
   /**
-   * Synchronizes the running relays with the database state. This is the single source of truth for state management.
+   * Synchronizes the running relays with the database state.
    */
   async syncWithDatabase() {
     try {
       logger.info('Synchronizing relay service state with database...');
       
-      // First, tell the caster to refresh its own list from the DB.
       if (this.caster) {
         await this.caster.refreshSourceTable();
       }
@@ -212,7 +199,6 @@ class RelayService extends EventEmitter {
       const activeDbStationNames = new Set(activeDbStations.map(s => s.name));
       const runningRelayNames = new Set(this.clients.keys());
       
-      // Start relays for stations that are active in DB but not running in memory.
       for (const station of activeDbStations) {
         if (!runningRelayNames.has(station.name)) {
           logger.info(`[SYNC] Found active station ${station.name} in DB without a running relay. Starting...`);
@@ -220,11 +206,10 @@ class RelayService extends EventEmitter {
         }
       }
       
-      // Stop relays that are running in memory but are inactive in DB.
       for (const stationName of runningRelayNames) {
         if (!activeDbStationNames.has(stationName)) {
           logger.info(`[SYNC] Found running relay for ${stationName} which is inactive in DB. Stopping...`);
-          await this.stopRelay(stationName, false); // Don't need to update DB, it's already inactive.
+          await this.stopRelay(stationName, false);
         }
       }
       
@@ -236,34 +221,72 @@ class RelayService extends EventEmitter {
     }
   }
 
+  // ===== START: CÁC HÀM ĐÃ SỬA LỖI =====
+
   /**
-   * Get overall status of the service.
+   * Lấy trạng thái của một trạm cụ thể.
+   * @param {number} stationId - ID của trạm cần lấy trạng thái.
+   * @returns {object|null} - Trả về object trạng thái hoặc null nếu không tìm thấy.
    */
-  getStatus() {
-    const status = {
-      caster: this.caster ? this.caster.getStats() : { running: false },
-      relays: []
-    };
-    
-    for (const [stationName, { client, station }] of this.clients.entries()) {
-      status.relays.push({
-        stationId: station.id,
-        stationName,
-        connected: client.connected,
-        stats: client.getStats()
-      });
-    }
-    
-    return status;
+  getStationStatus(stationId) {
+      // SỬA ĐỔI: Lặp qua `this.clients.values()` thay vì `this.relays`
+      const allRelayData = Array.from(this.clients.values());
+      
+      // SỬA ĐỔI: Tìm kiếm dựa trên `data.station.id`
+      const relayData = allRelayData.find(data => data.station.id === stationId);
+      
+      if (!relayData) {
+          return null; // Trạm không hoạt động (không có trong bộ nhớ)
+      }
+
+      const { station, client } = relayData;
+      
+      // Lấy số lượng client (rover) đang kết nối tới mountpoint này từ caster
+      const clientsConnected = this.caster.getMountpoint(station.name)?.clients?.size || 0;
+
+      // SỬA ĐỔI: Trả về dữ liệu từ cấu trúc đúng (`station` và `client`)
+      return {
+          stationId: station.id,
+          stationName: station.name,
+          status: 'active', // Nếu nó tồn tại trong 'clients' thì nó đang active
+          sourceConnected: client.connected, // Trạng thái kết nối đến nguồn
+          sourceHost: client.options.host,
+          sourceMountpoint: client.options.mountpoint,
+          clientsConnected: clientsConnected, // Số lượng rover đang kết nối
+          startTime: client.startTime, // Giả sử client có thuộc tính này
+      };
   }
 
   /**
-   * Gracefully shut down the relay service.
+   * Lấy trạng thái tổng quan của toàn bộ dịch vụ.
+   * @returns {object} - Trạng thái tổng quan.
    */
+  getStatus() {
+      // SỬA ĐỔI: Lặp qua `this.clients.values()`
+      const activeRelays = Array.from(this.clients.values()).map(relayData => {
+          const { station, client } = relayData;
+          const clientsConnected = this.caster.getMountpoint(station.name)?.clients?.size || 0;
+          return {
+              stationId: station.id,
+              stationName: station.name,
+              sourceConnected: client.connected,
+              clientsConnected: clientsConnected,
+          };
+      });
+
+      return {
+          casterStatus: this.caster ? 'running' : 'stopped',
+          totalRoversConnected: this.caster ? this.caster.clients.size : 0, // Tổng số rover kết nối đến caster
+          totalRelaysRunning: this.clients.size, // Tổng số relay đang chạy
+          relays: activeRelays,
+      };
+  }
+  
+  // ===== END: CÁC HÀM ĐÃ SỬA LỖI =====
+
   async shutdown() {
     logger.info('Shutting down NTRIP relay service...');
     
-    // Stop all client connections
     const stationNames = Array.from(this.clients.keys());
     for (const stationName of stationNames) {
       await this.stopRelay(stationName, false);
@@ -277,12 +300,7 @@ class RelayService extends EventEmitter {
     
     logger.info('NTRIP relay service shut down successfully.');
   }
-  // Thêm hàm này vào trong class RelayService
 
-  /**
-   * Get a list of currently active connections with their real-time status.
-   * @returns {Array<object>} A list of active connections.
-   */
   getActiveConnections() {
     if (!this.caster || !this.caster.clients) {
       return [];
@@ -306,5 +324,5 @@ class RelayService extends EventEmitter {
   }
 }
 
-// Export a single instance for the entire application
+// Export một instance duy nhất để đảm bảo toàn bộ ứng dụng dùng chung.
 export default new RelayService();

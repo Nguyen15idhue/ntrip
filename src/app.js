@@ -25,8 +25,18 @@ if (!fs.existsSync(logsDir)) {
 // Initialize Express app
 const app = express();
 
+// ======================= CẬP NHẬT Ở ĐÂY =======================
 // Middleware
-app.use(cors());
+// Cấu hình CORS để chỉ cho phép frontend truy cập
+const corsOptions = {
+  // Lấy URL của frontend từ biến môi trường để linh hoạt
+  // giữa môi trường dev và production.
+  origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
+// =============================================================
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

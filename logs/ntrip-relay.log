@@ -2365,3 +2365,92 @@
 2025-07-29 11:14:04 debug: Connection closed from 127.0.0.1.
 2025-07-29 11:14:04 info: Client beb44d48-a62f-438a-9fc7-45e5af31dd4b (rover2) disconnected from HNI_111.
 2025-07-29 11:14:13 info: Shutting down...
+2025-07-29 12:23:43 info: Database connection established successfully.
+2025-07-29 12:23:43 info: Initializing NTRIP relay service...
+2025-07-29 12:23:43 info: Synchronizing relay service state with database...
+2025-07-29 12:23:43 info: Caster is refreshing its station list from the database.
+2025-07-29 12:23:43 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-29 12:23:43 info: Added new station to caster: HANOI_VRS2
+2025-07-29 12:23:43 info: Added new station to caster: HNI_111
+2025-07-29 12:23:43 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 12:23:43 info: [SYNC] Found active station HANOI_VRS2 in DB without a running relay. Starting...
+2025-07-29 12:23:43 debug: Updated existing station in caster: HANOI_VRS2
+2025-07-29 12:23:43 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-29 12:23:43 info: Started relay for station: HANOI_VRS2
+2025-07-29 12:23:43 info: [SYNC] Found active station HNI_111 in DB without a running relay. Starting...
+2025-07-29 12:23:43 debug: Updated existing station in caster: HNI_111
+2025-07-29 12:23:43 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 12:23:43 info: Started relay for station: HNI_111
+2025-07-29 12:23:43 info: Relay service synchronized with database.
+2025-07-29 12:23:43 info: NTRIP relay service initialized successfully.
+2025-07-29 12:23:43 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-29 12:23:43 info: API server running on port 3000
+2025-07-29 12:23:43 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 12:23:43 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 12:23:43 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-29 12:23:43 info: Relay connected to source for station HNI_111
+2025-07-29 12:23:43 info: Authentication successful for mountpoint: HNI_QuocOai
+2025-07-29 12:23:43 info: Relay connected to source for station HANOI_VRS2
+2025-07-29 12:37:29 debug: JWT auth successful for user: john@example.com
+2025-07-29 12:37:29 info: Disconnected from NTRIP source: HNI_QuocOai
+2025-07-29 12:37:29 info: Stopped relay client for station: HANOI_VRS2
+2025-07-29 12:37:29 info: Removed station from caster: HANOI_VRS2
+2025-07-29 12:37:29 info: Updated station HANOI_VRS2 status to inactive in DB.
+2025-07-29 12:38:06 debug: JWT auth successful for user: john@example.com
+2025-07-29 12:38:06 info: Added new station to caster: HANOI_VRS2
+2025-07-29 12:38:06 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-29 12:38:06 info: Started relay for station: HANOI_VRS2
+2025-07-29 12:38:06 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 12:38:06 info: Authentication successful for mountpoint: HNI_QuocOai
+2025-07-29 12:38:06 info: Relay connected to source for station HANOI_VRS2
+2025-07-29 12:42:15 info: Shutting down...
+2025-07-29 12:42:17 info: Database connection established successfully.
+2025-07-29 12:42:17 info: Initializing NTRIP relay service...
+2025-07-29 12:42:17 info: Synchronizing relay service state with database...
+2025-07-29 12:42:17 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-29 12:42:17 info: Added new station to caster: HANOI_VRS2
+2025-07-29 12:42:17 info: Added new station to caster: HNI_111
+2025-07-29 12:42:17 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 12:42:17 info: [SYNC] Found active station HANOI_VRS2 in DB without a running relay. Starting...
+2025-07-29 12:42:17 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-29 12:42:17 info: Started relay for station: HANOI_VRS2
+2025-07-29 12:42:17 info: [SYNC] Found active station HNI_111 in DB without a running relay. Starting...
+2025-07-29 12:42:17 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 12:42:17 info: Started relay for station: HNI_111
+2025-07-29 12:42:17 info: Relay service synchronized with database.
+2025-07-29 12:42:17 info: NTRIP relay service initialized successfully.
+2025-07-29 12:42:17 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-29 12:42:17 info: API server running on port 3000
+2025-07-29 12:42:17 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 12:42:17 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 12:42:17 info: Authentication successful for mountpoint: HNI_QuocOai
+2025-07-29 12:42:17 info: Relay connected to source for station HANOI_VRS2
+2025-07-29 12:42:17 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-29 12:42:17 info: Relay connected to source for station HNI_111
+2025-07-29 12:42:49 info: Client 66fed541-6070-4dab-9b0c-a3e9d97b5e40 (rover2) connected to HANOI_VRS2 from 127.0.0.1.
+2025-07-29 12:42:49 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:42:57 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:43:04 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:43:12 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:43:12 debug: JWT auth successful for user: john@example.com
+2025-07-29 12:43:19 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:43:26 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:43:34 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:43:41 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:43:49 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:43:56 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:44:03 info: Client 66fed541-6070-4dab-9b0c-a3e9d97b5e40 (rover2) disconnected.
+2025-07-29 12:44:47 info: Client 751a04d9-bf7c-464e-8b10-3e089abc3044 (rover2) connected to HANOI_VRS2 from 127.0.0.1.
+2025-07-29 12:44:47 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:44:50 info: Client 751a04d9-bf7c-464e-8b10-3e089abc3044 (rover2) disconnected.
+2025-07-29 12:45:03 debug: JWT auth successful for user: john@example.com
+2025-07-29 12:45:15 info: Client 558017fa-753c-4dc0-aa74-a398ae12ad99 (rover2) connected to HANOI_VRS2 from 127.0.0.1.
+2025-07-29 12:45:15 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:45:23 debug: JWT auth successful for user: john@example.com
+2025-07-29 12:45:23 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:45:30 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:45:37 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:45:46 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:45:52 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:46:00 debug: Client rover2 updated position. Status: RTK Fixed
+2025-07-29 12:46:07 debug: Client rover2 updated position. Status: RTK Fixed

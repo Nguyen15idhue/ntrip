@@ -36,6 +36,7 @@ import userRoutes from './routes/user.routes.js';
 import stationRoutes from './routes/station.routes.js';
 import roverRoutes from './routes/rover.routes.js';
 import locationRoutes from './routes/location.routes.js';
+import statusRoutes from './routes/status.routes.js';
 
 // Use API routes
 app.use('/api/auth', authRoutes);
@@ -43,6 +44,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/stations', stationRoutes);
 app.use('/api/rovers', roverRoutes);
 app.use('/api/locations', locationRoutes);
+app.use('/api/status', statusRoutes);
 
 // Root route
 app.get('/', (req, res) => {

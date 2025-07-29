@@ -277,6 +277,33 @@ class RelayService extends EventEmitter {
     
     logger.info('NTRIP relay service shut down successfully.');
   }
+  // Thêm hàm này vào trong class RelayService
+
+  /**
+   * Get a list of currently active connections with their real-time status.
+   * @returns {Array<object>} A list of active connections.
+   */
+  getActiveConnections() {
+    if (!this.caster || !this.caster.clients) {
+      return [];
+    }
+
+    const connections = [];
+    for (const client of this.caster.clients.values()) {
+      connections.push({
+        sessionId: client.id,
+        roverId: client.rover.id,
+        roverUsername: client.rover.username,
+        mountpoint: client.mountpoint,
+        ipAddress: client.ip,
+        connectedAt: client.connectedAt,
+        gnssStatus: client.gnssStatus,
+        lastPosition: client.lastPosition,
+        lastPositionUpdate: client.lastPositionUpdate
+      });
+    }
+    return connections;
+  }
 }
 
 // Export a single instance for the entire application

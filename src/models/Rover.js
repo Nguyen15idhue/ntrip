@@ -54,6 +54,42 @@ Rover.init({
     type: DataTypes.DATE,
     allowNull: true
   },
+  // --- NEW FIELDS ---
+  start_date: {
+    type: DataTypes.DATEONLY,
+    allowNull: true,
+    comment: 'The date when the rover becomes active.'
+  },
+  end_date: {
+    type: DataTypes.DATEONLY,
+    allowNull: true,
+    comment: 'The date when the rover expires.'
+  },
+  // --- NEW VIRTUAL FIELD ---
+  is_currently_active: {
+    type: DataTypes.VIRTUAL,
+    get() {
+      const status = this.getDataValue('status');
+      if (status !== 'active') {
+        return false;
+      }
+      
+      const now = new Date();
+      now.setHours(0, 0, 0, 0); // Compare date part only
+
+      const startDate = this.getDataValue('start_date');
+      const endDate = this.getDataValue('end_date');
+
+      if (startDate && new Date(startDate) > now) {
+        return false; // Not yet started
+      }
+      if (endDate && new Date(endDate) < now) {
+        return false; // Expired
+      }
+
+      return true; // Active and within valid date range
+    }
+  },
   created_at: {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW
@@ -70,14 +106,15 @@ Rover.init({
   createdAt: 'created_at',
   updatedAt: 'updated_at',
   hooks: {
-    // Hash password before saving to database
     beforeCreate: async (rover) => {
+      // Use the raw password provided, not password_hash
       if (rover.password_hash) {
         rover.password_hash = await bcrypt.hash(rover.password_hash, 10);
       }
     },
     beforeUpdate: async (rover) => {
-      if (rover.changed('password_hash')) {
+      // Check if password_hash was changed explicitly
+      if (rover.changed('password_hash') && rover.password_hash) {
         rover.password_hash = await bcrypt.hash(rover.password_hash, 10);
       }
     }

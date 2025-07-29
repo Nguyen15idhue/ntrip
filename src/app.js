@@ -2,10 +2,12 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import sequelize from './config/database.js';
-import { logger, stream } from './utils/logger.js';
+import { logger } from './utils/logger.js';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+// FIX: Import the singleton instance of the RelayService
+import relayService from './services/relay.service.js';
 
 // Load environment variables
 dotenv.config();
@@ -65,46 +67,33 @@ process.on('uncaughtException', (err) => {
   process.exit(1);
 });
 
-// Initialize NTRIP relay service
-import RelayService from './services/relay.service.js';
-
 // Database & server initialization
 async function initialize() {
   try {
-    // Connect to database
     await sequelize.authenticate();
-    logger.info('Database connection established successfully');
+    logger.info('Database connection established successfully.');
 
-    // Start Express server
+    // Initialize NTRIP relay service using the singleton instance
+    await relayService.initialize();
+
     const server = app.listen(PORT, () => {
       logger.info(`API server running on port ${PORT}`);
     });
-
-    // Initialize NTRIP relay service
-    const relayService = new RelayService();
-    await relayService.initialize();
     
-    // Handle graceful shutdown
     const shutdown = async () => {
       logger.info('Shutting down...');
-      
-      // Stop the relay service first
       await relayService.shutdown();
       
-      // Close the express server
       server.close(() => {
-        logger.info('Express server closed');
-        
-        // Close database connection
+        logger.info('Express server closed.');
         sequelize.close().then(() => {
-          logger.info('Database connection closed');
+          logger.info('Database connection closed.');
           process.exit(0);
         });
       });
       
-      // Force exit if graceful shutdown fails
       setTimeout(() => {
-        logger.error('Forced shutdown after timeout');
+        logger.error('Forced shutdown after timeout.');
         process.exit(1);
       }, 10000);
     };
@@ -112,7 +101,7 @@ async function initialize() {
     process.on('SIGINT', shutdown);
     process.on('SIGTERM', shutdown);
   } catch (error) {
-    logger.error('Failed to initialize:', error);
+    logger.error('Failed to initialize application:', error);
     process.exit(1);
   }
 }

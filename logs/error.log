@@ -173,3 +173,27 @@
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async NtripCaster._handleParsedRequest (file:///C:/laragon/www/ntrip/src/ntrip/ntrip-caster.js:399:27)
 2025-07-27 22:53:45 error: Cannot start relay for station HNI_141: caster not initialized
+2025-07-29 11:00:31 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:31 error: Relay client error for station HNI_111: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:31 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:31 error: Relay client error for station HANOI_VRS2: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:38 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:38 error: Relay client error for station HNI_111: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:38 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:38 error: Relay client error for station HANOI_VRS2: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:45 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:45 error: Relay client error for station HNI_111: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:45 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:45 error: Relay client error for station HANOI_VRS2: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:52 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:52 error: Relay client error for station HNI_111: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:52 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:52 error: Relay client error for station HANOI_VRS2: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:59 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:59 error: Relay client error for station HNI_111: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:59 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:59 error: Relay client error for station HANOI_VRS2: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:01:06 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:01:06 error: Relay client error for station HNI_111: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:01:06 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:01:06 error: Relay client error for station HANOI_VRS2: connect ECONNREFUSED 103.168.58.135:1509

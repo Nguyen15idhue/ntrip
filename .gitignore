@@ -1,0 +1,69 @@
+# Thư mục và file từ Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Các file biến môi trường
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Các file log
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# File cấu hình riêng cho NTRIP
+ntrip-config.json
+ntrip-config-*.json
+
+# File và thư mục dữ liệu cục bộ
+data/
+uploads/
+tmp/
+
+# Các file hệ thống
+.DS_Store
+Thumbs.db
+
+# Thư mục build
+dist/
+build/
+coverage/
+
+# IDE và text editor
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+*.swp
+*.swo
+
+# Các file cấu hình cá nhân
+config.local.js
+config.dev.js
+
+# File bảo mật
+*.pem
+*.key
+*.cert
+*.crt
+
+# File tạm thời
+*.tmp
+*.bak
+.cache/
+
+# Các file và thư mục khác
+.nyc_output/
+.vercel
+.next/
+.nuxt/
+.serverless/

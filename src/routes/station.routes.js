@@ -2,10 +2,11 @@ import express from 'express';
 import { Station, Location } from '../models/index.js';
 import { authenticateJWT, isAdmin } from '../middleware/auth.js';
 import { logger } from '../utils/logger.js';
-import RelayService from '../services/relay.service.js';
+// FIX: Import the singleton instance, do NOT create a new one.
+import relayService from '../services/relay.service.js';
+import { Op } from 'sequelize';
 
 const router = express.Router();
-const relayService = new RelayService();
 
 // Get all stations
 router.get('/', authenticateJWT, async (req, res) => {
@@ -13,338 +14,212 @@ router.get('/', authenticateJWT, async (req, res) => {
     const stations = await Station.findAll({
       include: [Location]
     });
-    
-    res.status(200).json({
-      success: true,
-      data: stations
-    });
+    res.status(200).json({ success: true, data: stations });
   } catch (error) {
     logger.error('Error fetching stations:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Failed to fetch stations'
-    });
+    res.status(500).json({ success: false, message: 'Failed to fetch stations' });
   }
 });
+
+// Create new station
+router.post('/', [authenticateJWT, isAdmin], async (req, res) => {
+  try {
+    const { name } = req.body;
+    
+    const existingStation = await Station.findOne({ where: { name } });
+    if (existingStation) {
+      return res.status(400).json({ success: false, message: 'Station with this name already exists' });
+    }
+    
+    const station = await Station.create(req.body);
+    
+    // If the new station is active, start its relay.
+    if (station.status === 'active') {
+      await relayService.startRelay(station.id);
+    }
+    
+    // The caster will pick up the new station on its next sync or can be refreshed here if immediate visibility is needed
+    await relayService.syncWithDatabase();
+    
+    res.status(201).json({ success: true, data: station, message: 'Station created successfully' });
+  } catch (error) {
+    logger.error('Error creating station:', error);
+    res.status(500).json({ success: false, message: 'Failed to create station' });
+  }
+});
+
+// *** NEW: BULK ACTIONS ROUTE ***
+router.post('/bulk-action', [authenticateJWT, isAdmin], async (req, res) => {
+    const { action, stationIds } = req.body;
+
+    // --- Input Validation ---
+    if (!action || !['start', 'stop', 'delete'].includes(action)) {
+        return res.status(400).json({ success: false, message: "Invalid or missing 'action'. Must be one of: start, stop, delete." });
+    }
+    if (!stationIds || !Array.isArray(stationIds) || stationIds.length === 0) {
+        return res.status(400).json({ success: false, message: "Missing or invalid 'stationIds'. Must be a non-empty array of station IDs." });
+    }
+
+    const results = {
+        succeeded: [],
+        failed: []
+    };
+
+    const stations = await Station.findAll({ where: { id: { [Op.in]: stationIds } } });
+    const stationMap = new Map(stations.map(s => [s.id, s]));
+
+    for (const id of stationIds) {
+        try {
+            const station = stationMap.get(id);
+            if (!station) {
+                throw new Error('Station not found.');
+            }
+
+            switch (action) {
+                case 'start':
+                    await relayService.startRelay(station.id);
+                    break;
+                case 'stop':
+                    await relayService.stopRelay(station.name);
+                    break;
+                case 'delete':
+                    // First stop relay without updating DB, then destroy the record
+                    await relayService.stopRelay(station.name, false); 
+                    await station.destroy();
+                    break;
+            }
+            results.succeeded.push(id);
+        } catch (error) {
+            logger.error(`Bulk action '${action}' failed for station ID ${id}:`, error);
+            results.failed.push({ id, error: error.message });
+        }
+    }
+    
+    // Sync the entire service state after all actions are done
+    await relayService.syncWithDatabase();
+
+    res.status(200).json({
+        success: true,
+        message: `Bulk action '${action}' processed.`,
+        results
+    });
+});
+
 
 // Get station by ID
 router.get('/:id', authenticateJWT, async (req, res) => {
-  try {
-    const station = await Station.findByPk(req.params.id, {
-      include: [Location]
-    });
-    
-    if (!station) {
-      return res.status(404).json({
-        success: false,
-        message: 'Station not found'
-      });
+    try {
+        const station = await Station.findByPk(req.params.id, {
+            include: [Location]
+        });
+        if (!station) {
+            return res.status(404).json({ success: false, message: 'Station not found' });
+        }
+        res.status(200).json({ success: true, data: station });
+    } catch (error) {
+        logger.error(`Error fetching station ${req.params.id}:`, error);
+        res.status(500).json({ success: false, message: 'Failed to fetch station' });
     }
-    
-    res.status(200).json({
-      success: true,
-      data: station
-    });
-  } catch (error) {
-    logger.error(`Error fetching station ${req.params.id}:`, error);
-    res.status(500).json({
-      success: false,
-      message: 'Failed to fetch station'
-    });
-  }
 });
 
-// Create new station - Admin access required
-router.post('/', [authenticateJWT, isAdmin], async (req, res) => {
-  try {
-    const {
-      name,
-      description,
-      lat,
-      lon,
-      location_id,
-      source_host,
-      source_port,
-      source_user,
-      source_pass,
-      source_mount_point,
-      carrier,
-      nav_system,
-      network,
-      country,
-      status
-    } = req.body;
-    
-    // Validate required fields
-    if (!name || !location_id || !source_host || !source_mount_point || lat === undefined || lon === undefined) {
-      return res.status(400).json({
-        success: false,
-        message: 'Name, location, latitude, longitude, source host, and source mount point are required'
-      });
-    }
-    
-    // Check if station already exists
-    const existingStation = await Station.findOne({
-      where: { name }
-    });
-    
-    if (existingStation) {
-      return res.status(400).json({
-        success: false,
-        message: 'Station with this name already exists'
-      });
-    }
-    
-    // Create station
-    const station = await Station.create({
-      name,
-      description,
-      lat,
-      lon,
-      location_id,
-      source_host,
-      source_port: source_port || 2101,
-      source_user,
-      source_pass,
-      source_mount_point,
-      carrier,
-      nav_system,
-      network,
-      country,
-      status: status || 'inactive'
-    });
-    
-    // If station is active, set it up in relay service
-    if (station.status === 'active') {
-      await relayService.startRelay(station.id);
-    }
-    
-    // Refresh source table to include new station
-    await relayService.refreshSourceTable();
-    
-    res.status(201).json({
-      success: true,
-      data: station,
-      message: 'Station created successfully'
-    });
-  } catch (error) {
-    logger.error('Error creating station:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Failed to create station'
-    });
-  }
-});
 
-// Update station (admin only)
+// Update station
 router.put('/:id', [authenticateJWT, isAdmin], async (req, res) => {
   try {
     const station = await Station.findByPk(req.params.id);
-    
     if (!station) {
-      return res.status(404).json({
-        success: false,
-        message: 'Station not found'
-      });
+      return res.status(404).json({ success: false, message: 'Station not found' });
     }
     
     const oldStatus = station.status;
-    const {
-      name,
-      description,
-      lat,
-      lon,
-      location_id,
-      source_host,
-      source_port,
-      source_user,
-      source_pass,
-      source_mount_point,
-      carrier,
-      nav_system,
-      network,
-      country,
-      status
-    } = req.body;
+    const oldName = station.name;
+
+    await station.update(req.body);
     
-    // Update fields
-    if (name) station.name = name;
-    if (description !== undefined) station.description = description;
-    if (lat) station.lat = lat;
-    if (lon) station.lon = lon;
-    if (location_id) station.location_id = location_id;
-    if (source_host) station.source_host = source_host;
-    if (source_port) station.source_port = source_port;
-    if (source_user !== undefined) station.source_user = source_user;
-    if (source_pass !== undefined) station.source_pass = source_pass;
-    if (source_mount_point) station.source_mount_point = source_mount_point;
-    if (carrier !== undefined) station.carrier = carrier;
-    if (nav_system !== undefined) station.nav_system = nav_system;
-    if (network !== undefined) station.network = network;
-    if (country !== undefined) station.country = country;
-    if (status) station.status = status;
+    const newStatus = station.status;
+    const newName = station.name;
     
-    await station.save();
-    
-    // Handle status changes for relay service
-    if (oldStatus !== status) {
-      if (status === 'active') {
-        // Activate station
+    // Logic to handle relay state changes
+    if (oldName !== newName) {
+        // If name changed, we must stop the old one.
+        await relayService.stopRelay(oldName, false);
+        // If the station is still active with the new name, start it.
+        if(newStatus === 'active') {
+            await relayService.startRelay(station.id);
+        }
+    } else if (oldStatus !== newStatus) {
+      // If name is the same, but status changed
+      if (newStatus === 'active') {
         await relayService.startRelay(station.id);
-      } else if (status === 'inactive') {
-        // Deactivate station
+      } else {
         await relayService.stopRelay(station.name);
       }
-    } else if (status === 'active') {
-      // Restart active station with new configuration
-      await relayService.stopRelay(station.name);
+    } else if (newStatus === 'active') {
+      // If status is still active and config might have changed (e.g., source host), restart.
+      logger.info(`Restarting station ${station.name} due to configuration update.`);
+      await relayService.stopRelay(station.name, false);
       await relayService.startRelay(station.id);
     }
-    
-    // Refresh source table to reflect changes
-    await relayService.refreshSourceTable();
-    
-    res.status(200).json({
-      success: true,
-      data: station,
-      message: 'Station updated successfully'
-    });
+
+    await relayService.syncWithDatabase();
+
+    res.status(200).json({ success: true, data: station, message: 'Station updated successfully' });
   } catch (error) {
     logger.error(`Error updating station ${req.params.id}:`, error);
-    res.status(500).json({
-      success: false,
-      message: 'Failed to update station'
-    });
+    res.status(500).json({ success: false, message: 'Failed to update station' });
   }
 });
 
-// Delete station (admin only)
+// Delete station
 router.delete('/:id', [authenticateJWT, isAdmin], async (req, res) => {
   try {
     const station = await Station.findByPk(req.params.id);
-    
     if (!station) {
-      return res.status(404).json({
-        success: false,
-        message: 'Station not found'
-      });
+      return res.status(404).json({ success: false, message: 'Station not found' });
     }
     
-    // Stop station if active
-    if (station.status === 'active') {
-      await relayService.stopRelay(station.name);
-    }
-    
+    await relayService.stopRelay(station.name, false);
     await station.destroy();
-    
-    // Refresh source table to reflect deleted station
-    await relayService.refreshSourceTable();
-    
-    res.status(200).json({
-      success: true,
-      message: 'Station deleted successfully'
-    });
-  } catch (error) {
-    logger.error(`Error deleting station ${req.params.id}:`, error);
-    res.status(500).json({
-      success: false,
-      message: 'Failed to delete station'
-    });
-  }
-});
-
-// Start station (admin only)
-router.post('/:id/start', [authenticateJWT, isAdmin], async (req, res) => {
-  try {
-    const station = await Station.findByPk(req.params.id);
-    
-    if (!station) {
-      return res.status(404).json({
-        success: false,
-        message: 'Station not found'
-      });
-    }
-    
-    // First stop any existing relay to ensure clean state
-    try {
-      logger.info(`Ensuring station ${station.name} is stopped before starting`);
-      await relayService.stopRelay(station.name);
-    } catch (stopError) {
-      logger.warn(`Non-critical error when stopping station before restart: ${stopError.message}`);
-      // Continue even if stopping fails
-    }
-    
-    // Update status in database
-    station.status = 'active';
-    await station.save();
-    
-    // Set up station in relay service
-    const result = await relayService.startRelay(station.id);
-    
-    if (!result.success) {
-      logger.error(`Failed to start station ${station.name}: ${result.message}`);
-      return res.status(500).json({
-        success: false,
-        message: `Failed to start station: ${result.message}`
-      });
-    }
-    
-    // Synchronize with database to ensure consistency
     await relayService.syncWithDatabase();
     
-    res.status(200).json({
-      success: true,
-      message: 'Station started successfully',
-      data: station
-    });
+    res.status(200).json({ success: true, message: 'Station deleted successfully' });
   } catch (error) {
-    logger.error(`Error starting station ${req.params.id}:`, error);
-    res.status(500).json({
-      success: false,
-      message: `Failed to start station: ${error.message}`
-    });
+    logger.error(`Error deleting station ${req.params.id}:`, error);
+    res.status(500).json({ success: false, message: 'Failed to delete station' });
   }
 });
 
-// Stop station (admin only)
+// Start station
+router.post('/:id/start', [authenticateJWT, isAdmin], async (req, res) => {
+  try {
+    const result = await relayService.startRelay(req.params.id);
+    if (!result.success) {
+      return res.status(500).json({ success: false, message: result.message });
+    }
+    res.status(200).json({ success: true, message: 'Station start command issued.', data: result.station });
+  } catch (error) {
+    logger.error(`API Error starting station ${req.params.id}:`, error);
+    res.status(500).json({ success: false, message: `Failed to start station: ${error.message}` });
+  }
+});
+
+// Stop station
 router.post('/:id/stop', [authenticateJWT, isAdmin], async (req, res) => {
   try {
     const station = await Station.findByPk(req.params.id);
-    
     if (!station) {
-      return res.status(404).json({
-        success: false,
-        message: 'Station not found'
-      });
+      return res.status(404).json({ success: false, message: 'Station not found' });
+    }
+
+    const result = await relayService.stopRelay(station.name);
+    if (!result.success) {
+      return res.status(500).json({ success: false, message: result.message });
     }
     
-    // First update status in database
-    station.status = 'inactive';
-    await station.save();
-    
-    // Always force refresh the sourcetable to ensure sync
-    await relayService.refreshSourceTable();
-    
-    // Stop station in relay service - we'll consider this successful even if no relay was running
-    const result = await relayService.stopRelay(station.name);
-    
-    // We consider this a success even if the relay wasn't found
-    // Because the goal is to make sure the station is stopped
-    
-    // Synchronize with database to ensure consistency
-    await relayService.syncWithDatabase();
-    
-    res.status(200).json({
-      success: true,
-      message: result.success ? 'Station stopped successfully' : 'Station marked as inactive (no active relay found)',
-      data: station
-    });
+    res.status(200).json({ success: true, message: 'Station stop command issued.' });
   } catch (error) {
-    logger.error(`Error stopping station ${req.params.id}:`, error);
-    res.status(500).json({
-      success: false,
-      message: `Failed to stop station: ${error.message}`
-    });
+    logger.error(`API Error stopping station ${req.params.id}:`, error);
+    res.status(500).json({ success: false, message: `Failed to stop station: ${error.message}` });
   }
 });
 
@@ -352,32 +227,24 @@ router.post('/:id/stop', [authenticateJWT, isAdmin], async (req, res) => {
 router.get('/:id/stats', authenticateJWT, async (req, res) => {
   try {
     const station = await Station.findByPk(req.params.id);
-    
     if (!station) {
-      return res.status(404).json({
-        success: false,
-        message: 'Station not found'
-      });
+      return res.status(404).json({ success: false, message: 'Station not found' });
     }
     
-    // Get stats from relay service
-    const stats = relayService.getStats();
-    const stationStats = stats.activeStations.find(s => s.id === parseInt(req.params.id));
+    const serviceStatus = relayService.getStatus();
+    const stationStats = serviceStatus.relays.find(s => s.stationId === parseInt(req.params.id));
     
-    res.status(200).json({
-      success: true,
-      data: stationStats || { 
-        id: parseInt(req.params.id),
-        name: station.name,
-        status: 'inactive'
-      }
-    });
+    if (stationStats) {
+      res.status(200).json({ success: true, data: stationStats });
+    } else {
+      res.status(200).json({
+        success: true,
+        data: { stationId: station.id, stationName: station.name, connected: false, status: 'inactive' }
+      });
+    }
   } catch (error) {
     logger.error(`Error fetching station stats ${req.params.id}:`, error);
-    res.status(500).json({
-      success: false,
-      message: 'Failed to fetch station statistics'
-    });
+    res.status(500).json({ success: false, message: 'Failed to fetch station statistics' });
   }
 });
 

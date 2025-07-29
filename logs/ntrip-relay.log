@@ -1957,3 +1957,411 @@
 2025-07-29 00:33:53 debug: Sent NMEA position to NTRIP caster: $GPGGA,173353.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*69
 2025-07-29 00:34:53 debug: Sent NMEA position to NTRIP caster: $GPGGA,173453.00,2055.56986,N,10536.01790,E,4,10,1.0,100.00,M,0.0,M,,*67
 2025-07-29 00:34:53 debug: Sent NMEA position to NTRIP caster: $GPGGA,173453.00,2101.71000,N,10551.25200,E,4,10,1.0,100.00,M,0.0,M,,*6E
+2025-07-29 10:11:51 info: Database connection established successfully.
+2025-07-29 10:11:51 info: Initializing NTRIP relay service...
+2025-07-29 10:11:51 info: Synchronizing relay service state with database...
+2025-07-29 10:11:51 info: Caster is refreshing its station list from the database.
+2025-07-29 10:11:51 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-29 10:11:51 info: Added new station to caster: HANOI_VRS2
+2025-07-29 10:11:51 info: Added new station to caster: HNI_111
+2025-07-29 10:11:51 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 10:11:51 info: [SYNC] Found active station HANOI_VRS2 in DB without a running relay. Starting...
+2025-07-29 10:11:51 debug: Updated existing station in caster: HANOI_VRS2
+2025-07-29 10:11:51 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_SocSon_Ait
+2025-07-29 10:11:51 info: Started relay for station: HANOI_VRS2
+2025-07-29 10:11:51 info: [SYNC] Found active station HNI_111 in DB without a running relay. Starting...
+2025-07-29 10:11:51 debug: Updated existing station in caster: HNI_111
+2025-07-29 10:11:51 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 10:11:51 info: Started relay for station: HNI_111
+2025-07-29 10:11:51 info: Relay service synchronized with database.
+2025-07-29 10:11:51 info: NTRIP relay service initialized successfully.
+2025-07-29 10:11:51 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-29 10:11:51 info: API server running on port 3000
+2025-07-29 10:11:51 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 10:11:51 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 10:11:51 info: Authentication successful for mountpoint: HNI_SocSon_Ait
+2025-07-29 10:11:51 info: Relay connected to source for station HANOI_VRS2
+2025-07-29 10:11:51 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-29 10:11:51 info: Relay connected to source for station HNI_111
+2025-07-29 10:12:41 debug: JWT auth successful for user: john@example.com
+2025-07-29 10:16:34 debug: JWT auth successful for user: john@example.com
+2025-07-29 10:16:34 info: Relay for station HNI_111 is already running and connected.
+2025-07-29 10:16:46 debug: JWT auth successful for user: john@example.com
+2025-07-29 10:16:46 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 10:16:46 info: Stopped relay client for station: HNI_111
+2025-07-29 10:16:46 info: Removed station from caster: HNI_111
+2025-07-29 10:16:46 info: Updated station HNI_111 status to inactive in DB.
+2025-07-29 10:17:03 debug: JWT auth successful for user: john@example.com
+2025-07-29 10:17:03 info: Added new station to caster: HNI_111
+2025-07-29 10:17:03 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 10:17:03 info: Started relay for station: HNI_111
+2025-07-29 10:17:03 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 10:17:03 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-29 10:17:03 info: Relay connected to source for station HNI_111
+2025-07-29 10:17:55 info: Shutting down...
+2025-07-29 10:17:58 info: Database connection established successfully.
+2025-07-29 10:17:58 info: Initializing NTRIP relay service...
+2025-07-29 10:17:58 info: Synchronizing relay service state with database...
+2025-07-29 10:17:58 info: Caster is refreshing its station list from the database.
+2025-07-29 10:17:58 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-29 10:17:58 info: Added new station to caster: HANOI_VRS2
+2025-07-29 10:17:58 info: Added new station to caster: HNI_111
+2025-07-29 10:17:58 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 10:17:58 info: [SYNC] Found active station HANOI_VRS2 in DB without a running relay. Starting...
+2025-07-29 10:17:58 debug: Updated existing station in caster: HANOI_VRS2
+2025-07-29 10:17:58 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_SocSon_Ait
+2025-07-29 10:17:58 info: Started relay for station: HANOI_VRS2
+2025-07-29 10:17:58 info: [SYNC] Found active station HNI_111 in DB without a running relay. Starting...
+2025-07-29 10:17:58 debug: Updated existing station in caster: HNI_111
+2025-07-29 10:17:58 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 10:17:58 info: Started relay for station: HNI_111
+2025-07-29 10:17:58 info: Relay service synchronized with database.
+2025-07-29 10:17:58 info: NTRIP relay service initialized successfully.
+2025-07-29 10:17:58 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-29 10:17:58 info: API server running on port 3000
+2025-07-29 10:17:58 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 10:17:58 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 10:17:58 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-29 10:17:58 info: Relay connected to source for station HNI_111
+2025-07-29 10:17:58 info: Authentication successful for mountpoint: HNI_SocSon_Ait
+2025-07-29 10:17:58 info: Relay connected to source for station HANOI_VRS2
+2025-07-29 10:18:11 debug: JWT auth successful for user: john@example.com
+2025-07-29 10:18:11 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 10:18:11 info: Stopped relay client for station: HNI_111
+2025-07-29 10:18:11 info: Removed station from caster: HNI_111
+2025-07-29 10:18:11 info: Updated station HNI_111 status to inactive in DB.
+2025-07-29 10:18:24 debug: JWT auth successful for user: john@example.com
+2025-07-29 10:18:24 info: Added new station to caster: HNI_111
+2025-07-29 10:18:24 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 10:18:24 info: Started relay for station: HNI_111
+2025-07-29 10:18:24 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 10:18:24 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-29 10:18:24 info: Relay connected to source for station HNI_111
+2025-07-29 10:21:50 debug: JWT auth successful for user: john@example.com
+2025-07-29 10:26:02 debug: JWT auth successful for user: john@example.com
+2025-07-29 10:26:09 debug: JWT auth successful for user: john@example.com
+2025-07-29 10:26:16 debug: JWT auth successful for user: john@example.com
+2025-07-29 10:26:24 debug: JWT auth successful for user: john@example.com
+2025-07-29 10:28:47 info: Shutting down...
+2025-07-29 10:28:50 info: Database connection established successfully.
+2025-07-29 10:28:50 info: Initializing NTRIP relay service...
+2025-07-29 10:28:50 info: Synchronizing relay service state with database...
+2025-07-29 10:28:50 info: Caster is refreshing its station list from the database.
+2025-07-29 10:28:50 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-29 10:28:50 info: Added new station to caster: HANOI_VRS2
+2025-07-29 10:28:50 info: Added new station to caster: HNI_111
+2025-07-29 10:28:50 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 10:28:50 info: [SYNC] Found active station HANOI_VRS2 in DB without a running relay. Starting...
+2025-07-29 10:28:51 debug: Updated existing station in caster: HANOI_VRS2
+2025-07-29 10:28:51 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_SocSon_Ait
+2025-07-29 10:28:51 info: Started relay for station: HANOI_VRS2
+2025-07-29 10:28:51 info: [SYNC] Found active station HNI_111 in DB without a running relay. Starting...
+2025-07-29 10:28:51 debug: Updated existing station in caster: HNI_111
+2025-07-29 10:28:51 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 10:28:51 info: Started relay for station: HNI_111
+2025-07-29 10:28:51 info: Relay service synchronized with database.
+2025-07-29 10:28:51 info: NTRIP relay service initialized successfully.
+2025-07-29 10:28:51 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-29 10:28:51 info: API server running on port 3000
+2025-07-29 10:28:51 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 10:28:51 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 10:28:51 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-29 10:28:51 info: Relay connected to source for station HNI_111
+2025-07-29 10:28:51 info: Authentication successful for mountpoint: HNI_SocSon_Ait
+2025-07-29 10:28:51 info: Relay connected to source for station HANOI_VRS2
+2025-07-29 10:29:15 debug: JWT auth successful for user: john@example.com
+2025-07-29 10:30:11 debug: JWT auth successful for user: john@example.com
+2025-07-29 10:30:11 info: Disconnected from NTRIP source: HNI_SocSon_Ait
+2025-07-29 10:30:11 info: Stopped relay client for station: HANOI_VRS2
+2025-07-29 10:30:11 info: Removed station from caster: HANOI_VRS2
+2025-07-29 10:30:11 info: Updated station HANOI_VRS2 status to inactive in DB.
+2025-07-29 10:30:11 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 10:30:11 info: Stopped relay client for station: HNI_111
+2025-07-29 10:30:11 info: Removed station from caster: HNI_111
+2025-07-29 10:30:11 info: Updated station HNI_111 status to inactive in DB.
+2025-07-29 10:30:11 info: Synchronizing relay service state with database...
+2025-07-29 10:30:11 info: Caster is refreshing its station list from the database.
+2025-07-29 10:30:11 info: Caster sourcetable refreshed. Total active stations: 0
+2025-07-29 10:30:11 info: Relay service synchronized with database.
+2025-07-29 10:30:23 debug: JWT auth successful for user: john@example.com
+2025-07-29 10:30:23 info: Added new station to caster: HANOI_VRS2
+2025-07-29 10:30:23 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_SocSon_Ait
+2025-07-29 10:30:23 info: Started relay for station: HANOI_VRS2
+2025-07-29 10:30:23 info: Added new station to caster: HNI_111
+2025-07-29 10:30:23 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 10:30:23 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 10:30:23 info: Started relay for station: HNI_111
+2025-07-29 10:30:23 info: Synchronizing relay service state with database...
+2025-07-29 10:30:23 info: Caster is refreshing its station list from the database.
+2025-07-29 10:30:23 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 10:30:23 debug: Updated existing station in caster: HANOI_VRS2
+2025-07-29 10:30:23 debug: Updated existing station in caster: HNI_111
+2025-07-29 10:30:23 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 10:30:23 info: Authentication successful for mountpoint: HNI_SocSon_Ait
+2025-07-29 10:30:23 info: Relay connected to source for station HANOI_VRS2
+2025-07-29 10:30:23 info: Relay service synchronized with database.
+2025-07-29 10:30:23 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-29 10:30:23 info: Relay connected to source for station HNI_111
+2025-07-29 10:31:43 info: Caster is refreshing its station list from the database.
+2025-07-29 10:31:43 debug: Updated existing station in caster: HANOI_VRS2
+2025-07-29 10:31:43 debug: Updated existing station in caster: HNI_111
+2025-07-29 10:31:43 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 10:31:44 debug: Connection closed from 127.0.0.1.
+2025-07-29 10:31:47 info: Client fcd5f3ec-9295-4cb2-a636-fd7b9ec78a8b (rover2) connected to HANOI_VRS2 from 127.0.0.1.
+2025-07-29 10:31:55 debug: Connection closed from 127.0.0.1.
+2025-07-29 10:31:55 info: Client fcd5f3ec-9295-4cb2-a636-fd7b9ec78a8b (rover2) disconnected from HANOI_VRS2.
+2025-07-29 10:32:00 info: Client 620b24f2-02a6-41c7-b56c-aeb5e2026a8a (rover2) connected to HNI_111 from 127.0.0.1.
+2025-07-29 10:32:06 debug: Connection closed from 127.0.0.1.
+2025-07-29 10:32:06 info: Client 620b24f2-02a6-41c7-b56c-aeb5e2026a8a (rover2) disconnected from HNI_111.
+2025-07-29 10:33:01 info: Shutting down...
+2025-07-29 10:33:03 info: Database connection established successfully.
+2025-07-29 10:33:03 info: Initializing NTRIP relay service...
+2025-07-29 10:33:03 info: Synchronizing relay service state with database...
+2025-07-29 10:33:03 info: Caster is refreshing its station list from the database.
+2025-07-29 10:33:03 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-29 10:33:03 info: Added new station to caster: HANOI_VRS2
+2025-07-29 10:33:03 info: Added new station to caster: HNI_111
+2025-07-29 10:33:03 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 10:33:03 info: [SYNC] Found active station HANOI_VRS2 in DB without a running relay. Starting...
+2025-07-29 10:33:03 debug: Updated existing station in caster: HANOI_VRS2
+2025-07-29 10:33:03 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 10:33:03 info: Started relay for station: HANOI_VRS2
+2025-07-29 10:33:03 info: [SYNC] Found active station HNI_111 in DB without a running relay. Starting...
+2025-07-29 10:33:03 debug: Updated existing station in caster: HNI_111
+2025-07-29 10:33:03 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 10:33:03 info: Started relay for station: HNI_111
+2025-07-29 10:33:03 info: Relay service synchronized with database.
+2025-07-29 10:33:03 info: NTRIP relay service initialized successfully.
+2025-07-29 10:33:03 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-29 10:33:03 info: API server running on port 3000
+2025-07-29 10:33:03 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 10:33:03 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 10:33:03 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-29 10:33:03 info: Relay connected to source for station HANOI_VRS2
+2025-07-29 10:33:03 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-29 10:33:03 info: Relay connected to source for station HNI_111
+2025-07-29 10:33:07 info: Caster is refreshing its station list from the database.
+2025-07-29 10:33:07 debug: Updated existing station in caster: HANOI_VRS2
+2025-07-29 10:33:07 debug: Updated existing station in caster: HNI_111
+2025-07-29 10:33:07 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 10:33:08 debug: Connection closed from 127.0.0.1.
+2025-07-29 10:33:13 info: Client 2892b075-f70c-4313-89d6-c4747f3f4753 (rover2) connected to HANOI_VRS2 from 127.0.0.1.
+2025-07-29 10:33:19 debug: Connection closed from 127.0.0.1.
+2025-07-29 10:33:19 info: Client 2892b075-f70c-4313-89d6-c4747f3f4753 (rover2) disconnected from HANOI_VRS2.
+2025-07-29 10:33:22 info: Client 03ef9bd2-6b05-4410-bfb2-93b58b9cd7f8 (rover2) connected to HNI_111 from 127.0.0.1.
+2025-07-29 10:33:30 debug: Connection closed from 127.0.0.1.
+2025-07-29 10:33:30 info: Client 03ef9bd2-6b05-4410-bfb2-93b58b9cd7f8 (rover2) disconnected from HNI_111.
+2025-07-29 11:00:24 warn: Connection closed for HNI_CauGiay.
+2025-07-29 11:00:24 warn: Relay disconnected from source for station HNI_111
+2025-07-29 11:00:24 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-29 11:00:24 warn: Connection closed for HNI_CauGiay.
+2025-07-29 11:00:24 warn: Relay disconnected from source for station HANOI_VRS2
+2025-07-29 11:00:24 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-29 11:00:29 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-29 11:00:29 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 11:00:29 warn: Relay disconnected from source for station HNI_111
+2025-07-29 11:00:29 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:00:29 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-29 11:00:29 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 11:00:29 warn: Relay disconnected from source for station HANOI_VRS2
+2025-07-29 11:00:29 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:00:31 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:31 error: Relay client error for station HNI_111: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:31 warn: Connection closed for HNI_CauGiay.
+2025-07-29 11:00:31 warn: Relay disconnected from source for station HNI_111
+2025-07-29 11:00:31 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 2).
+2025-07-29 11:00:31 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:31 error: Relay client error for station HANOI_VRS2: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:31 warn: Connection closed for HNI_CauGiay.
+2025-07-29 11:00:31 warn: Relay disconnected from source for station HANOI_VRS2
+2025-07-29 11:00:31 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 2).
+2025-07-29 11:00:36 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-29 11:00:36 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 11:00:36 warn: Relay disconnected from source for station HNI_111
+2025-07-29 11:00:36 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:00:36 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-29 11:00:36 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 11:00:36 warn: Relay disconnected from source for station HANOI_VRS2
+2025-07-29 11:00:36 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:00:38 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:38 error: Relay client error for station HNI_111: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:38 warn: Connection closed for HNI_CauGiay.
+2025-07-29 11:00:38 warn: Relay disconnected from source for station HNI_111
+2025-07-29 11:00:38 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 3).
+2025-07-29 11:00:38 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:38 error: Relay client error for station HANOI_VRS2: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:38 warn: Connection closed for HNI_CauGiay.
+2025-07-29 11:00:38 warn: Relay disconnected from source for station HANOI_VRS2
+2025-07-29 11:00:38 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 3).
+2025-07-29 11:00:43 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-29 11:00:43 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 11:00:43 warn: Relay disconnected from source for station HNI_111
+2025-07-29 11:00:43 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:00:43 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-29 11:00:43 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 11:00:43 warn: Relay disconnected from source for station HANOI_VRS2
+2025-07-29 11:00:43 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:00:45 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:45 error: Relay client error for station HNI_111: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:45 warn: Connection closed for HNI_CauGiay.
+2025-07-29 11:00:45 warn: Relay disconnected from source for station HNI_111
+2025-07-29 11:00:45 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 4).
+2025-07-29 11:00:45 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:45 error: Relay client error for station HANOI_VRS2: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:45 warn: Connection closed for HNI_CauGiay.
+2025-07-29 11:00:45 warn: Relay disconnected from source for station HANOI_VRS2
+2025-07-29 11:00:45 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 4).
+2025-07-29 11:00:50 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-29 11:00:50 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 11:00:50 warn: Relay disconnected from source for station HNI_111
+2025-07-29 11:00:50 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:00:50 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-29 11:00:50 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 11:00:50 warn: Relay disconnected from source for station HANOI_VRS2
+2025-07-29 11:00:50 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:00:52 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:52 error: Relay client error for station HNI_111: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:52 warn: Connection closed for HNI_CauGiay.
+2025-07-29 11:00:52 warn: Relay disconnected from source for station HNI_111
+2025-07-29 11:00:52 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 5).
+2025-07-29 11:00:52 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:52 error: Relay client error for station HANOI_VRS2: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:52 warn: Connection closed for HNI_CauGiay.
+2025-07-29 11:00:52 warn: Relay disconnected from source for station HANOI_VRS2
+2025-07-29 11:00:52 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 5).
+2025-07-29 11:00:57 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-29 11:00:57 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 11:00:57 warn: Relay disconnected from source for station HNI_111
+2025-07-29 11:00:57 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:00:57 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-29 11:00:57 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 11:00:57 warn: Relay disconnected from source for station HANOI_VRS2
+2025-07-29 11:00:57 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:00:59 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:59 error: Relay client error for station HNI_111: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:59 warn: Connection closed for HNI_CauGiay.
+2025-07-29 11:00:59 warn: Relay disconnected from source for station HNI_111
+2025-07-29 11:00:59 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 6).
+2025-07-29 11:00:59 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:59 error: Relay client error for station HANOI_VRS2: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:00:59 warn: Connection closed for HNI_CauGiay.
+2025-07-29 11:00:59 warn: Relay disconnected from source for station HANOI_VRS2
+2025-07-29 11:00:59 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 6).
+2025-07-29 11:01:04 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-29 11:01:04 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 11:01:04 warn: Relay disconnected from source for station HNI_111
+2025-07-29 11:01:04 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:01:04 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-29 11:01:04 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 11:01:04 warn: Relay disconnected from source for station HANOI_VRS2
+2025-07-29 11:01:04 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:01:06 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:01:06 error: Relay client error for station HNI_111: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:01:06 error: NTRIP client error for HNI_CauGiay: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:01:06 error: Relay client error for station HANOI_VRS2: connect ECONNREFUSED 103.168.58.135:1509
+2025-07-29 11:01:06 warn: Connection closed for HNI_CauGiay.
+2025-07-29 11:01:06 warn: Relay disconnected from source for station HANOI_VRS2
+2025-07-29 11:01:06 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 7).
+2025-07-29 11:01:06 warn: Connection closed for HNI_CauGiay.
+2025-07-29 11:01:06 warn: Relay disconnected from source for station HNI_111
+2025-07-29 11:01:06 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 7).
+2025-07-29 11:01:10 info: Shutting down...
+2025-07-29 11:04:34 info: Database connection established successfully.
+2025-07-29 11:04:34 info: Initializing NTRIP relay service...
+2025-07-29 11:04:34 info: Synchronizing relay service state with database...
+2025-07-29 11:04:34 info: Caster is refreshing its station list from the database.
+2025-07-29 11:04:34 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-29 11:04:34 info: Added new station to caster: HANOI_VRS2
+2025-07-29 11:04:34 info: Added new station to caster: HNI_111
+2025-07-29 11:04:34 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 11:04:34 info: [SYNC] Found active station HANOI_VRS2 in DB without a running relay. Starting...
+2025-07-29 11:04:34 debug: Updated existing station in caster: HANOI_VRS2
+2025-07-29 11:04:34 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:04:34 info: Started relay for station: HANOI_VRS2
+2025-07-29 11:04:34 info: [SYNC] Found active station HNI_111 in DB without a running relay. Starting...
+2025-07-29 11:04:34 debug: Updated existing station in caster: HNI_111
+2025-07-29 11:04:34 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:04:34 info: Started relay for station: HNI_111
+2025-07-29 11:04:34 info: Relay service synchronized with database.
+2025-07-29 11:04:34 info: NTRIP relay service initialized successfully.
+2025-07-29 11:04:34 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-29 11:04:34 info: API server running on port 3000
+2025-07-29 11:04:34 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 11:04:34 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 11:04:34 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-29 11:04:34 info: Relay connected to source for station HNI_111
+2025-07-29 11:04:34 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-29 11:04:34 info: Relay connected to source for station HANOI_VRS2
+2025-07-29 11:04:58 info: Caster is refreshing its station list from the database.
+2025-07-29 11:04:58 debug: Updated existing station in caster: HANOI_VRS2
+2025-07-29 11:04:58 debug: Updated existing station in caster: HNI_111
+2025-07-29 11:04:58 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 11:04:59 debug: Connection closed from 127.0.0.1.
+2025-07-29 11:05:00 info: Client 7b2096d2-6bb8-48d2-82b8-d049752d7238 (rover2) connected to HANOI_VRS2 from 127.0.0.1.
+2025-07-29 11:05:03 debug: Connection closed from 127.0.0.1.
+2025-07-29 11:05:03 info: Client 7b2096d2-6bb8-48d2-82b8-d049752d7238 (rover2) disconnected from HANOI_VRS2.
+2025-07-29 11:05:09 info: Client 1270e7f6-bc17-46b6-86ad-446ea4eec0be (rover2) connected to HNI_111 from 127.0.0.1.
+2025-07-29 11:05:13 debug: Connection closed from 127.0.0.1.
+2025-07-29 11:05:13 info: Client 1270e7f6-bc17-46b6-86ad-446ea4eec0be (rover2) disconnected from HNI_111.
+2025-07-29 11:05:41 debug: JWT auth successful for user: john@example.com
+2025-07-29 11:12:45 info: Caster is refreshing its station list from the database.
+2025-07-29 11:12:45 debug: Updated existing station in caster: HANOI_VRS2
+2025-07-29 11:12:45 debug: Updated existing station in caster: HNI_111
+2025-07-29 11:12:45 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 11:12:46 debug: Connection closed from 127.0.0.1.
+2025-07-29 11:13:13 info: Shutting down...
+2025-07-29 11:13:15 info: Database connection established successfully.
+2025-07-29 11:13:15 info: Initializing NTRIP relay service...
+2025-07-29 11:13:15 info: Synchronizing relay service state with database...
+2025-07-29 11:13:15 info: Caster is refreshing its station list from the database.
+2025-07-29 11:13:15 info: NTRIP caster started on 0.0.0.0:9001
+2025-07-29 11:13:15 info: Added new station to caster: HANOI_VRS2
+2025-07-29 11:13:15 info: Added new station to caster: HNI_111
+2025-07-29 11:13:15 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 11:13:15 info: [SYNC] Found active station HANOI_VRS2 in DB without a running relay. Starting...
+2025-07-29 11:13:15 debug: Updated existing station in caster: HANOI_VRS2
+2025-07-29 11:13:15 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:13:15 info: Started relay for station: HANOI_VRS2
+2025-07-29 11:13:15 info: [SYNC] Found active station HNI_111 in DB without a running relay. Starting...
+2025-07-29 11:13:15 debug: Updated existing station in caster: HNI_111
+2025-07-29 11:13:15 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-29 11:13:15 info: Started relay for station: HNI_111
+2025-07-29 11:13:15 info: Relay service synchronized with database.
+2025-07-29 11:13:15 info: NTRIP relay service initialized successfully.
+2025-07-29 11:13:15 info: NTRIP caster running at 0.0.0.0:9001
+2025-07-29 11:13:15 info: API server running on port 3000
+2025-07-29 11:13:15 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 11:13:15 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 11:13:15 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-29 11:13:15 info: Relay connected to source for station HANOI_VRS2
+2025-07-29 11:13:15 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-29 11:13:15 info: Relay connected to source for station HNI_111
+2025-07-29 11:13:25 debug: JWT auth successful for user: john@example.com
+2025-07-29 11:13:25 info: Restarting station HANOI_VRS2 due to configuration update.
+2025-07-29 11:13:25 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-29 11:13:25 info: Stopped relay client for station: HANOI_VRS2
+2025-07-29 11:13:25 info: Removed station from caster: HANOI_VRS2
+2025-07-29 11:13:25 info: Added new station to caster: HANOI_VRS2
+2025-07-29 11:13:25 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_QuocOai
+2025-07-29 11:13:25 info: Started relay for station: HANOI_VRS2
+2025-07-29 11:13:25 info: Synchronizing relay service state with database...
+2025-07-29 11:13:25 info: Caster is refreshing its station list from the database.
+2025-07-29 11:13:25 debug: Updated existing station in caster: HANOI_VRS2
+2025-07-29 11:13:25 debug: Updated existing station in caster: HNI_111
+2025-07-29 11:13:25 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 11:13:25 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-29 11:13:25 info: Relay service synchronized with database.
+2025-07-29 11:13:25 info: Authentication successful for mountpoint: HNI_QuocOai
+2025-07-29 11:13:25 info: Relay connected to source for station HANOI_VRS2
+2025-07-29 11:13:43 info: Caster is refreshing its station list from the database.
+2025-07-29 11:13:43 debug: Updated existing station in caster: HANOI_VRS2
+2025-07-29 11:13:43 debug: Updated existing station in caster: HNI_111
+2025-07-29 11:13:43 info: Caster sourcetable refreshed. Total active stations: 2
+2025-07-29 11:13:44 debug: Connection closed from 127.0.0.1.
+2025-07-29 11:13:53 info: Client 6f694910-c3a6-4d8b-a0e0-562192e1d22a (rover2) connected to HANOI_VRS2 from 127.0.0.1.
+2025-07-29 11:13:57 debug: Connection closed from 127.0.0.1.
+2025-07-29 11:13:57 info: Client 6f694910-c3a6-4d8b-a0e0-562192e1d22a (rover2) disconnected from HANOI_VRS2.
+2025-07-29 11:14:00 info: Client beb44d48-a62f-438a-9fc7-45e5af31dd4b (rover2) connected to HNI_111 from 127.0.0.1.
+2025-07-29 11:14:04 debug: Connection closed from 127.0.0.1.
+2025-07-29 11:14:04 info: Client beb44d48-a62f-438a-9fc7-45e5af31dd4b (rover2) disconnected from HNI_111.
+2025-07-29 11:14:13 info: Shutting down...

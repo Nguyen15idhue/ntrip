@@ -21,6 +21,8 @@ A Node.js-based NTRIP Relay system that provides RESTful API and low-latency RTC
 
 ## Installation
 
+### Windows Installation
+
 1. Clone the repository:
 ```
 git clone https://github.com/yourusername/ntrip-relay.git
@@ -37,12 +39,35 @@ Copy the `.env.example` file to `.env` and update the values according to your e
 
 4. Create the database and run migrations:
 ```
-# On Windows
 setup-db.bat
+```
 
-# On Linux/Mac
-mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS ntrip_relay CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
-node src/utils/migrate.js
+### Ubuntu Server Installation
+
+1. Download and run the setup script:
+```bash
+wget -O setup-ubuntu.sh https://raw.githubusercontent.com/Nguyen15idhue/ntrip/main/setup-ubuntu.sh
+chmod +x setup-ubuntu.sh
+./setup-ubuntu.sh
+```
+
+2. Install and start the NTRIP Relay system:
+```bash
+wget -O install-ubuntu.sh https://raw.githubusercontent.com/Nguyen15idhue/ntrip/main/install-ubuntu.sh
+chmod +x install-ubuntu.sh
+./install-ubuntu.sh
+```
+
+3. The installation script will:
+   - Clone the repository
+   - Install dependencies
+   - Set up environment configuration
+   - Create and configure the database
+   - Set up a systemd service for automatic startup
+
+4. Verify the service is running:
+```bash
+sudo systemctl status ntrip-relay.service
 ```
 
 ## Authentication Update
@@ -58,6 +83,7 @@ For detailed information about the authentication changes and migration guide, s
 
 ### Starting the Server
 
+#### On Windows
 ```
 npm start
 ```
@@ -65,6 +91,27 @@ npm start
 For development with auto-reload:
 ```
 npm run dev
+```
+
+#### On Ubuntu Server
+The application runs as a systemd service which starts automatically on system boot.
+
+To manage the service:
+```bash
+# Using systemctl
+sudo systemctl start ntrip-relay.service    # Start service
+sudo systemctl stop ntrip-relay.service     # Stop service
+sudo systemctl restart ntrip-relay.service  # Restart service
+sudo systemctl status ntrip-relay.service   # Check service status
+
+# Using the management script
+./ntrip-service.sh start    # Start service
+./ntrip-service.sh stop     # Stop service
+./ntrip-service.sh restart  # Restart service
+./ntrip-service.sh status   # Check service status
+./ntrip-service.sh logs     # View logs
+./ntrip-service.sh update   # Update application from git repository
+./ntrip-service.sh backup   # Backup database
 ```
 
 ### API Endpoints

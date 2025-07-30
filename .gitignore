@@ -67,3 +67,5 @@ config.dev.js
 .next/
 .nuxt/
 .serverless/
+
+.env

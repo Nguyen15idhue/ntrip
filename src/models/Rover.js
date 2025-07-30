@@ -25,9 +25,9 @@ Rover.init({
     type: DataTypes.STRING,
     allowNull: false
   },
-  station_id: {
+   station_id: {
     type: DataTypes.INTEGER,
-    allowNull: false,
+    allowNull: true, // THAY ĐỔI Ở ĐÂY: Cho phép NULL
     references: {
       model: 'stations',
       key: 'id'

@@ -1364,3 +1364,255 @@
 2025-07-29 19:08:42 error: Relay client error for station HANOI_VRS2: read ECONNRESET
 2025-07-29 19:08:42 error: NTRIP client error for HNI_CauGiay: read ECONNRESET
 2025-07-29 19:08:42 error: Relay client error for station HNI_111: read ECONNRESET
+2025-07-29 19:43:47 error: Socket error: read ECONNRESET
+2025-07-29 21:30:43 error: NTRIP client error for YBI_NghiaLo: Socket timeout
+2025-07-29 21:30:43 error: Relay client error for station NghiaLo: Socket timeout
+2025-07-29 21:31:18 error: NTRIP client error for YBI_NghiaLo: Socket timeout
+2025-07-29 21:31:18 error: Relay client error for station NghiaLo: Socket timeout
+2025-07-29 21:31:53 error: NTRIP client error for YBI_NghiaLo: Socket timeout
+2025-07-29 21:31:53 error: Relay client error for station NghiaLo: Socket timeout
+2025-07-29 22:08:12 error: Error: WHERE parameter "name" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (C:\laragon\www\ntrip\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1746:13)
+    at C:\laragon\www\ntrip\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1737:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (C:\laragon\www\ntrip\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1735:35)
+    at MySQLQueryGenerator.getWhereConditions (C:\laragon\www\ntrip\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2078:19)
+    at MySQLQueryGenerator.selectQuery (C:\laragon\www\ntrip\node_modules\sequelize\lib\dialects\abstract\query-generator.js:991:28)
+    at MySQLQueryInterface.select (C:\laragon\www\ntrip\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+    at Station.findAll (C:\laragon\www\ntrip\node_modules\sequelize\lib\model.js:1140:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Station.findOne (C:\laragon\www\ntrip\node_modules\sequelize\lib\model.js:1240:12)
+2025-07-29 22:09:12 error: NTRIP client error for YBI_NghiaLo: Socket timeout
+2025-07-29 22:09:12 error: Relay client error for station NghiaLo: Socket timeout
+2025-07-29 22:09:47 error: NTRIP client error for YBI_NghiaLo: Socket timeout
+2025-07-29 22:09:47 error: Relay client error for station NghiaLo: Socket timeout
+2025-07-29 22:10:22 error: NTRIP client error for YBI_NghiaLo: Socket timeout
+2025-07-29 22:10:22 error: Relay client error for station NghiaLo: Socket timeout
+2025-07-29 22:10:57 error: NTRIP client error for YBI_NghiaLo: Socket timeout
+2025-07-29 22:10:57 error: Relay client error for station NghiaLo: Socket timeout
+2025-07-29 22:11:32 error: NTRIP client error for YBI_NghiaLo: Socket timeout
+2025-07-29 22:11:32 error: Relay client error for station NghiaLo: Socket timeout
+2025-07-29 22:12:07 error: NTRIP client error for YBI_NghiaLo: Socket timeout
+2025-07-29 22:12:07 error: Relay client error for station NghiaLo: Socket timeout
+2025-07-29 22:12:42 error: NTRIP client error for YBI_NghiaLo: Socket timeout
+2025-07-29 22:12:42 error: Relay client error for station NghiaLo: Socket timeout
+2025-07-29 22:13:17 error: NTRIP client error for YBI_NghiaLo: Socket timeout
+2025-07-29 22:13:17 error: Relay client error for station NghiaLo: Socket timeout
+2025-07-29 22:13:52 error: NTRIP client error for YBI_NghiaLo: Socket timeout
+2025-07-29 22:13:52 error: Relay client error for station NghiaLo: Socket timeout
+2025-07-29 22:14:27 error: NTRIP client error for YBI_NghiaLo: Socket timeout
+2025-07-29 22:14:27 error: Relay client error for station NghiaLo: Socket timeout
+2025-07-29 22:49:25 error: TokenExpiredError: jwt expired
+    at C:\laragon\www\ntrip\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\laragon\www\ntrip\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\laragon\www\ntrip\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:21:25)
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at C:\laragon\www\ntrip\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\laragon\www\ntrip\node_modules\express\lib\router\index.js:346:12)
+2025-07-29 22:49:32 error: TokenExpiredError: jwt expired
+    at C:\laragon\www\ntrip\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\laragon\www\ntrip\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\laragon\www\ntrip\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticateJWT (file:///C:/laragon/www/ntrip/src/middleware/auth.js:21:25)
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\laragon\www\ntrip\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\laragon\www\ntrip\node_modules\express\lib\router\layer.js:95:5)
+    at C:\laragon\www\ntrip\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\laragon\www\ntrip\node_modules\express\lib\router\index.js:346:12)
+2025-07-29 23:01:23 error: Failed to fetch mountpoints from rtk.taikhoandoddac.vn:1509. Error: net is not defined
+2025-07-29 23:02:35 error: Error: getaddrinfo ENOTFOUND rtk.taikhoandoddac.vn
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)
+2025-07-29 23:02:35 error: Failed to fetch mountpoints from rtk.taikhoandoddac.vn:1509. Error: Connection error: getaddrinfo ENOTFOUND rtk.taikhoandoddac.vn
+2025-07-29 23:13:24 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:13:24 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:13:59 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:13:59 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:14:34 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:14:34 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:15:09 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:15:09 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:15:44 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:15:44 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:16:19 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:16:19 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:16:54 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:16:54 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:17:29 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:17:29 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:18:04 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:18:04 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:18:39 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:18:39 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:19:14 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:19:14 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:19:49 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:19:49 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:20:24 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:20:24 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:20:59 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:20:59 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:21:34 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:21:34 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:22:09 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:22:09 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:22:44 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:22:44 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:23:19 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:23:19 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:23:55 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:23:55 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:24:30 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:24:30 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:25:05 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:25:05 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:25:40 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:25:40 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:26:15 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:26:15 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:26:50 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:26:50 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:27:25 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:27:25 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:28:00 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:28:00 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:28:35 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:28:35 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:29:10 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:29:10 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:29:45 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:29:45 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:30:20 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:30:20 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:30:55 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:30:55 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:31:30 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:31:30 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:32:05 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:32:05 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:32:40 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:32:40 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:33:15 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:33:15 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:33:50 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:33:50 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:34:25 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:34:25 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:35:00 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:35:00 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:35:35 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:35:35 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:36:10 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:36:10 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:36:45 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:36:45 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:37:21 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:37:21 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:37:56 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:37:56 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:38:31 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:38:31 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:39:06 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:39:06 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:39:41 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:39:41 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:40:16 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:40:16 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:40:51 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:40:51 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:41:26 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:41:26 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:42:01 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:42:01 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:42:36 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:42:36 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:43:11 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:43:11 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:43:46 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:43:46 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:44:21 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:44:21 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:44:56 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:44:56 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:45:31 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:45:31 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:46:06 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:46:06 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:46:41 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:46:41 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:47:16 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:47:16 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:47:51 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:47:51 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:48:26 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:48:26 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:49:01 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:49:01 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:49:37 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:49:37 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:50:12 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:50:12 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:50:47 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:50:47 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:51:22 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:51:22 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:51:57 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:51:57 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:52:32 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:52:32 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:53:07 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:53:07 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:53:42 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:53:42 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:54:17 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:54:17 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:54:52 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:54:52 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:55:27 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:55:27 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:56:02 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:56:02 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:56:37 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:56:37 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:57:12 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:57:12 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:57:47 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:57:47 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:58:22 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:58:22 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:59:04 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:59:04 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-29 23:59:39 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-29 23:59:39 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 00:00:14 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 00:00:14 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 00:00:49 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 00:00:49 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 00:01:24 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 00:01:24 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 00:01:59 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 00:01:59 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 00:02:34 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 00:02:34 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 00:03:09 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 00:03:09 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 00:06:59 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 00:06:59 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 00:07:34 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 00:07:34 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 00:09:38 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 00:09:38 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 00:10:13 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 00:10:13 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 00:10:48 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 00:10:48 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 00:11:23 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 00:11:23 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 00:11:59 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 00:11:59 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 00:13:06 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 00:13:06 error: Relay client error for station HNI_CauGiay: Socket timeout

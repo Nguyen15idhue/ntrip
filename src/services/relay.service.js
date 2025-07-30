@@ -3,6 +3,7 @@ import { Station, Location } from '../models/index.js';
 import { logger } from '../utils/logger.js';
 import NtripClient from '../ntrip/ntrip-client.js';
 import NtripCaster from '../ntrip/ntrip-caster.js';
+import net from 'net';
 
 class RelayService extends EventEmitter {
   constructor() {
@@ -257,7 +258,7 @@ class RelayService extends EventEmitter {
       };
   }
 
-  /**
+   /**
    * Lấy trạng thái tổng quan của toàn bộ dịch vụ.
    * @returns {object} - Trạng thái tổng quan.
    */
@@ -280,6 +281,22 @@ class RelayService extends EventEmitter {
           totalRelaysRunning: this.clients.size, // Tổng số relay đang chạy
           relays: activeRelays,
       };
+  }
+
+  // ===== START: HÀM MỚI ĐỂ LẤY TRẠNG THÁI NGUỒN =====
+  /**
+   * Lấy trạng thái kết nối tới nguồn của tất cả các relay đang chạy.
+   * @returns {Map<string, boolean>} - Một Map với key là station.name và value là trạng thái kết nối (true = online, false = offline).
+   */
+  getAllSourceStatuses() {
+    const statuses = new Map();
+    for (const relayData of this.clients.values()) {
+      // relayData có cấu trúc là { client, intervalId, station }
+      if (relayData.station && relayData.client) {
+        statuses.set(relayData.station.name, relayData.client.connected);
+      }
+    }
+    return statuses;
   }
   
   // ===== END: CÁC HÀM ĐÃ SỬA LỖI =====
@@ -322,6 +339,94 @@ class RelayService extends EventEmitter {
     }
     return connections;
   }
+
+  // ===== START: HÀM MỚI ĐỂ LẤY MOUNTPOINTS TỪ NGUỒN BÊN NGOÀI =====
+  /**
+   * Kết nối đến một nguồn NTRIP và lấy danh sách mountpoint từ sourcetable.
+   * @param {string} host - Hostname hoặc IP của nguồn NTRIP.
+   * @param {number} port - Port của nguồn NTRIP.
+   * @param {string} [username] - Tên đăng nhập (tùy chọn).
+   * @param {string} [password] - Mật khẩu (tùy chọn).
+   * @returns {Promise<Array<object>>} - Một Promise trả về mảng các object mountpoint.
+   */
+  fetchMountpointsFromSource({ host, port, username, password }) {
+    return new Promise((resolve, reject) => {
+      const socket = new net.Socket();
+      let responseData = '';
+
+      socket.on('data', (data) => {
+        responseData += data.toString();
+      });
+
+      socket.on('close', () => {
+        try {
+          // Kiểm tra xem phản hồi có phải là HTTP 200 OK không
+          if (!responseData.includes('SOURCETABLE 200 OK')) {
+             // Thử phân tích lỗi, có thể là 401 Unauthorized
+             if (responseData.includes('401 Unauthorized')) {
+                return reject(new Error('Unauthorized. Please check your credentials.'));
+             }
+             return reject(new Error('Failed to get a valid sourcetable. The source might be down or unreachable.'));
+          }
+
+          const lines = responseData.split('\r\n');
+          const mountpoints = lines
+            .filter(line => line.startsWith('STR;')) // Chỉ lấy các dòng STR (stream)
+            .map(line => {
+              const fields = line.split(';');
+              return {
+                mountpoint: fields[1] || '',
+                identifier: fields[2] || '',
+                format: fields[3] || '',
+                formatDetails: fields[4] || '',
+                carrier: fields[5] || '',
+                navSystem: fields[6] || '',
+                network: fields[7] || '',
+                country: fields[8] || '',
+                latitude: parseFloat(fields[9]) || 0,
+                longitude: parseFloat(fields[10]) || 0,
+                nmea: fields[12] === '1',
+                solution: fields[13] === '1',
+                generator: fields[14] || '',
+                authentication: fields[16] || 'N', // N=None, B=Basic, D=Digest
+              };
+            });
+            
+          resolve(mountpoints);
+        } catch (parseError) {
+          reject(new Error(`Error parsing sourcetable: ${parseError.message}`));
+        }
+      });
+      
+      socket.on('error', (err) => {
+        logger.error(`Socket error while fetching mountpoints from ${host}:${port}:`, err);
+        reject(new Error(`Connection error: ${err.message}`));
+      });
+      
+      // Đặt timeout để tránh treo kết nối
+      socket.setTimeout(10000, () => {
+        socket.destroy();
+        reject(new Error('Connection timed out after 10 seconds.'));
+      });
+
+      socket.connect(port, host, () => {
+        logger.info(`Connecting to ${host}:${port} to fetch sourcetable.`);
+        let request = `GET / HTTP/1.1\r\n`;
+        request += `Host: ${host}:${port}\r\n`;
+        request += `User-Agent: NodeJS-NTRIP-Client\r\n`;
+        request += `Connection: close\r\n`;
+
+        if (username && password) {
+            const credentials = Buffer.from(`${username}:${password}`).toString('base64');
+            request += `Authorization: Basic ${credentials}\r\n`;
+        }
+
+        request += `\r\n`;
+        socket.write(request);
+      });
+    });
+  }
+  // ===== END: HÀM MỚI =====
 }
 
 // Export một instance duy nhất để đảm bảo toàn bộ ứng dụng dùng chung.

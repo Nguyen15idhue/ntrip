@@ -11,10 +11,30 @@ const router = express.Router();
 // Get all stations
 router.get('/', authenticateJWT, async (req, res) => {
   try {
+    // Bước 1: Lấy tất cả các trạm từ cơ sở dữ liệu
     const stations = await Station.findAll({
       include: [Location]
     });
-    res.status(200).json({ success: true, data: stations });
+
+    // Bước 2: Lấy trạng thái kết nối nguồn thực tế từ RelayService
+    const sourceStatuses = relayService.getAllSourceStatuses();
+
+    // Bước 3: Kết hợp dữ liệu từ DB với trạng thái thực tế
+    const stationsWithRealtimeStatus = stations.map(station => {
+      // Chuyển đổi đối tượng Sequelize thành một object JSON thuần túy để thêm thuộc tính mới
+      const stationJson = station.toJSON();
+      
+      // Kiểm tra trạng thái từ map. Nếu trạm có trong map và giá trị là true, thì là 'online'.
+      // Nếu không có trong map (tức là relay không chạy cho trạm này) hoặc giá trị là false, thì là 'offline'.
+      const isOnline = sourceStatuses.get(stationJson.name) || false;
+      
+      // Thêm trường `source_status` vào đối tượng
+      stationJson.source_status = isOnline ? 'online' : 'offline';
+      
+      return stationJson;
+    });
+
+    res.status(200).json({ success: true, data: stationsWithRealtimeStatus });
   } catch (error) {
     logger.error('Error fetching stations:', error);
     res.status(500).json({ success: false, message: 'Failed to fetch stations' });

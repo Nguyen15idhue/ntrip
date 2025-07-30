@@ -1,3 +1,5 @@
+// src/ntrip/ntrip-client.js
+
 import net from 'net';
 import { Buffer } from 'buffer';
 import { EventEmitter } from 'events';
@@ -33,7 +35,6 @@ class NtripClient extends EventEmitter {
       this.disconnect();
     }
     
-    // Clear any pending reconnect timers
     if (this.reconnectTimer) {
       clearTimeout(this.reconnectTimer);
       this.reconnectTimer = null;
@@ -95,7 +96,6 @@ class NtripClient extends EventEmitter {
         logger.info(`Authentication successful for mountpoint: ${this.options.mountpoint}`);
         this.emit('connected');
         
-        // Process any RTCM data that came with the header
         const headerEndIndex = data.indexOf('\r\n\r\n');
         if (headerEndIndex !== -1 && data.length > headerEndIndex + 4) {
           this._processRtcmData(data.subarray(headerEndIndex + 4));
@@ -119,7 +119,6 @@ class NtripClient extends EventEmitter {
   _handleError(error) {
     logger.error(`NTRIP client error for ${this.options.mountpoint}: ${error.message}`);
     this.emit('error', error);
-    // The 'close' event will usually follow, triggering reconnection logic.
   }
 
   _handleClose() {
@@ -173,7 +172,13 @@ class NtripClient extends EventEmitter {
     const lonMin = (Math.abs(lon) - lonDeg) * 60;
     const lonStr = `${lonDeg.toString().padStart(3, '0')}${lonMin.toFixed(5).padStart(8, '0')}`;
     const lonHem = lon >= 0 ? 'E' : 'W';
-    const ggaBody = `GPGGA,${time},${latStr},${latHem},${lonStr},${lonHem},1,08,1.0,${alt.toFixed(1)},M,0.0,M,,`;
+    
+    // ====================== THAY ĐỔI DUY NHẤT Ở ĐÂY ======================
+    // Thay đổi chỉ số chất lượng từ 1 (Single) thành 4 (RTK Fixed).
+    const ggaBody = `GPGGA,${time},${latStr},${latHem},${lonStr},${lonHem},4,12,0.8,${alt.toFixed(1)},M,0.0,M,,`;
+    //                                                                  ^  ^^ ^^^
+    // Tôi cũng đã thay đổi số vệ tinh (08->12) và HDOP (1.0->0.8) cho hợp lý hơn với trạng thái Fixed.
+    // =====================================================================
     
     let checksum = 0;
     for (const char of ggaBody) {

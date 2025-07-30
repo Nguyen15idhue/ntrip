@@ -8144,3 +8144,1021 @@
 2025-07-30 00:13:16 debug: JWT auth successful for user: john@example.com
 2025-07-30 00:13:17 debug: JWT auth successful for user: john@example.com
 2025-07-30 00:13:17 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:36:56 info: Database connection established successfully.
+2025-07-30 13:36:56 info: Initializing NTRIP relay service...
+2025-07-30 13:36:56 info: Synchronizing relay service state with database...
+2025-07-30 13:36:56 info: NTRIP caster started on 0.0.0.0:6089
+2025-07-30 13:36:56 info: Added new station to caster: HNI_CauGiay
+2025-07-30 13:36:56 info: Caster sourcetable refreshed. Total active stations: 1
+2025-07-30 13:36:56 info: [SYNC] Found active station HNI_CauGiay in DB without a running relay. Starting...
+2025-07-30 13:36:56 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:36:56 info: Started relay for station: HNI_CauGiay
+2025-07-30 13:36:56 info: Relay service synchronized with database.
+2025-07-30 13:36:56 info: NTRIP relay service initialized successfully.
+2025-07-30 13:36:56 info: NTRIP caster running at 0.0.0.0:6089
+2025-07-30 13:36:56 info: API server running on port 3000
+2025-07-30 13:36:56 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:36:56 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:36:56 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:37:26 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:37:26 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:37:26 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:37:26 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:37:26 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:37:26 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:37:31 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:37:31 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:37:31 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:37:31 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:37:31 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:37:31 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:37:31 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:37:41 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:37:41 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:37:41 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:37:41 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:37:41 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:37:41 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:37:59 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:37:59 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:37:59 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:37:59 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:37:59 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:37:59 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:01 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:38:01 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:38:01 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:38:01 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:38:01 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:38:01 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:38:06 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:38:06 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:38:06 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:38:06 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:38:06 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:38:06 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:38:06 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:38:10 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:10 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:10 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:20 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:20 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:20 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:30 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:30 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:30 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:37 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:38:37 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:38:37 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:38:37 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:38:37 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:38:37 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:38:40 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:40 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:40 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:42 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:38:42 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:38:42 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:38:42 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:38:42 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:38:42 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:38:42 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:38:50 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:50 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:38:50 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:39:00 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:39:00 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:39:00 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:39:10 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:39:10 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:39:10 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:39:12 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:39:12 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:39:12 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:39:12 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:39:12 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:39:12 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:39:17 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:39:17 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:39:17 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:39:17 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:39:17 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:39:17 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:39:17 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:39:20 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:39:20 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:39:20 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:39:47 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:39:47 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:39:47 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:39:47 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:39:47 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:39:47 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:39:52 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:39:52 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:39:52 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:39:52 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:39:52 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:39:52 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:39:52 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:40:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:40:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:40:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:40:22 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:40:22 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:40:22 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:40:22 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:40:22 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:40:22 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:40:27 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:40:27 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:40:27 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:40:27 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:40:27 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:40:27 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:40:27 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:40:57 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:40:57 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:40:57 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:40:57 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:40:57 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:40:57 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:41:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:41:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:41:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:41:02 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:41:02 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:41:02 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:41:02 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:41:02 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:41:02 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:41:02 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:41:32 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:41:32 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:41:32 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:41:32 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:41:32 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:41:32 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:41:37 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:41:37 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:41:37 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:41:37 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:41:37 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:41:37 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:41:37 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:42:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:42:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:42:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:42:07 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:42:07 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:42:07 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:42:07 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:42:07 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:42:07 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:42:12 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:42:12 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:42:12 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:42:12 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:42:13 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:42:13 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:42:13 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:42:43 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:42:43 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:42:43 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:42:43 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:42:43 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:42:43 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:42:48 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:42:48 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:42:48 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:42:48 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:42:48 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:42:48 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:42:48 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:43:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:43:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:43:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:43:18 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:43:18 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:43:18 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:43:18 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:43:18 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:43:18 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:43:23 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:43:23 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:43:23 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:43:23 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:43:23 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:43:23 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:43:23 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:43:53 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:43:53 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:43:53 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:43:53 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:43:53 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:43:53 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:43:58 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:43:58 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:43:58 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:43:58 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:43:58 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:43:58 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:43:58 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:44:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:44:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:44:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:44:28 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:44:28 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:44:28 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:44:28 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:44:28 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:44:28 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:44:33 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:44:33 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:44:33 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:44:33 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:44:33 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:44:33 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:44:33 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:45:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:45:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:45:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:45:03 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:45:03 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:45:03 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:45:03 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:45:03 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:45:03 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:45:08 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:45:08 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:45:08 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:45:08 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:45:08 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:45:08 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:45:08 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:45:38 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:45:38 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:45:38 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:45:38 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:45:38 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:45:38 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:45:43 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:45:43 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:45:43 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:45:43 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:45:44 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:45:44 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:45:44 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:46:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:46:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:46:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:46:14 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:46:14 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:46:14 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:46:14 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:46:14 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:46:14 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:46:19 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:46:19 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:46:19 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:46:19 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:46:19 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:46:19 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:46:19 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:46:49 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:46:49 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:46:49 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:46:49 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:46:49 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:46:49 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:46:54 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:46:54 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:46:54 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:46:54 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:46:54 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:46:54 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:46:54 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:47:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:47:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:47:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:47:24 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:47:24 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:47:24 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:47:24 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:47:24 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:47:24 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:47:29 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:47:29 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:47:29 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:47:29 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:47:29 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:47:29 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:47:29 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:47:59 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:47:59 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:47:59 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:47:59 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:47:59 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:47:59 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:48:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:48:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:48:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:48:04 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:48:04 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:48:04 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:48:04 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:48:04 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:48:04 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:48:04 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:48:34 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:48:34 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:48:34 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:48:34 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:48:34 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:48:34 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:48:39 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:48:39 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:48:39 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:48:39 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:48:40 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:48:40 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:48:40 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:49:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:49:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:49:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:49:10 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:49:10 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:49:10 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:49:10 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:49:10 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:49:10 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:49:15 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:49:15 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:49:15 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:49:15 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:49:15 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:49:15 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:49:15 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:49:45 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:49:45 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:49:45 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:49:45 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:49:45 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:49:45 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:49:50 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:49:50 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:49:50 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:49:50 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:49:50 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:49:50 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:49:50 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:50:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:50:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:50:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:50:20 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:50:20 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:50:20 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:50:20 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:50:20 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:50:20 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:50:25 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:50:25 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:50:25 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:50:25 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:50:25 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:50:25 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:50:25 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:50:55 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:50:55 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:50:55 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:50:55 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:50:55 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:50:55 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:51:00 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:51:00 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:51:00 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:51:00 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:51:00 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:51:00 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:51:00 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:51:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:51:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:51:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:51:30 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:51:30 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:51:30 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:51:30 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:51:30 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:51:30 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:51:35 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:51:35 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:51:35 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:51:35 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:51:35 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:51:35 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:51:35 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:52:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:52:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:52:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:52:05 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:52:05 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:52:05 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:52:05 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:52:05 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:52:05 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:52:10 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:52:10 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:52:10 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:52:10 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:52:10 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:52:11 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:52:11 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:52:41 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:52:41 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:52:41 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:52:41 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:52:41 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:52:41 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:52:46 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:52:46 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:52:46 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:52:46 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:52:46 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:52:46 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:52:46 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:53:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:53:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:53:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:53:16 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:53:16 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:53:16 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:53:16 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:53:16 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:53:16 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:53:21 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:53:21 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:53:21 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:53:21 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:53:24 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:53:25 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:53:25 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:53:55 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:53:55 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:53:55 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:53:55 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:53:55 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:53:55 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:54:00 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:54:00 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:54:00 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:54:00 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:54:00 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:54:00 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:54:00 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:54:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:54:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:54:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:54:30 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:54:30 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:54:30 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:54:30 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:54:30 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:54:30 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:54:35 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:54:35 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:54:35 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:54:35 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:54:35 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:54:35 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:54:35 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:55:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:55:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:55:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:55:05 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:55:05 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:55:05 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:55:05 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:55:05 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:55:05 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:55:10 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:55:10 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:55:10 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:55:10 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:55:10 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:55:10 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:55:10 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:55:40 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:55:40 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:55:40 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:55:40 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:55:40 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:55:40 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:55:45 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:55:45 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:55:45 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:55:45 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:55:45 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:55:45 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:55:45 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:56:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:15 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:56:15 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:56:15 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:56:15 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:56:15 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:56:15 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:56:20 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:56:20 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:56:20 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:56:20 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:56:20 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:56:20 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:56:20 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:56:38 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:38 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:38 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:39 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:39 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:39 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:50 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:50 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:50 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:50 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 13:56:50 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 13:56:50 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 13:56:50 warn: Connection closed for HNI_CauGiay.
+2025-07-30 13:56:50 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:56:50 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 13:56:55 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 13:56:55 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:56:55 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 13:56:55 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 13:56:55 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 13:56:55 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 13:56:55 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 13:56:59 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:59 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:59 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:59 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:59 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:56:59 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:57:04 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:57:04 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:57:06 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:57:21 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:57:21 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 13:57:21 info: Stopped relay client for station: HNI_CauGiay
+2025-07-30 13:57:21 info: Removed station from caster: HNI_CauGiay
+2025-07-30 13:57:21 info: Updated station HNI_CauGiay status to inactive in DB.
+2025-07-30 13:57:23 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:49 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:49 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:50 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:50 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:50 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:50 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:51 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:51 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:53 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:53 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:57 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:57 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:57 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:57 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:57 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:58:57 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:59:00 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:59:00 debug: JWT auth successful for user: john@example.com
+2025-07-30 13:59:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 14:00:48 info: Shutting down...
+2025-07-30 15:29:56 error: SequelizeConnectionRefusedError
+    at ConnectionManager.connect (C:\laragon\www\ntrip\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:92:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ConnectionManager._connect (C:\laragon\www\ntrip\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:222:24)
+    at async C:\laragon\www\ntrip\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:174:32
+    at async ConnectionManager.getConnection (C:\laragon\www\ntrip\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:197:7)
+    at async C:\laragon\www\ntrip\node_modules\sequelize\lib\sequelize.js:305:26
+    at async Sequelize.authenticate (C:\laragon\www\ntrip\node_modules\sequelize\lib\sequelize.js:457:5)
+    at async initialize (file:///C:/laragon/www/ntrip/src/app.js:87:5)
+2025-07-30 15:30:16 info: Database connection established successfully.
+2025-07-30 15:30:16 info: Initializing NTRIP relay service...
+2025-07-30 15:30:16 info: Synchronizing relay service state with database...
+2025-07-30 15:30:16 info: NTRIP caster started on 0.0.0.0:6089
+2025-07-30 15:30:16 info: Caster sourcetable refreshed. Total active stations: 0
+2025-07-30 15:30:16 info: Relay service synchronized with database.
+2025-07-30 15:30:16 info: NTRIP relay service initialized successfully.
+2025-07-30 15:30:16 info: NTRIP caster running at 0.0.0.0:6089
+2025-07-30 15:30:16 info: API server running on port 3000
+2025-07-30 15:32:46 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:32:46 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:32:46 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:32:46 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:32:46 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:32:46 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:32:49 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:32:49 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:32:51 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:32:56 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:32:56 info: Connecting to rtk.taikhoandodac.vn:1508 to fetch sourcetable.
+2025-07-30 15:33:00 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:33:00 warn: No active relay found for station HNI_CauGiay. Nothing to stop.
+2025-07-30 15:33:00 info: Synchronizing relay service state with database...
+2025-07-30 15:33:00 info: Caster sourcetable refreshed. Total active stations: 0
+2025-07-30 15:33:00 info: Relay service synchronized with database.
+2025-07-30 15:33:01 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:33:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:33:02 info: Added new station to caster: YBI_NghiaLo
+2025-07-30 15:33:02 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/YBI_NghiaLo
+2025-07-30 15:33:02 info: Started relay for station: YBI_NghiaLo
+2025-07-30 15:33:03 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 15:33:03 info: Authentication successful for mountpoint: YBI_NghiaLo
+2025-07-30 15:33:03 info: Relay connected to source for station YBI_NghiaLo
+2025-07-30 15:33:04 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:33:29 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:33:29 info: Disconnected from NTRIP source: YBI_NghiaLo
+2025-07-30 15:33:29 info: Stopped relay client for station: YBI_NghiaLo
+2025-07-30 15:33:29 info: Removed station from caster: YBI_NghiaLo
+2025-07-30 15:33:29 info: Updated station YBI_NghiaLo status to inactive in DB.
+2025-07-30 15:33:30 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:33:45 info: Shutting down...
+2025-07-30 15:38:54 info: Database connection established successfully.
+2025-07-30 15:38:54 info: Initializing NTRIP relay service...
+2025-07-30 15:38:54 info: Synchronizing relay service state with database...
+2025-07-30 15:38:54 info: NTRIP caster started on 0.0.0.0:6089
+2025-07-30 15:38:54 info: Caster sourcetable refreshed. Total active stations: 0
+2025-07-30 15:38:54 info: Relay service synchronized with database.
+2025-07-30 15:38:54 info: NTRIP relay service initialized successfully.
+2025-07-30 15:38:54 info: NTRIP caster running at 0.0.0.0:6089
+2025-07-30 15:38:54 info: API server running on port 3000
+2025-07-30 15:38:58 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:38:58 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:39:01 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:39:01 info: Added new station to caster: YBI_NghiaLo
+2025-07-30 15:39:01 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/YBI_NghiaLo
+2025-07-30 15:39:01 info: Started relay for station: YBI_NghiaLo
+2025-07-30 15:39:01 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 15:39:01 info: Authentication successful for mountpoint: YBI_NghiaLo
+2025-07-30 15:39:01 info: Relay connected to source for station YBI_NghiaLo
+2025-07-30 15:39:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:39:08 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:39:08 info: Disconnected from NTRIP source: YBI_NghiaLo
+2025-07-30 15:39:08 info: Stopped relay client for station: YBI_NghiaLo
+2025-07-30 15:39:08 info: Removed station from caster: YBI_NghiaLo
+2025-07-30 15:39:08 info: Updated station YBI_NghiaLo status to inactive in DB.
+2025-07-30 15:39:10 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:39:38 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:39:38 info: Added new station to caster: YBI_NghiaLo
+2025-07-30 15:39:38 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/YBI_NghiaLo
+2025-07-30 15:39:38 info: Started relay for station: YBI_NghiaLo
+2025-07-30 15:39:38 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 15:39:38 info: Authentication successful for mountpoint: YBI_NghiaLo
+2025-07-30 15:39:38 info: Relay connected to source for station YBI_NghiaLo
+2025-07-30 15:39:40 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:39:42 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:39:50 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:39:50 info: Disconnected from NTRIP source: YBI_NghiaLo
+2025-07-30 15:39:50 info: Stopped relay client for station: YBI_NghiaLo
+2025-07-30 15:39:50 info: Removed station from caster: YBI_NghiaLo
+2025-07-30 15:39:50 info: Updated station YBI_NghiaLo status to inactive in DB.
+2025-07-30 15:39:52 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:44:10 debug: JWT auth successful for user: john@example.com
+2025-07-30 15:44:10 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:26:31 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:26:31 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:26:33 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:27:26 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:27:26 info: Synchronizing relay service state with database...
+2025-07-30 16:27:26 info: Caster sourcetable refreshed. Total active stations: 0
+2025-07-30 16:27:26 info: Relay service synchronized with database.
+2025-07-30 16:27:26 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:27:29 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:27:29 info: Added new station to caster: YBI_NghiaLo
+2025-07-30 16:27:29 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/YBI_NghiaLo
+2025-07-30 16:27:29 info: Started relay for station: YBI_NghiaLo
+2025-07-30 16:27:29 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 16:27:29 info: Authentication successful for mountpoint: YBI_NghiaLo
+2025-07-30 16:27:29 info: Relay connected to source for station YBI_NghiaLo
+2025-07-30 16:27:31 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:27:32 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:27:41 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:27:41 info: Disconnected from NTRIP source: YBI_NghiaLo
+2025-07-30 16:27:41 info: Stopped relay client for station: YBI_NghiaLo
+2025-07-30 16:27:41 info: Removed station from caster: YBI_NghiaLo
+2025-07-30 16:27:41 info: Updated station YBI_NghiaLo status to inactive in DB.
+2025-07-30 16:27:42 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:27:46 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:27:46 info: Added new station to caster: YBI_NghiaLo
+2025-07-30 16:27:46 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/YBI_NghiaLo
+2025-07-30 16:27:46 info: Started relay for station: YBI_NghiaLo
+2025-07-30 16:27:46 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 16:27:46 info: Authentication successful for mountpoint: YBI_NghiaLo
+2025-07-30 16:27:46 info: Relay connected to source for station YBI_NghiaLo
+2025-07-30 16:27:47 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:27:48 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:27:52 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:27:52 info: Disconnected from NTRIP source: YBI_NghiaLo
+2025-07-30 16:27:52 info: Stopped relay client for station: YBI_NghiaLo
+2025-07-30 16:27:52 info: Removed station from caster: YBI_NghiaLo
+2025-07-30 16:27:52 info: Updated station YBI_NghiaLo status to inactive in DB.
+2025-07-30 16:27:54 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:27:54 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:27:57 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:28:00 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:28:00 warn: No active relay found for station YBI_NghiaLo. Nothing to stop.
+2025-07-30 16:28:00 info: Synchronizing relay service state with database...
+2025-07-30 16:28:00 info: Caster sourcetable refreshed. Total active stations: 0
+2025-07-30 16:28:00 info: Relay service synchronized with database.
+2025-07-30 16:28:00 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:28:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:28:02 info: Added new station to caster: HNI_CauGiay
+2025-07-30 16:28:02 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 16:28:02 info: Started relay for station: HNI_CauGiay
+2025-07-30 16:28:02 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 16:28:02 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 16:28:02 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 16:28:03 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:28:06 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:28:29 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:28:29 info: Restarting station HNI_CauGiay due to configuration update.
+2025-07-30 16:28:29 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 16:28:29 info: Stopped relay client for station: HNI_CauGiay
+2025-07-30 16:28:29 info: Removed station from caster: HNI_CauGiay
+2025-07-30 16:28:29 info: Added new station to caster: HNI_CauGiay
+2025-07-30 16:28:29 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 16:28:29 info: Started relay for station: HNI_CauGiay
+2025-07-30 16:28:29 info: Synchronizing relay service state with database...
+2025-07-30 16:28:29 info: Caster sourcetable refreshed. Total active stations: 1
+2025-07-30 16:28:29 info: Relay service synchronized with database.
+2025-07-30 16:28:29 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 16:28:29 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 16:28:29 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 16:28:29 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:33:47 error: NTRIP client error for HNI_CauGiay: read ECONNRESET
+2025-07-30 16:33:47 error: Relay client error for station HNI_CauGiay: read ECONNRESET
+2025-07-30 16:33:47 warn: Connection closed for HNI_CauGiay.
+2025-07-30 16:33:47 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 16:33:47 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 16:33:52 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 16:33:52 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 16:33:52 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 16:33:52 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 16:33:53 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 16:33:53 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 16:33:53 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 16:43:07 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:43:07 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 16:43:07 info: Stopped relay client for station: HNI_CauGiay
+2025-07-30 16:43:07 info: Removed station from caster: HNI_CauGiay
+2025-07-30 16:43:07 info: Updated station HNI_CauGiay status to inactive in DB.
+2025-07-30 16:43:09 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:43:10 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:43:15 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:43:15 info: Added new station to caster: HNI_CauGiay
+2025-07-30 16:43:15 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 16:43:15 info: Started relay for station: HNI_CauGiay
+2025-07-30 16:43:15 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 16:43:15 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 16:43:15 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 16:43:16 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:43:17 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:43:23 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:43:23 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 16:43:23 info: Stopped relay client for station: HNI_CauGiay
+2025-07-30 16:43:23 info: Removed station from caster: HNI_CauGiay
+2025-07-30 16:43:23 info: Updated station HNI_CauGiay status to inactive in DB.
+2025-07-30 16:43:24 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:44:14 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:44:14 info: Added new station to caster: HNI_CauGiay
+2025-07-30 16:44:14 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 16:44:14 info: Started relay for station: HNI_CauGiay
+2025-07-30 16:44:14 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 16:44:14 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 16:44:14 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 16:44:15 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:44:21 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:44:21 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 16:44:21 info: Stopped relay client for station: HNI_CauGiay
+2025-07-30 16:44:21 info: Removed station from caster: HNI_CauGiay
+2025-07-30 16:44:21 info: Updated station HNI_CauGiay status to inactive in DB.
+2025-07-30 16:44:22 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:44:27 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:44:27 info: Added new station to caster: HNI_CauGiay
+2025-07-30 16:44:27 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 16:44:27 info: Started relay for station: HNI_CauGiay
+2025-07-30 16:44:27 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 16:44:27 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 16:44:27 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 16:44:28 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:52:01 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:52:12 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:52:47 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:52:47 info: Restarting station HNI_CauGiay due to configuration update.
+2025-07-30 16:52:47 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 16:52:47 info: Stopped relay client for station: HNI_CauGiay
+2025-07-30 16:52:47 info: Removed station from caster: HNI_CauGiay
+2025-07-30 16:52:47 info: Added new station to caster: HNI_CauGiay
+2025-07-30 16:52:47 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 16:52:47 info: Started relay for station: HNI_CauGiay
+2025-07-30 16:52:47 info: Synchronizing relay service state with database...
+2025-07-30 16:52:47 info: Caster sourcetable refreshed. Total active stations: 1
+2025-07-30 16:52:47 info: Relay service synchronized with database.
+2025-07-30 16:52:47 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 16:52:48 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:52:49 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 16:52:49 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 16:53:19 warn: Connection timeout for HNI_CauGiay. Destroying socket.
+2025-07-30 16:53:19 error: NTRIP client error for HNI_CauGiay: Socket timeout
+2025-07-30 16:53:19 error: Relay client error for station HNI_CauGiay: Socket timeout
+2025-07-30 16:53:19 warn: Connection closed for HNI_CauGiay.
+2025-07-30 16:53:19 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 16:53:19 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 16:53:24 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 16:53:24 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 16:53:24 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 16:53:24 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 16:53:24 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 16:53:24 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 16:53:24 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 16:56:45 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:56:45 debug: JWT auth successful for user: john@example.com
+2025-07-30 16:57:00 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:01:48 error: NTRIP client error for HNI_CauGiay: read ECONNRESET
+2025-07-30 17:01:48 error: Relay client error for station HNI_CauGiay: read ECONNRESET
+2025-07-30 17:01:48 warn: Connection closed for HNI_CauGiay.
+2025-07-30 17:01:48 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 17:01:48 info: Attempting to reconnect to HNI_CauGiay in 5000ms (attempt 1).
+2025-07-30 17:01:53 warn: Client for HNI_CauGiay already has a socket. Disconnecting first.
+2025-07-30 17:01:53 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 17:01:53 warn: Relay disconnected from source for station HNI_CauGiay
+2025-07-30 17:01:53 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 17:01:53 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 17:01:53 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 17:01:53 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 17:06:50 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:06:53 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:06:53 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:06:56 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:07:00 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:08:49 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:08:49 info: Restarting station HNI_CauGiay due to configuration update.
+2025-07-30 17:08:49 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 17:08:49 info: Stopped relay client for station: HNI_CauGiay
+2025-07-30 17:08:49 info: Removed station from caster: HNI_CauGiay
+2025-07-30 17:08:49 info: Added new station to caster: HNI_CauGiay
+2025-07-30 17:08:49 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 17:08:49 info: Started relay for station: HNI_CauGiay
+2025-07-30 17:08:49 info: Synchronizing relay service state with database...
+2025-07-30 17:08:49 info: Caster sourcetable refreshed. Total active stations: 1
+2025-07-30 17:08:49 info: Relay service synchronized with database.
+2025-07-30 17:08:49 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 17:08:49 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 17:08:49 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 17:08:49 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:08:52 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:08:52 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:08:55 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:08:55 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:20:23 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:20:25 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:20:46 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:20:46 info: Restarting station HNI_CauGiay due to configuration update.
+2025-07-30 17:20:46 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 17:20:46 info: Stopped relay client for station: HNI_CauGiay
+2025-07-30 17:20:46 info: Removed station from caster: HNI_CauGiay
+2025-07-30 17:20:46 info: Added new station to caster: HNI_CauGiay
+2025-07-30 17:20:46 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 17:20:46 info: Started relay for station: HNI_CauGiay
+2025-07-30 17:20:46 info: Synchronizing relay service state with database...
+2025-07-30 17:20:46 info: Caster sourcetable refreshed. Total active stations: 1
+2025-07-30 17:20:46 info: Relay service synchronized with database.
+2025-07-30 17:20:46 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 17:20:46 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 17:20:46 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 17:20:46 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:20:51 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:20:51 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:20:53 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:20:53 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:20:53 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:20:53 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:20:53 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:20:53 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:20:57 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:20:57 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:21:06 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:21:06 info: Relay for station HNI_CauGiay is already running.
+2025-07-30 17:21:06 info: Synchronizing relay service state with database...
+2025-07-30 17:21:06 info: Caster sourcetable refreshed. Total active stations: 1
+2025-07-30 17:21:06 info: Relay service synchronized with database.
+2025-07-30 17:21:07 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:31:06 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:31:06 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:31:09 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:31:09 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 17:31:09 info: Stopped relay client for station: HNI_CauGiay
+2025-07-30 17:31:09 info: Removed station from caster: HNI_CauGiay
+2025-07-30 17:31:09 info: Updated station HNI_CauGiay status to inactive in DB.
+2025-07-30 17:31:11 info: Shutting down...
+2025-07-30 17:31:14 info: Database connection established successfully.
+2025-07-30 17:31:14 info: Initializing NTRIP relay service...
+2025-07-30 17:31:14 info: Synchronizing relay service state with database...
+2025-07-30 17:31:14 info: NTRIP caster started on 0.0.0.0:6089
+2025-07-30 17:31:14 info: Caster sourcetable refreshed. Total active stations: 0
+2025-07-30 17:31:14 info: Relay service synchronized with database.
+2025-07-30 17:31:14 info: NTRIP relay service initialized successfully.
+2025-07-30 17:31:14 info: NTRIP caster running at 0.0.0.0:6089
+2025-07-30 17:31:14 info: API server running on port 3000
+2025-07-30 17:31:47 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:32:21 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:32:21 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:32:24 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:32:24 info: Added new station to caster: HNI_CauGiay
+2025-07-30 17:32:24 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 17:32:24 info: Started relay for station: HNI_CauGiay
+2025-07-30 17:32:24 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 17:32:24 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 17:32:24 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 17:32:26 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:32:28 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:32:28 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:32:39 info: Shutting down...
+2025-07-30 17:35:00 info: Database connection established successfully.
+2025-07-30 17:35:00 info: Initializing NTRIP relay service...
+2025-07-30 17:35:00 info: Synchronizing relay service state with database...
+2025-07-30 17:35:00 info: NTRIP caster started on 0.0.0.0:6089
+2025-07-30 17:35:00 info: Added new station to caster: HNI_CauGiay
+2025-07-30 17:35:00 info: Caster sourcetable refreshed. Total active stations: 1
+2025-07-30 17:35:00 info: [SYNC] Found active station HNI_CauGiay in DB without a running relay. Starting...
+2025-07-30 17:35:00 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1508/HNI_CauGiay
+2025-07-30 17:35:00 info: Started relay for station: HNI_CauGiay
+2025-07-30 17:35:00 info: Relay service synchronized with database.
+2025-07-30 17:35:00 info: NTRIP relay service initialized successfully.
+2025-07-30 17:35:00 info: NTRIP caster running at 0.0.0.0:6089
+2025-07-30 17:35:00 info: API server running on port 3000
+2025-07-30 17:35:00 info: TCP connection established to source: rtk.taikhoandodac.vn:1508
+2025-07-30 17:35:00 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 17:35:00 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 17:35:03 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:35:03 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:53:53 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:53:56 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:53:56 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:54:02 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:54:02 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 17:54:02 info: Stopped relay client for station: HNI_CauGiay
+2025-07-30 17:54:02 info: Removed station from caster: HNI_CauGiay
+2025-07-30 17:54:02 info: Synchronizing relay service state with database...
+2025-07-30 17:54:02 info: Caster sourcetable refreshed. Total active stations: 0
+2025-07-30 17:54:02 info: Relay service synchronized with database.
+2025-07-30 17:54:03 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:54:06 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:54:06 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:54:21 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:54:23 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:54:46 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:55:25 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:55:25 info: Added new station to caster: HNI_CauGiay
+2025-07-30 17:55:25 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-30 17:55:25 info: Started relay for station: HNI_CauGiay
+2025-07-30 17:55:25 info: Synchronizing relay service state with database...
+2025-07-30 17:55:25 info: Caster sourcetable refreshed. Total active stations: 1
+2025-07-30 17:55:25 info: Relay service synchronized with database.
+2025-07-30 17:55:25 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-30 17:55:25 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 17:55:25 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 17:55:26 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:55:30 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:55:31 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:55:31 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:55:32 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:55:33 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:55:33 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:55:33 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:55:33 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:55:34 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:55:34 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:57:30 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:57:33 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:57:33 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:57:42 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:57:42 info: Disconnected from NTRIP source: HNI_CauGiay
+2025-07-30 17:57:42 info: Stopped relay client for station: HNI_CauGiay
+2025-07-30 17:57:42 info: Removed station from caster: HNI_CauGiay
+2025-07-30 17:57:42 info: Updated station HNI_CauGiay status to inactive in DB.
+2025-07-30 17:57:42 info: Synchronizing relay service state with database...
+2025-07-30 17:57:42 info: Caster sourcetable refreshed. Total active stations: 0
+2025-07-30 17:57:42 info: Relay service synchronized with database.
+2025-07-30 17:57:44 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:57:51 debug: JWT auth successful for user: john@example.com
+2025-07-30 17:57:51 info: Added new station to caster: HNI_CauGiay
+2025-07-30 17:57:51 info: Connecting to NTRIP source: rtk.taikhoandodac.vn:1509/HNI_CauGiay
+2025-07-30 17:57:51 info: Started relay for station: HNI_CauGiay
+2025-07-30 17:57:51 info: Synchronizing relay service state with database...
+2025-07-30 17:57:51 info: Caster sourcetable refreshed. Total active stations: 1
+2025-07-30 17:57:51 info: Relay service synchronized with database.
+2025-07-30 17:57:51 info: TCP connection established to source: rtk.taikhoandodac.vn:1509
+2025-07-30 17:57:51 info: Authentication successful for mountpoint: HNI_CauGiay
+2025-07-30 17:57:51 info: Relay connected to source for station HNI_CauGiay
+2025-07-30 17:57:52 debug: JWT auth successful for user: john@example.com

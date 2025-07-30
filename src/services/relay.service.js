@@ -1,29 +1,30 @@
 import { EventEmitter } from 'events';
-import { Station, Location } from '../models/index.js';
+import { Station } from '../models/index.js'; // Chỉ cần Station ở đây vì Location đã được include ở route
 import { logger } from '../utils/logger.js';
 import NtripClient from '../ntrip/ntrip-client.js';
 import NtripCaster from '../ntrip/ntrip-caster.js';
 import net from 'net';
 
+// Hằng số cấu hình thời gian timeout cho dữ liệu RTCM (tính bằng mili-giây)
+// Nếu không nhận được dữ liệu trong khoảng thời gian này, coi như nguồn đã offline.
+const RTCM_DATA_TIMEOUT_MS = 15000; // 15 giây
+
 class RelayService extends EventEmitter {
   constructor() {
     super();
-    // Singleton pattern: The `export default new RelayService()` at the bottom
-    // already ensures only one instance is created and shared.
-    // The check inside the constructor is therefore redundant but harmless.
     if (RelayService._instance) {
       return RelayService._instance;
     }
     
-    // Sửa đổi quan trọng: Tên thuộc tính của bạn là 'clients', không phải 'relays'
-    this.clients = new Map(); // Key: station.name, Value: { client, intervalId, station }
+    // Key: station.name, Value: { client, intervalId, station, lastDataTimestamp }
+    this.clients = new Map();
     this.caster = null;
     this.initialized = false;
     RelayService._instance = this;
   }
 
   /**
-   * Initialize the relay service. This should only be called once.
+   * Khởi tạo dịch vụ relay. Chỉ nên được gọi một lần.
    */
   async initialize() {
     if (this.initialized) {
@@ -44,7 +45,6 @@ class RelayService extends EventEmitter {
       
       this.caster.on('error', (error) => logger.error('NTRIP caster error:', error));
       
-      // Load stations and sync state with DB
       await this.syncWithDatabase();
       
       this.initialized = true;
@@ -57,8 +57,8 @@ class RelayService extends EventEmitter {
   }
 
   /**
-   * Start a relay for a specific station. Idempotent.
-   * @param {number} stationId - The ID of the station to start.
+   * Bắt đầu một relay cho một trạm cụ thể.
+   * @param {number} stationId - ID của trạm cần bắt đầu.
    * @returns {Promise<{success: boolean, message: string, station?: object}>}
    */
   async startRelay(stationId) {
@@ -69,12 +69,12 @@ class RelayService extends EventEmitter {
       }
 
       if (this.clients.has(station.name)) {
-        const { client } = this.clients.get(station.name);
-        if (client && client.connected) {
-           logger.info(`Relay for station ${station.name} is already running and connected.`);
+        const existingRelay = this.clients.get(station.name);
+        if (existingRelay.client && existingRelay.client.connected) {
+           logger.info(`Relay for station ${station.name} is already running.`);
            return { success: true, message: 'Relay already running.', station };
         }
-        logger.info(`Relay for station ${station.name} exists but is not connected. Attempting to restart.`);
+        logger.info(`Relay for station ${station.name} exists but is not connected. Restarting.`);
         await this.stopRelay(station.name, false);
       }
       
@@ -98,10 +98,18 @@ class RelayService extends EventEmitter {
         username: station.source_user,
         password: station.source_pass,
       });
-
-      let intervalId = null;
+      
+      // === Cấu trúc trạng thái mới cho mỗi relay ===
+      const relayState = {
+        client: client,
+        intervalId: null,
+        station: station,
+        lastDataTimestamp: null, // Theo dõi thời điểm nhận dữ liệu cuối cùng
+      };
       
       client.on('rtcm', (data) => {
+        // Cập nhật timestamp mỗi khi nhận được dữ liệu RTCM
+        relayState.lastDataTimestamp = Date.now();
         this.caster.broadcast(station.name, data);
       });
       
@@ -110,7 +118,7 @@ class RelayService extends EventEmitter {
         const position = { lat: parseFloat(station.lat), lon: parseFloat(station.lon), alt: 100 };
         client.sendPosition(position);
         
-        intervalId = setInterval(() => {
+        relayState.intervalId = setInterval(() => {
           if (client.connected) {
             client.sendPosition(position);
           }
@@ -119,14 +127,15 @@ class RelayService extends EventEmitter {
       
       client.on('disconnected', () => {
         logger.warn(`Relay disconnected from source for station ${station.name}`);
-        if(intervalId) clearInterval(intervalId);
+        relayState.lastDataTimestamp = null; // Reset khi ngắt kết nối
+        if(relayState.intervalId) clearInterval(relayState.intervalId);
       });
       
       client.on('error', (error) => {
         logger.error(`Relay client error for station ${station.name}: ${error.message}`);
       });
       
-      this.clients.set(station.name, { client, intervalId, station });
+      this.clients.set(station.name, relayState);
       client.connect();
       
       if (station.status !== 'active') {
@@ -143,18 +152,16 @@ class RelayService extends EventEmitter {
   }
 
   /**
-   * Stop a relay for a station. Idempotent.
-   * @param {string} stationName - The name (mountpoint) of the station to stop.
-   * @param {boolean} updateDb - Whether to update the station's status in the database.
+   * Dừng một relay cho một trạm.
+   * @param {string} stationName - Tên của trạm cần dừng.
+   * @param {boolean} updateDb - Có cập nhật trạng thái của trạm trong CSDL hay không.
    * @returns {Promise<{success: boolean, message: string}>}
    */
   async stopRelay(stationName, updateDb = true) {
     try {
       const relayData = this.clients.get(stationName);
 
-      if (!relayData) {
-        logger.warn(`No active relay found for station ${stationName}. Nothing to stop.`);
-      } else {
+      if (relayData) {
         const { client, intervalId } = relayData;
         if (intervalId) clearInterval(intervalId);
         if (client) {
@@ -163,6 +170,8 @@ class RelayService extends EventEmitter {
         }
         this.clients.delete(stationName);
         logger.info(`Stopped relay client for station: ${stationName}`);
+      } else {
+        logger.warn(`No active relay found for station ${stationName}. Nothing to stop.`);
       }
       
       if (this.caster) {
@@ -186,7 +195,7 @@ class RelayService extends EventEmitter {
   }
 
   /**
-   * Synchronizes the running relays with the database state.
+   * Đồng bộ hóa các relay đang chạy với trạng thái trong CSDL.
    */
   async syncWithDatabase() {
     try {
@@ -221,40 +230,65 @@ class RelayService extends EventEmitter {
       return false;
     }
   }
-
-  // ===== START: CÁC HÀM ĐÃ SỬA LỖI =====
+  
+  // ====================================================================
+  // ===== CÁC HÀM LẤY TRẠNG THÁI (STATUS) ĐÃ CẬP NHẬT LOGIC MỚI =====
+  // ====================================================================
 
   /**
-   * Lấy trạng thái của một trạm cụ thể.
+   * Lấy trạng thái kết nối tới nguồn của tất cả các relay đang chạy, dựa trên luồng dữ liệu.
+   * @returns {Map<string, boolean>} - Map với key là station.name và value là true (online) hoặc false (offline).
+   */
+  getAllSourceStatuses() {
+    const statuses = new Map();
+    const now = Date.now();
+
+    for (const relayData of this.clients.values()) {
+      if (relayData.station && relayData.client) {
+        const isConnectedTCP = relayData.client.connected;
+        const lastDataTimestamp = relayData.lastDataTimestamp;
+
+        // Điều kiện để "online":
+        // 1. Phải có kết nối TCP.
+        // 2. Phải đã từng nhận được dữ liệu (timestamp không null).
+        // 3. Lần nhận dữ liệu cuối cùng phải trong khoảng thời gian timeout cho phép.
+        const isDataFlowing = lastDataTimestamp && (now - lastDataTimestamp < RTCM_DATA_TIMEOUT_MS);
+        
+        const isOnline = isConnectedTCP && isDataFlowing;
+        
+        statuses.set(relayData.station.name, isOnline);
+      }
+    }
+    return statuses;
+  }
+  
+  /**
+   * Lấy trạng thái chi tiết của một trạm cụ thể.
    * @param {number} stationId - ID của trạm cần lấy trạng thái.
-   * @returns {object|null} - Trả về object trạng thái hoặc null nếu không tìm thấy.
+   * @returns {object|null} - Trả về object trạng thái hoặc null nếu trạm không hoạt động.
    */
   getStationStatus(stationId) {
-      // SỬA ĐỔI: Lặp qua `this.clients.values()` thay vì `this.relays`
       const allRelayData = Array.from(this.clients.values());
-      
-      // SỬA ĐỔI: Tìm kiếm dựa trên `data.station.id`
       const relayData = allRelayData.find(data => data.station.id === stationId);
       
       if (!relayData) {
-          return null; // Trạm không hoạt động (không có trong bộ nhớ)
+          return null;
       }
 
-      const { station, client } = relayData;
-      
-      // Lấy số lượng client (rover) đang kết nối tới mountpoint này từ caster
+      const { station, client, lastDataTimestamp } = relayData;
       const clientsConnected = this.caster.getMountpoint(station.name)?.clients?.size || 0;
+      const isDataFlowing = lastDataTimestamp && (Date.now() - lastDataTimestamp < RTCM_DATA_TIMEOUT_MS);
+      const isOnline = client.connected && isDataFlowing;
 
-      // SỬA ĐỔI: Trả về dữ liệu từ cấu trúc đúng (`station` và `client`)
       return {
           stationId: station.id,
           stationName: station.name,
-          status: 'active', // Nếu nó tồn tại trong 'clients' thì nó đang active
-          sourceConnected: client.connected, // Trạng thái kết nối đến nguồn
+          status: 'active',
+          sourceConnected: isOnline,
           sourceHost: client.options.host,
           sourceMountpoint: client.options.mountpoint,
-          clientsConnected: clientsConnected, // Số lượng rover đang kết nối
-          startTime: client.startTime, // Giả sử client có thuộc tính này
+          clientsConnected: clientsConnected,
+          startTime: client.startTime,
       };
   }
 
@@ -263,61 +297,29 @@ class RelayService extends EventEmitter {
    * @returns {object} - Trạng thái tổng quan.
    */
   getStatus() {
-      // SỬA ĐỔI: Lặp qua `this.clients.values()`
+      const statuses = this.getAllSourceStatuses(); // Dùng lại hàm đã có logic đúng
       const activeRelays = Array.from(this.clients.values()).map(relayData => {
-          const { station, client } = relayData;
+          const { station } = relayData;
           const clientsConnected = this.caster.getMountpoint(station.name)?.clients?.size || 0;
           return {
               stationId: station.id,
               stationName: station.name,
-              sourceConnected: client.connected,
+              sourceConnected: statuses.get(station.name) || false,
               clientsConnected: clientsConnected,
           };
       });
 
       return {
           casterStatus: this.caster ? 'running' : 'stopped',
-          totalRoversConnected: this.caster ? this.caster.clients.size : 0, // Tổng số rover kết nối đến caster
-          totalRelaysRunning: this.clients.size, // Tổng số relay đang chạy
+          totalRoversConnected: this.caster ? this.caster.clients.size : 0,
+          totalRelaysRunning: this.clients.size,
           relays: activeRelays,
       };
   }
 
-  // ===== START: HÀM MỚI ĐỂ LẤY TRẠNG THÁI NGUỒN =====
   /**
-   * Lấy trạng thái kết nối tới nguồn của tất cả các relay đang chạy.
-   * @returns {Map<string, boolean>} - Một Map với key là station.name và value là trạng thái kết nối (true = online, false = offline).
+   * Lấy danh sách các kết nối của Rover đang hoạt động.
    */
-  getAllSourceStatuses() {
-    const statuses = new Map();
-    for (const relayData of this.clients.values()) {
-      // relayData có cấu trúc là { client, intervalId, station }
-      if (relayData.station && relayData.client) {
-        statuses.set(relayData.station.name, relayData.client.connected);
-      }
-    }
-    return statuses;
-  }
-  
-  // ===== END: CÁC HÀM ĐÃ SỬA LỖI =====
-
-  async shutdown() {
-    logger.info('Shutting down NTRIP relay service...');
-    
-    const stationNames = Array.from(this.clients.keys());
-    for (const stationName of stationNames) {
-      await this.stopRelay(stationName, false);
-    }
-    
-    this.clients.clear();
-    
-    if (this.caster) {
-      this.caster.stop();
-    }
-    
-    logger.info('NTRIP relay service shut down successfully.');
-  }
-
   getActiveConnections() {
     if (!this.caster || !this.caster.clients) {
       return [];
@@ -340,29 +342,19 @@ class RelayService extends EventEmitter {
     return connections;
   }
 
-  // ===== START: HÀM MỚI ĐỂ LẤY MOUNTPOINTS TỪ NGUỒN BÊN NGOÀI =====
   /**
-   * Kết nối đến một nguồn NTRIP và lấy danh sách mountpoint từ sourcetable.
-   * @param {string} host - Hostname hoặc IP của nguồn NTRIP.
-   * @param {number} port - Port của nguồn NTRIP.
-   * @param {string} [username] - Tên đăng nhập (tùy chọn).
-   * @param {string} [password] - Mật khẩu (tùy chọn).
-   * @returns {Promise<Array<object>>} - Một Promise trả về mảng các object mountpoint.
+   * Lấy danh sách mountpoint từ một nguồn NTRIP bên ngoài.
    */
   fetchMountpointsFromSource({ host, port, username, password }) {
     return new Promise((resolve, reject) => {
       const socket = new net.Socket();
       let responseData = '';
 
-      socket.on('data', (data) => {
-        responseData += data.toString();
-      });
+      socket.on('data', (data) => { responseData += data.toString(); });
 
       socket.on('close', () => {
         try {
-          // Kiểm tra xem phản hồi có phải là HTTP 200 OK không
           if (!responseData.includes('SOURCETABLE 200 OK')) {
-             // Thử phân tích lỗi, có thể là 401 Unauthorized
              if (responseData.includes('401 Unauthorized')) {
                 return reject(new Error('Unauthorized. Please check your credentials.'));
              }
@@ -371,63 +363,59 @@ class RelayService extends EventEmitter {
 
           const lines = responseData.split('\r\n');
           const mountpoints = lines
-            .filter(line => line.startsWith('STR;')) // Chỉ lấy các dòng STR (stream)
+            .filter(line => line.startsWith('STR;'))
             .map(line => {
               const fields = line.split(';');
               return {
-                mountpoint: fields[1] || '',
-                identifier: fields[2] || '',
-                format: fields[3] || '',
-                formatDetails: fields[4] || '',
-                carrier: fields[5] || '',
-                navSystem: fields[6] || '',
-                network: fields[7] || '',
-                country: fields[8] || '',
-                latitude: parseFloat(fields[9]) || 0,
-                longitude: parseFloat(fields[10]) || 0,
-                nmea: fields[12] === '1',
-                solution: fields[13] === '1',
-                generator: fields[14] || '',
-                authentication: fields[16] || 'N', // N=None, B=Basic, D=Digest
+                mountpoint: fields[1] || '', identifier: fields[2] || '',
+                format: fields[3] || '', formatDetails: fields[4] || '',
+                carrier: fields[5] || '', navSystem: fields[6] || '',
+                network: fields[7] || '', country: fields[8] || '',
+                latitude: parseFloat(fields[9]) || 0, longitude: parseFloat(fields[10]) || 0,
+                nmea: fields[12] === '1', solution: fields[13] === '1',
+                generator: fields[14] || '', authentication: fields[16] || 'N',
               };
             });
-            
           resolve(mountpoints);
         } catch (parseError) {
           reject(new Error(`Error parsing sourcetable: ${parseError.message}`));
         }
       });
       
-      socket.on('error', (err) => {
-        logger.error(`Socket error while fetching mountpoints from ${host}:${port}:`, err);
-        reject(new Error(`Connection error: ${err.message}`));
-      });
-      
-      // Đặt timeout để tránh treo kết nối
-      socket.setTimeout(10000, () => {
-        socket.destroy();
-        reject(new Error('Connection timed out after 10 seconds.'));
-      });
+      socket.on('error', (err) => reject(new Error(`Connection error: ${err.message}`)));
+      socket.setTimeout(10000, () => { socket.destroy(); reject(new Error('Connection timed out.')); });
 
       socket.connect(port, host, () => {
-        logger.info(`Connecting to ${host}:${port} to fetch sourcetable.`);
-        let request = `GET / HTTP/1.1\r\n`;
-        request += `Host: ${host}:${port}\r\n`;
-        request += `User-Agent: NodeJS-NTRIP-Client\r\n`;
-        request += `Connection: close\r\n`;
-
+        let request = `GET / HTTP/1.1\r\nHost: ${host}:${port}\r\nUser-Agent: NodeJS-NTRIP-Client\r\nConnection: close\r\n`;
         if (username && password) {
-            const credentials = Buffer.from(`${username}:${password}`).toString('base64');
-            request += `Authorization: Basic ${credentials}\r\n`;
+            request += `Authorization: Basic ${Buffer.from(`${username}:${password}`).toString('base64')}\r\n`;
         }
-
         request += `\r\n`;
         socket.write(request);
       });
     });
   }
-  // ===== END: HÀM MỚI =====
+
+  /**
+   * Dọn dẹp và tắt dịch vụ relay.
+   */
+  async shutdown() {
+    logger.info('Shutting down NTRIP relay service...');
+    
+    const stationNames = Array.from(this.clients.keys());
+    for (const stationName of stationNames) {
+      await this.stopRelay(stationName, false);
+    }
+    
+    this.clients.clear();
+    
+    if (this.caster) {
+      this.caster.stop();
+    }
+    
+    logger.info('NTRIP relay service shut down successfully.');
+  }
 }
 
-// Export một instance duy nhất để đảm bảo toàn bộ ứng dụng dùng chung.
+// Export một instance duy nhất (singleton) để toàn bộ ứng dụng dùng chung.
 export default new RelayService();
